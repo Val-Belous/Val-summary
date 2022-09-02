@@ -1,0 +1,50 @@
+.container {
+  position: relative;
+  width: 100%;
+  color: #fff;
+
+  left: 50%;
+  top: 50%;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+
+  transform: translate(-50%, -50%) translate3d(0, 0, calc(600px * 0.5));
+
+  border: 1px solid white;
+  padding: 25px;
+
+  align-items: center;
+}
+
+.box {
+  padding: 10px;
+  border: 1px solid #fff;
+  display: flex;
+  height: 270px;
+  border-radius: 10px;
+}
+
+.textContainer {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  display: block;
+  font-size: 25px;
+
+  margin-bottom: 10px;
+}
+
+.image {
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+}

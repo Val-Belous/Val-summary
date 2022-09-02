@@ -10,31 +10,37 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
   background-color: #050505;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .maintext {
   color: gold;
-  position: absolute;
-  top: 5%;
+  margin-bottom: 150px;
 }
 
 .box {
-  --width: 400px;
-  --height: 400px;
-  --depth: 400px;
+  --width: 600px;
+  --height: 600px;
+  --depth: 600px;
   --hue: 30;
-  --alpha: 0.8;
+  --alpha: 0;
 
   width: var(--width);
   height: var(--height);
   position: relative;
 
-  /* perspective: 1600px; */
+  /* perspective: auto; */
   transform-style: preserve-3d;
 
-  animation: animateBox 8s infinite linear;
+  /* animation: animateBox 15s infinite linear; */
   will-change: transform;
 }
 
@@ -48,7 +54,7 @@ body {
 }
 
 .box__face {
-  border: 1px solid black;
+  border: 1px solid white;
   position: absolute;
   background-color: hsla(var(--hue), 50%, 50%, var(--alpha));
 
@@ -67,7 +73,7 @@ body {
   height: 100%;
 
   --hue: 220;
-  --alpha: 0.6;
+  --alpha: 0;
   --coeff: -0.5;
 
   transform: translate(-50%, -50%)
@@ -85,7 +91,7 @@ body {
 
   --rotate: 90deg;
   --hue: 160;
-  --alpha: 0.8;
+  --alpha: 0;
   transform: translate(-50%, -50%) rotateY(var(--rotate))
     translate3d(0, 0, calc(var(--width) * 0.5));
 }
@@ -99,7 +105,7 @@ body {
   width: var(--width);
   height: var(--depth);
   --hue: 30;
-  --alpha: 0.6;
+  --alpha: 0;
   --rotate: 90deg;
 
   transform: translate(-50%, -50%) rotateX(var(--rotate))
