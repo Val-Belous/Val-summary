@@ -37,19 +37,44 @@ body {
   height: var(--height);
   position: relative;
 
-  /* perspective: auto; */
+  /* perspective: 600px; */
   transform-style: preserve-3d;
 
-  /* animation: animateBox 15s infinite linear; */
+  /* animation: animateBox 5s infinite linear; */
+  transform: rotateX(-10deg) rotateY(10deg);
   will-change: transform;
 }
 
-@keyframes animateBox {
+@keyframes animateBoxOne {
   0% {
-    transform: rotateX(-30deg) rotateY(0deg);
+    transform: rotateX(-10deg) rotateY(10deg);
   }
   100% {
-    transform: rotateX(-30deg) rotateY(360deg);
+    transform: rotateX(-10deg) rotateY(100deg);
+  }
+}
+@keyframes animateBoxTwo {
+  0% {
+    transform: rotateX(-10deg) rotateY(100deg);
+  }
+  100% {
+    transform: rotateX(-10deg) rotateY(190deg);
+  }
+}
+@keyframes animateBoxThree {
+  0% {
+    transform: rotateX(-10deg) rotateY(190deg);
+  }
+  100% {
+    transform: rotateX(-10deg) rotateY(280deg);
+  }
+}
+@keyframes animateBoxFour {
+  0% {
+    transform: rotateX(-10deg) rotateY(280deg);
+  }
+  100% {
+    transform: rotateX(-10deg) rotateY(370deg);
   }
 }
 
@@ -114,4 +139,24 @@ body {
 
 .box__face--bottom {
   --rotate: -90deg;
+}
+
+.toleftone {
+  transform: rotateX(-10deg) rotateY(100deg);
+  animation: animateBoxOne 0.5s linear;
+}
+
+.tolefttwo {
+  transform: rotateX(-10deg) rotateY(190deg);
+  animation: animateBoxTwo 0.5s linear;
+}
+
+.toleftthree {
+  transform: rotateX(-10deg) rotateY(280deg);
+  animation: animateBoxThree 0.5s linear;
+}
+
+.toleftfour {
+  transform: rotateX(-10deg) rotateY(370deg);
+  animation: animateBoxFour 0.5s linear;
 }
