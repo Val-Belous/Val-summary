@@ -7,17 +7,35 @@ export const App = () => {
     const onKeyPress = evt => {
       switch (evt.keyCode) {
         case 37:
-          console.log('lol');
-          if (element.classList.contains('toleftone')) {
+          if (element.classList.contains('torightfour')) {
+            element.classList.remove('torightfour');
+            element.classList.add('toleftone');
+          } else if (element.classList.contains('toleftone')) {
+            element.classList.remove('torightone');
+            element.classList.remove('torighttwo');
+            element.classList.remove('torightthree');
+            element.classList.remove('torightfour');
             element.classList.remove('toleftone');
             element.classList.add('tolefttwo');
           } else if (element.classList.contains('tolefttwo')) {
+            element.classList.remove('torightone');
+            element.classList.remove('torighttwo');
+            element.classList.remove('torightthree');
+            element.classList.remove('torightfour');
             element.classList.remove('tolefttwo');
             element.classList.add('toleftthree');
           } else if (element.classList.contains('toleftthree')) {
+            element.classList.remove('torightone');
+            element.classList.remove('torighttwo');
+            element.classList.remove('torightthree');
+            element.classList.remove('torightfour');
             element.classList.remove('toleftthree');
             element.classList.add('toleftfour');
           } else if (element.classList.contains('toleftfour')) {
+            element.classList.remove('torightone');
+            element.classList.remove('torighttwo');
+            element.classList.remove('torightthree');
+            element.classList.remove('torightfour');
             element.classList.remove('toleftfour');
             element.classList.add('toleftone');
           } else {
@@ -27,6 +45,40 @@ export const App = () => {
         case 38:
           break;
         case 39:
+          if (element.classList.contains('toleftone')) {
+            element.classList.remove('toleftone');
+            element.classList.add('torightfour');
+          } else if (element.classList.contains('torightone')) {
+            element.classList.remove('toleftone');
+            element.classList.remove('tolefttwo');
+            element.classList.remove('toleftthree');
+            element.classList.remove('toleftfour');
+            element.classList.remove('torightone');
+            element.classList.add('torighttwo');
+          } else if (element.classList.contains('torighttwo')) {
+            element.classList.remove('toleftone');
+            element.classList.remove('tolefttwo');
+            element.classList.remove('toleftthree');
+            element.classList.remove('toleftfour');
+            element.classList.remove('torighttwo');
+            element.classList.add('torightthree');
+          } else if (element.classList.contains('torightthree')) {
+            element.classList.remove('toleftone');
+            element.classList.remove('tolefttwo');
+            element.classList.remove('toleftthree');
+            element.classList.remove('toleftfour');
+            element.classList.remove('torightthree');
+            element.classList.add('torightfour');
+          } else if (element.classList.contains('torightfour')) {
+            element.classList.remove('toleftone');
+            element.classList.remove('tolefttwo');
+            element.classList.remove('toleftthree');
+            element.classList.remove('toleftfour');
+            element.classList.remove('torightfour');
+            element.classList.add('torightone');
+          } else {
+            element.classList.add('torightone');
+          }
           break;
 
         default:
@@ -45,9 +97,9 @@ export const App = () => {
       <h1 className="maintext">Welcome!</h1>
       <div className="scene">
         <div className="box" id="box" ref={ref}>
-          {/* <FrontAboutMe /> */}
           <div className="box__face box__face--back">Back</div>
-          <div className="box__face box__face--front">Front</div>
+          <FrontAboutMe />
+          {/* <div className="box__face box__face--front">Front</div> */}
           <div className="box__face box__face--left">Left</div>
           <div className="box__face box__face--right">Right</div>
           <div className="box__face box__face--top">Top</div>
