@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
+  gap: 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.arrows {
+  fill: transparent;
+  stroke: white;
+}
