@@ -1,9 +1,25 @@
 import styles from './FrontAboutMe.module.css';
 import photo from '../../images/myPhoto.JPG';
+import { useEffect } from 'react';
 
 export const FrontAboutMe = () => {
+  useEffect(() => {
+    const backdrop = document.querySelector('.ModalAboutMe_backdrop__v1zHC');
+    const frontSide = document.querySelector(
+      '.FrontAboutMe_containerFront__-xEOJ'
+    );
+    frontSide.addEventListener('click', openFrontSide);
+
+    function openFrontSide(evt) {
+      if (evt.target !== evt.currentTarget) {
+        console.log(evt);
+        backdrop.classList.remove('ModalAboutMe_ishidden__5OpwD');
+      }
+    }
+  }, []);
+
   return (
-    <div className={styles.container}>
+    <div className={styles.containerFront}>
       <h2 className={styles.mainTitle}>Hello, my name is Val Belous</h2>
       <div className={styles.box}>
         <img className={styles.image} src={photo} alt="" />

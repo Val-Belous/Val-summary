@@ -47,7 +47,10 @@ export const keysFunc = (element, code) => {
       }
       break;
     case 39:
-      if (element.classList.contains('toleftthree')) {
+      if (element.classList.contains('toleftfour')) {
+        element.classList.remove('toleftfour');
+        element.classList.add('torightone');
+      } else if (element.classList.contains('toleftthree')) {
         element.classList.remove('toleftthree');
         element.classList.add('torighttwo');
       } else if (element.classList.contains('tolefttwo')) {
@@ -89,17 +92,7 @@ export const keysFunc = (element, code) => {
         element.classList.add('torightone');
       }
       break;
-    case 13:
-      if (
-        element.classList.contains('torightfour') ||
-        element.classList.contains('default') ||
-        element.classList.contains('toleftfour')
-      ) {
-        console.log('lol');
-      }
-      break;
     default:
-      console.log('error');
-      break;
+      return;
   }
 };

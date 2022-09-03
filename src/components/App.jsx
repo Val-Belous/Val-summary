@@ -3,6 +3,7 @@ import { FrontAboutMe } from './FrontAboutMe/FrontAboutMe';
 import { keysFunc } from 'helpers/keyPressFunc';
 import { RightMyProjects } from './RightMyProjects/RightMyProjects';
 import { Arrows } from './Arrows/Arrows';
+import { ModalAboutMe } from './ModalAboutMe/ModalAboutMe';
 
 export const App = () => {
   const ref = useRef(null);
@@ -10,7 +11,7 @@ export const App = () => {
     const onKeyPress = evt => {
       keysFunc(element, evt.keyCode);
     };
-    const element = ref.current;
+    let element = ref.current;
     window.addEventListener('keydown', onKeyPress);
     return () => {
       window.removeEventListener('keydown', onKeyPress);
@@ -29,12 +30,13 @@ export const App = () => {
             {/* <div className="box__face box__face--front">Front</div> */}
             <div className="box__face box__face--left">Left</div>
             {/* <div className="box__face box__face--right">Right</div> */}
-            <div className="box__face box__face--top">Top</div>
+            <div className="box__face box__face--top"></div>
             <div className="box__face box__face--bottom"></div>
           </div>
         </div>
       </div>
       <Arrows />
+      <ModalAboutMe />
     </>
   );
 };
