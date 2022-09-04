@@ -1,5 +1,5 @@
 export const keysFunc = (element, code) => {
-  const body = document.querySelector('body');
+  // const body = document.querySelector('body');
   switch (code) {
     case 37:
       if (element.classList.contains('default')) {
