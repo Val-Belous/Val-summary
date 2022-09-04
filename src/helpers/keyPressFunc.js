@@ -1,7 +1,11 @@
 export const keysFunc = (element, code) => {
+  const body = document.querySelector('body');
   switch (code) {
     case 37:
-      if (element.classList.contains('torighttwo')) {
+      if (element.classList.contains('default')) {
+        element.classList.remove('default');
+        element.classList.add('toleftone');
+      } else if (element.classList.contains('torighttwo')) {
         element.classList.remove('torighttwo');
         element.classList.add('toleftthree');
       } else if (element.classList.contains('torightthree')) {
@@ -15,6 +19,7 @@ export const keysFunc = (element, code) => {
         element.classList.remove('torightfour');
         element.classList.add('toleftone');
       } else if (element.classList.contains('toleftone')) {
+        element.classList.remove('default');
         element.classList.remove('torightone');
         element.classList.remove('torighttwo');
         element.classList.remove('torightthree');
@@ -47,7 +52,10 @@ export const keysFunc = (element, code) => {
       }
       break;
     case 39:
-      if (element.classList.contains('toleftfour')) {
+      if (element.classList.contains('default')) {
+        element.classList.remove('default');
+        element.classList.add('torightone');
+      } else if (element.classList.contains('toleftfour')) {
         element.classList.remove('toleftfour');
         element.classList.add('torightone');
       } else if (element.classList.contains('toleftthree')) {
