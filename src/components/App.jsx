@@ -4,13 +4,23 @@ import { keysFunc } from 'helpers/keyPressFunc';
 import { RightMyProjects } from './RightMyProjects/RightMyProjects';
 import { Arrows } from './Arrows/Arrows';
 import { ModalAboutMe } from './ModalAboutMe/ModalAboutMe';
+import { PortfolioModal } from './PortfolioModal/PortfolioModal';
 
 export const App = () => {
   const ref = useRef(null);
   useEffect(() => {
     const onKeyPress = evt => {
-      const backdrop = document.querySelector('.ModalAboutMe_backdrop__v1zHC');
-      if (!backdrop.classList.contains('ModalAboutMe_ishidden__5OpwD')) {
+      const aboutMeBackdrop = document.querySelector(
+        '.ModalAboutMe_backdrop__v1zHC'
+      );
+      const portfolioBackdrop = document.querySelector(
+        '.PortfolioModal_backdrop__XXUZr'
+      );
+
+      if (
+        !aboutMeBackdrop.classList.contains('ModalAboutMe_ishidden__5OpwD') ||
+        !portfolioBackdrop.classList.contains('PortfolioModal_ishidden__WK0Ud')
+      ) {
         return;
       }
       keysFunc(element, evt.keyCode);
@@ -39,6 +49,7 @@ export const App = () => {
       </div>
       <Arrows />
       <ModalAboutMe />
+      <PortfolioModal />
     </>
   );
 };

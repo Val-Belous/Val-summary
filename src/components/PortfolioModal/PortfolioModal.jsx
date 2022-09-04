@@ -1,11 +1,11 @@
-import styles from './ModalAboutMe.module.css';
+import styles from './PortfolioModal.module.css';
 import { useRef, useEffect } from 'react';
 
-export const ModalAboutMe = () => {
+export const PortfolioModal = () => {
   const ref = useRef(null);
 
   useEffect(() => {
-    const backdrop = document.querySelector('.ModalAboutMe_backdrop__v1zHC');
+    const backdrop = document.querySelector('.PortfolioModal_backdrop__XXUZr');
     backdrop.addEventListener('click', onHandlerClick);
 
     function onHandlerClick(evt) {
@@ -26,24 +26,23 @@ export const ModalAboutMe = () => {
     const bottomSide = document.querySelector('.box__face--bottom');
 
     const closeBackdrop = () => {
-      backdrop.classList.add('ModalAboutMe_ishidden__5OpwD');
+      backdrop.classList.add('PortfolioModal_ishidden__WK0Ud');
       rightSide.classList.remove('RightMyProjects_rightSideOpen__HJWqm');
       leftSide.classList.remove('box__face--leftOpen');
       topSide.classList.remove('box__face--topOpen');
       bottomSide.classList.remove('box__face--bottomOpen');
       frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
-      element.classList.add('ModalAboutMe_ishidden__5OpwD');
+      element.classList.add('PortfolioModal_ishidden__WK0Ud');
     };
 
     const onKeyPress = evt => {
       switch (evt.keyCode) {
         case 13:
           if (
-            box.classList.contains('torightfour') ||
-            box.classList.contains('default') ||
-            box.classList.contains('toleftfour')
+            box.classList.contains('torightone') ||
+            box.classList.contains('toleftthree')
           ) {
-            element.classList.remove('ModalAboutMe_ishidden__5OpwD');
+            element.classList.remove('PortfolioModal_ishidden__WK0Ud');
             leftSide.classList.add('box__face--leftOpen');
             topSide.classList.add('box__face--topOpen');
             bottomSide.classList.add('box__face--bottomOpen');
@@ -57,7 +56,7 @@ export const ModalAboutMe = () => {
           topSide.classList.remove('box__face--topOpen');
           bottomSide.classList.remove('box__face--bottomOpen');
           frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
-          element.classList.add('ModalAboutMe_ishidden__5OpwD');
+          element.classList.add('PortfolioModal_ishidden__WK0Ud');
           break;
         default:
           return;
@@ -79,10 +78,10 @@ export const ModalAboutMe = () => {
             <div className={styles.textContainer}>
               <h3 className={styles.title}>Front-end developer</h3>
               <p className={styles.text}>
-                I am junior front-end developer looking for a full - time job.
-                Seeking to use my good JavaScript and React.js skills. I want
-                try to do my best on my future position in order to achieve the
-                maximum good result in the shortest possible time.
+                Portfolio. Portfolio. Portfolio. Portfolio. Portfolio.
+                Portfolio. Portfolio. Portfolio. Portfolio. Portfolio..
+                Portfolio. Portfolio. Portfolio. Portfolio. Portfolio.
+                Portfolio. Portfolio. Portfolio. Portfolio. Portfolio.
               </p>
             </div>
           </div>
