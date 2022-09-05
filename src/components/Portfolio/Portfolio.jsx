@@ -1,9 +1,9 @@
-import styles from './RightMyProjects.module.css';
+import styles from './Portfolio.module.css';
 // import kapustaImage from '../../images/kapusta-preview.PNG';
 // import filmotekaImage from '../../images/filmoteka-preview.PNG';
 // import hellenImage from '../../images/hellen-preview.PNG';
 
-export const RightMyProjects = () => {
+export const Portfolio = () => {
   return (
     <>
       <div className={styles.container}>

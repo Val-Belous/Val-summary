@@ -1,10 +1,10 @@
 import { useRef, useEffect } from 'react';
 import { FrontAboutMe } from './FrontAboutMe/FrontAboutMe';
 import { keysFunc } from 'helpers/keyPressFunc';
-import { RightMyProjects } from './RightMyProjects/RightMyProjects';
 import { Arrows } from './Arrows/Arrows';
 import { ModalAboutMe } from './ModalAboutMe/ModalAboutMe';
 import { PortfolioModal } from './PortfolioModal/PortfolioModal';
+import { Portfolio } from './Portfolio/Portfolio';
 
 export const App = () => {
   const ref = useRef(null);
@@ -40,7 +40,7 @@ export const App = () => {
           <div className="box default" id="box" ref={ref}>
             <div className="box__face box__face--back">Back</div>
             <FrontAboutMe />
-            <RightMyProjects />
+            <Portfolio />
             <div className="box__face box__face--left">Left</div>
             <div className="box__face box__face--top"></div>
             <div className="box__face box__face--bottom"></div>

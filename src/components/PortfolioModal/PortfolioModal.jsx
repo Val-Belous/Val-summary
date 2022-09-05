@@ -19,9 +19,7 @@ export const PortfolioModal = () => {
     const frontSide = document.querySelector(
       '.FrontAboutMe_containerFront__-xEOJ'
     );
-    const rightSide = document.querySelector(
-      '.RightMyProjects_container__jGLxi'
-    );
+    const rightSide = document.querySelector('.Portfolio_container__hiJ0s');
     const topSide = document.querySelector('.box__face--top');
     const bottomSide = document.querySelector('.box__face--bottom');
 
@@ -43,20 +41,35 @@ export const PortfolioModal = () => {
             box.classList.contains('toleftthree')
           ) {
             element.classList.remove('PortfolioModal_ishidden__WK0Ud');
-            leftSide.classList.add('box__face--leftOpen');
-            topSide.classList.add('box__face--topOpen');
-            bottomSide.classList.add('box__face--bottomOpen');
-            frontSide.classList.add('FrontAboutMe_frontSideOpen__zZ41Z');
-            rightSide.classList.add('RightMyProjects_rightSideOpen__HJWqm');
+            // leftSide.classList.add('box__face--leftOpen');
+            // topSide.classList.add('box__face--topOpen');
+            bottomSide.classList.add('box__face--bottomOpenPortfolio');
+            frontSide.classList.add(
+              'FrontAboutMe_frontSideOpenPortfolio__Nptph'
+            );
+            frontSide.classList.remove(
+              'FrontAboutMe_frontSideClosePortfolio__KIc2U'
+            );
+            // rightSide.classList.add('Portfolio_rightSideOpen__-Niiy');
           }
           break;
         case 27:
-          rightSide.classList.remove('RightMyProjects_rightSideOpen__HJWqm');
-          leftSide.classList.remove('box__face--leftOpen');
-          topSide.classList.remove('box__face--topOpen');
-          bottomSide.classList.remove('box__face--bottomOpen');
-          frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
-          element.classList.add('PortfolioModal_ishidden__WK0Ud');
+          if (
+            box.classList.contains('torightone') ||
+            box.classList.contains('toleftthree')
+          ) {
+            rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
+            leftSide.classList.remove('box__face--leftOpen');
+            topSide.classList.remove('box__face--topOpen');
+            bottomSide.classList.remove('box__face--bottomOpen');
+            frontSide.classList.remove(
+              'FrontAboutMe_frontSideOpenPortfolio__Nptph'
+            );
+            frontSide.classList.add(
+              'FrontAboutMe_frontSideClosePortfolio__KIc2U'
+            );
+            element.classList.add('PortfolioModal_ishidden__WK0Ud');
+          }
           break;
         default:
           return;

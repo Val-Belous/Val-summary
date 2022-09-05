@@ -39,6 +39,30 @@
     transform: rotateY(0deg) translateZ(-250px);
   }
 }
+.frontSideOpenPortfolio {
+  transform: rotateY(-90deg) translateZ(var(--cube-half));
+  animation: frontSideOpenPortfolio 3s linear;
+}
+@keyframes frontSideOpenPortfolio {
+  0% {
+    transform: rotateY(0deg) translateZ(var(--cube-half));
+  }
+  100% {
+    transform: rotateY(-90deg) translateZ(var(--cube-half));
+  }
+}
+.frontSideClosePortfolio {
+  transform: rotateY(0deg) translateZ(var(--cube-half));
+  animation: frontSideClosePortfolio 3s linear;
+}
+@keyframes frontSideClosePortfolio {
+  0% {
+    transform: rotateY(-90deg) translateZ(var(--cube-half));
+  }
+  100% {
+    transform: rotateY(0deg) translateZ(var(--cube-half));
+  }
+}
 
 .mainTitle {
   font-weight: 900;

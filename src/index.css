@@ -188,7 +188,7 @@ body {
   }
 }
 .box__face--topOpen {
-  transform: rotateY(-180deg) translateZ(var(--cube-half));
+  transform: rotateY(180deg) translateZ(var(--cube-half));
   animation: topSideOpen 3s linear;
 }
 @keyframes topSideOpen {
@@ -201,7 +201,7 @@ body {
 }
 
 .box__face--bottom {
-  transform: rotateX(-90deg) translateZ(var(--cube-half));
+  transform: rotateX(-90deg) rotateY(0deg) translateZ(var(--cube-half));
   -webkit-transform-style: preserve-3d;
   animation: bottomSideClose 3s linear;
 }
@@ -223,6 +223,18 @@ body {
   }
   100% {
     transform: rotateX(-180deg) translateZ(var(--cube-half));
+  }
+}
+.box__face--bottomOpenPortfolio {
+  transform: rotateX(-90deg) rotateY(270deg) translateZ(var(--cube-half));
+  animation: bottomOpenPortfolio 3s linear;
+}
+@keyframes bottomOpenPortfolio {
+  0% {
+    transform: rotateX(-90deg) translateZ(var(--cube-half));
+  }
+  100% {
+    transform: rotateX(-90deg) rotateY(270deg) translateZ(var(--cube-half));
   }
 }
 

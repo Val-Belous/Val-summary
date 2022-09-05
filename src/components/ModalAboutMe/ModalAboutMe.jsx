@@ -19,20 +19,24 @@ export const ModalAboutMe = () => {
     const frontSide = document.querySelector(
       '.FrontAboutMe_containerFront__-xEOJ'
     );
-    const rightSide = document.querySelector(
-      '.RightMyProjects_container__jGLxi'
-    );
+    const rightSide = document.querySelector('.Portfolio_container__hiJ0s');
     const topSide = document.querySelector('.box__face--top');
     const bottomSide = document.querySelector('.box__face--bottom');
 
     const closeBackdrop = () => {
-      backdrop.classList.add('ModalAboutMe_ishidden__5OpwD');
-      rightSide.classList.remove('RightMyProjects_rightSideOpen__HJWqm');
-      leftSide.classList.remove('box__face--leftOpen');
-      topSide.classList.remove('box__face--topOpen');
-      bottomSide.classList.remove('box__face--bottomOpen');
-      frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
-      element.classList.add('ModalAboutMe_ishidden__5OpwD');
+      if (
+        box.classList.contains('torightfour') ||
+        box.classList.contains('default') ||
+        box.classList.contains('toleftfour')
+      ) {
+        backdrop.classList.add('ModalAboutMe_ishidden__5OpwD');
+        rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
+        leftSide.classList.remove('box__face--leftOpen');
+        topSide.classList.remove('box__face--topOpen');
+        bottomSide.classList.remove('box__face--bottomOpen');
+        frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
+        element.classList.add('ModalAboutMe_ishidden__5OpwD');
+      }
     };
 
     const onKeyPress = evt => {
@@ -43,21 +47,30 @@ export const ModalAboutMe = () => {
             box.classList.contains('default') ||
             box.classList.contains('toleftfour')
           ) {
+            frontSide.classList.remove(
+              'FrontAboutMe_frontSideClosePortfolio__KIc2U'
+            );
             element.classList.remove('ModalAboutMe_ishidden__5OpwD');
             leftSide.classList.add('box__face--leftOpen');
             topSide.classList.add('box__face--topOpen');
             bottomSide.classList.add('box__face--bottomOpen');
             frontSide.classList.add('FrontAboutMe_frontSideOpen__zZ41Z');
-            rightSide.classList.add('RightMyProjects_rightSideOpen__HJWqm');
+            rightSide.classList.add('Portfolio_rightSideOpen__-Niiy');
           }
           break;
         case 27:
-          rightSide.classList.remove('RightMyProjects_rightSideOpen__HJWqm');
-          leftSide.classList.remove('box__face--leftOpen');
-          topSide.classList.remove('box__face--topOpen');
-          bottomSide.classList.remove('box__face--bottomOpen');
-          frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
-          element.classList.add('ModalAboutMe_ishidden__5OpwD');
+          if (
+            box.classList.contains('torightfour') ||
+            box.classList.contains('default') ||
+            box.classList.contains('toleftfour')
+          ) {
+            rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
+            leftSide.classList.remove('box__face--leftOpen');
+            topSide.classList.remove('box__face--topOpen');
+            bottomSide.classList.remove('box__face--bottomOpen');
+            frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
+            element.classList.add('ModalAboutMe_ishidden__5OpwD');
+          }
           break;
         default:
           return;
