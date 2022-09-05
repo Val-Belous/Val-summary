@@ -147,6 +147,31 @@ body {
   backdrop-filter: blur(3px);
   transform: rotateY(180deg) translateZ(var(--cube-half));
 }
+.box__face--backSideOpen {
+  transform: rotateY(-90deg) translateZ(var(--cube-half));
+  animation: backSideOpen 3s linear;
+}
+@keyframes backSideOpen {
+  0% {
+    transform: rotateY(-180deg) translateZ(var(--cube-half));
+  }
+  100% {
+    transform: rotateY(-90deg) translateZ(var(--cube-half));
+  }
+}
+.box__face--backSideClose {
+  transform: rotateY(-180deg) translateZ(var(--cube-half));
+  animation: backSideClose 3s linear;
+}
+@keyframes backSideClose {
+  0% {
+    transform: rotateY(-90deg) translateZ(var(--cube-half));
+  }
+  100% {
+    transform: rotateY(-180deg) translateZ(var(--cube-half));
+  }
+}
+
 .box__face--left {
   box-shadow: var(--boxShadow);
   backdrop-filter: blur(3px);
@@ -199,6 +224,30 @@ body {
     transform: rotateX(180deg) translateZ(var(--cube-half));
   }
 }
+.box__face--topOpenPortfolio {
+  transform: rotateX(90deg) rotateY(270deg) translateZ(var(--cube-half));
+  animation: topOpenPortfolio 3s linear;
+}
+@keyframes topOpenPortfolio {
+  0% {
+    transform: rotateX(90deg) translateZ(var(--cube-half));
+  }
+  100% {
+    transform: rotateX(90deg) rotateY(270deg) translateZ(var(--cube-half));
+  }
+}
+.box__face--topCLosePortfolio {
+  transform: rotateX(90deg) translateZ(var(--cube-half));
+  animation: topCLosePortfolio 3s linear;
+}
+@keyframes topCLosePortfolio {
+  0% {
+    transform: rotateX(90deg) rotateY(270deg) translateZ(var(--cube-half));
+  }
+  100% {
+    transform: rotateX(90deg) translateZ(var(--cube-half));
+  }
+}
 
 .box__face--bottom {
   transform: rotateX(-90deg) rotateY(0deg) translateZ(var(--cube-half));
@@ -235,6 +284,18 @@ body {
   }
   100% {
     transform: rotateX(-90deg) rotateY(270deg) translateZ(var(--cube-half));
+  }
+}
+.box__face--bottomClosePortfolio {
+  transform: rotateX(-90deg) rotateY(0deg) translateZ(var(--cube-half));
+  animation: bottomClosePortfolio 3s linear;
+}
+@keyframes bottomClosePortfolio {
+  0% {
+    transform: rotateX(-90deg) rotateY(270deg) translateZ(var(--cube-half));
+  }
+  100% {
+    transform: rotateX(-90deg) translateZ(var(--cube-half));
   }
 }
 

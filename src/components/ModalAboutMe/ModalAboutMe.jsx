@@ -47,9 +47,11 @@ export const ModalAboutMe = () => {
             box.classList.contains('default') ||
             box.classList.contains('toleftfour')
           ) {
+            topSide.classList.remove('box__face--topCLosePortfolio');
             frontSide.classList.remove(
               'FrontAboutMe_frontSideClosePortfolio__KIc2U'
             );
+            bottomSide.classList.remove('box__face--bottomClosePortfolio');
             element.classList.remove('ModalAboutMe_ishidden__5OpwD');
             leftSide.classList.add('box__face--leftOpen');
             topSide.classList.add('box__face--topOpen');

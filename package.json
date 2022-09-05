@@ -2,7 +2,7 @@
   "name": "val-summary",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Val-Belous.github.io/Val-summary/",
+  "homepage": "https://Val-Belous.github.io/val-summary/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",

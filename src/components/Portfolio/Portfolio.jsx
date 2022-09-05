@@ -8,7 +8,7 @@ export const Portfolio = () => {
     <>
       <div className={styles.container}>
         <h2 className={styles.mainTitle}>Portfolio</h2>
-        <span className={styles.rightSideOpen}></span>
+        <span className={styles.rightSideClosePortfolio}></span>
         {/* <ul className={styles.containerList}>
           <li className={styles.containerItem}>
             <h3>Kapu$ta</h3>
