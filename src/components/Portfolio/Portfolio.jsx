@@ -1,15 +1,15 @@
 import styles from './Portfolio.module.css';
-// import kapustaImage from '../../images/kapusta-preview.PNG';
-// import filmotekaImage from '../../images/filmoteka-preview.PNG';
-// import hellenImage from '../../images/hellen-preview.PNG';
+import kapustaImage from '../../images/kapusta-preview.PNG';
+import filmotekaImage from '../../images/filmoteka-preview.PNG';
+import hellenImage from '../../images/hellen-preview.PNG';
 
 export const Portfolio = () => {
   return (
     <>
       <div className={styles.container}>
         <h2 className={styles.mainTitle}>Portfolio</h2>
-        <span className={styles.rightSideClosePortfolio}></span>
-        {/* <ul className={styles.containerList}>
+        {/* <span className={styles.rightSideClosePortfolio}></span> */}
+        <ul className={styles.containerList}>
           <li className={styles.containerItem}>
             <h3>Kapu$ta</h3>
             <div className={styles.itemBox}>
@@ -54,7 +54,7 @@ export const Portfolio = () => {
               </div>
             </div>
           </li>
-        </ul> */}
+        </ul>
       </div>
     </>
   );

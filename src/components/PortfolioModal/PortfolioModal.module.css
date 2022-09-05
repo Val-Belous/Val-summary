@@ -1,5 +1,5 @@
 .backdrop {
-  /* backdrop-filter: blur(5px); */
+  backdrop-filter: blur(5px);
   position: fixed;
   top: 0;
   left: 50%;
@@ -22,21 +22,21 @@
 }
 
 .modal {
+  color: #fff;
   position: absolute;
-  bottom: 45%;
-  left: 15%;
-  transform: translate(-50%, -50%) scale(1);
+  top: 0;
+  left: 0;
+  /* transform: translate(-50%, -50%) scale(1); */
   transition: transform 5000ms ease-in-out 5000ms;
 
   color: black;
   width: 100%;
-  max-width: 250px;
+  height: 100vh;
   padding: 40px;
 
   background-color: rgba(255, 255, 255, 0.09);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
   animation: modal 8s linear;
   opacity: 1;
 }
@@ -49,4 +49,35 @@
     transform: translate(-50%, -50%) scale(1);
     transition: transform 2500ms ease-in-out 2500ms;
   }
+}
+
+.containerList {
+  background-color: gold;
+}
+
+.list {
+  text-align: center;
+  gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+}
+
+.listItem {
+  border: var(--border);
+  background-color: var(--backgroundCube);
+  width: 550px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.itemImage {
+  height: 285px;
+  width: 100%;
+  border-radius: 5px;
 }

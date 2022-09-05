@@ -28,7 +28,7 @@
   }
 }
 .frontSideOpen {
-  transform: rotateY(0deg) translateZ(-250px);
+  transform: rotateY(0deg) translateZ(-249px);
   animation: frontSideOpen 3s linear;
 }
 @keyframes frontSideOpen {

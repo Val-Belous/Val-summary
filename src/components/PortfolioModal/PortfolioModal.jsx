@@ -1,5 +1,8 @@
 import styles from './PortfolioModal.module.css';
 import { useRef, useEffect } from 'react';
+import kapustaImage from '../../images/kapusta-preview.PNG';
+import filmotekaImage from '../../images/filmoteka-preview.PNG';
+import hellenImage from '../../images/hellen-preview.PNG';
 
 export const PortfolioModal = () => {
   const ref = useRef(null);
@@ -123,13 +126,63 @@ export const PortfolioModal = () => {
         <div className={styles.modal}>
           <div className={styles.box}>
             <div className={styles.textContainer}>
-              <h3 className={styles.title}>Front-end developer</h3>
-              <p className={styles.text}>
-                Portfolio. Portfolio. Portfolio. Portfolio. Portfolio.
-                Portfolio. Portfolio. Portfolio. Portfolio. Portfolio..
-                Portfolio. Portfolio. Portfolio. Portfolio. Portfolio.
-                Portfolio. Portfolio. Portfolio. Portfolio. Portfolio.
-              </p>
+              <h2 className={styles.title}>My Projects</h2>
+              <ul className={styles.list}>
+                <li className={styles.listItem}>
+                  {/* <h3>Kapu$ta</h3> */}
+                  <div>
+                    <img
+                      className={styles.itemImage}
+                      src={kapustaImage}
+                      alt=""
+                    />
+                    <div>
+                      <p>[HTML, CSS, React, Redux, Formik, Chart.js]</p>
+                      <p>
+                        A app with a responsive layout. For finance management.
+                        Worked with Chart.js logic and styles.
+                      </p>
+                      <p>Position: Developer</p>
+                    </div>
+                  </div>
+                </li>
+                <li className={styles.listItem}>
+                  {/* <h3>Filmoteka</h3> */}
+                  <div>
+                    <img
+                      className={styles.itemImage}
+                      src={filmotekaImage}
+                      alt=""
+                    />
+                    <div>
+                      <p>[HTML, CSS, React, Redux, Formik, Chart.js]</p>
+                      <p>
+                        A app with a responsive layout. For finance management.
+                        Worked with Chart.js logic and styles.
+                      </p>
+                      <p>Position: Developer</p>
+                    </div>
+                  </div>
+                </li>
+                <li className={styles.listItem}>
+                  {/* <h3>Hellen</h3> */}
+                  <div>
+                    <img
+                      className={styles.itemImage}
+                      src={hellenImage}
+                      alt=""
+                    />
+                    <div>
+                      <p>[HTML, CSS, React, Redux, Formik, Chart.js]</p>
+                      <p>
+                        A app with a responsive layout. For finance management.
+                        Worked with Chart.js logic and styles.
+                      </p>
+                      <p>Position: Developer</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
