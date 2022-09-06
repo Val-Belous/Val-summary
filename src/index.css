@@ -12,13 +12,19 @@ ul {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p {
+p,
+a {
+  padding: 0;
   margin: 0;
 }
 
@@ -123,7 +129,7 @@ body {
 .box__face--right {
   transform: rotateY(90deg);
 }
-.box__face--back {
+ContactMe_containerContactMe__kjOIz {
   transform: rotateY(180deg);
 }
 .box__face--left {
@@ -142,14 +148,14 @@ body {
 /* .box__face--right {
   transform: rotateY(90deg) translateZ(var(--cube-half));
 } */
-.box__face--back {
+/* ContactMe_containerContactMe__kjOIz {
   box-shadow: var(--boxShadow);
   backdrop-filter: blur(3px);
   transform: rotateY(180deg) translateZ(var(--cube-half));
-}
-.box__face--backSideOpen {
+} */
+.ContactMe_contactMeOpen__aZkxe {
   transform: rotateY(-90deg) translateZ(var(--cube-half));
-  animation: backSideOpen 3s linear;
+  animation: backSideOpen 0.5s linear;
 }
 @keyframes backSideOpen {
   0% {
@@ -159,9 +165,9 @@ body {
     transform: rotateY(-90deg) translateZ(var(--cube-half));
   }
 }
-.box__face--backSideClose {
+.ContactMe_contactMeClose__mMKHM {
   transform: rotateY(-180deg) translateZ(var(--cube-half));
-  animation: backSideClose 3s linear;
+  animation: backSideClose 0.5s linear;
 }
 @keyframes backSideClose {
   0% {
@@ -172,11 +178,11 @@ body {
   }
 }
 
-.box__face--left {
+/* .box__face--left {
   box-shadow: var(--boxShadow);
   backdrop-filter: blur(3px);
   transform: rotateY(-90deg) translateZ(var(--cube-half));
-  animation: leftSideClose 3s linear;
+  animation: leftSideClose 0.5s linear;
 }
 @keyframes leftSideClose {
   0% {
@@ -186,9 +192,9 @@ body {
     transform: rotateY(-90deg) translateZ(var(--cube-half));
   }
 }
-.box__face--leftOpen {
+.Experience_experienceOpen__BM6ps {
   transform: rotateY(-180deg) translateZ(var(--cube-half));
-  animation: leftSideOpen 3s linear;
+  animation: leftSideOpen 0.5s linear;
 }
 @keyframes leftSideOpen {
   0% {
@@ -197,12 +203,12 @@ body {
   100% {
     transform: rotateY(-180deg) translateZ(var(--cube-half));
   }
-}
+} */
 .box__face--top {
   box-shadow: var(--boxShadow);
   backdrop-filter: blur(3px);
   transform: rotateX(90deg) translateZ(var(--cube-half));
-  animation: topSideClose 3s linear;
+  animation: topSideClose 0.5s linear;
 }
 @keyframes topSideClose {
   0% {
@@ -214,7 +220,7 @@ body {
 }
 .box__face--topOpen {
   transform: rotateY(180deg) translateZ(var(--cube-half));
-  animation: topSideOpen 3s linear;
+  animation: topSideOpen 0.5s linear;
 }
 @keyframes topSideOpen {
   0% {
@@ -226,7 +232,7 @@ body {
 }
 .box__face--topOpenPortfolio {
   transform: rotateX(90deg) rotateY(270deg) translateZ(var(--cube-half));
-  animation: topOpenPortfolio 3s linear;
+  animation: topOpenPortfolio 0.5s linear;
 }
 @keyframes topOpenPortfolio {
   0% {
@@ -238,7 +244,7 @@ body {
 }
 .box__face--topCLosePortfolio {
   transform: rotateX(90deg) translateZ(var(--cube-half));
-  animation: topCLosePortfolio 3s linear;
+  animation: topCLosePortfolio 0.5s linear;
 }
 @keyframes topCLosePortfolio {
   0% {
@@ -252,7 +258,7 @@ body {
 .box__face--bottom {
   transform: rotateX(-90deg) rotateY(0deg) translateZ(var(--cube-half));
   -webkit-transform-style: preserve-3d;
-  animation: bottomSideClose 3s linear;
+  animation: bottomSideClose 0.5s linear;
 }
 @keyframes bottomSideClose {
   0% {
@@ -264,7 +270,7 @@ body {
 }
 .box__face--bottomOpen {
   transform: rotateX(-180deg) translateZ(var(--cube-half));
-  animation: bottomSideOpen 3s linear;
+  animation: bottomSideOpen 0.5s linear;
 }
 @keyframes bottomSideOpen {
   0% {
@@ -276,7 +282,7 @@ body {
 }
 .box__face--bottomOpenPortfolio {
   transform: rotateX(-90deg) rotateY(270deg) translateZ(var(--cube-half));
-  animation: bottomOpenPortfolio 3s linear;
+  animation: bottomOpenPortfolio 0.5s linear;
 }
 @keyframes bottomOpenPortfolio {
   0% {
@@ -288,7 +294,7 @@ body {
 }
 .box__face--bottomClosePortfolio {
   transform: rotateX(-90deg) rotateY(0deg) translateZ(var(--cube-half));
-  animation: bottomClosePortfolio 3s linear;
+  animation: bottomClosePortfolio 0.5s linear;
 }
 @keyframes bottomClosePortfolio {
   0% {
@@ -310,20 +316,6 @@ body {
   transform: translateZ(150px);
   filter: blur(20px);
   background-color: rgba(1, 1, 1, 0.3);
-
-  animation: shiningBoxBottom 3s infinite;
-}
-
-@keyframes shiningBoxBottom {
-  0% {
-    background-color: rgba(1, 1, 1, 0.3);
-  }
-  50% {
-    background-color: rgba(1, 1, 1, 0.4);
-  }
-  100% {
-    background-color: rgba(1, 1, 1, 0.3);
-  }
 }
 
 .toleftone {

@@ -1,11 +1,12 @@
-import styles from './ModalAboutMe.module.css';
+import styles from './ModalContactMe.module.css';
 import { useRef, useEffect } from 'react';
-
-export const ModalAboutMe = () => {
+export const ModalContactMe = () => {
   const ref = useRef(null);
 
   useEffect(() => {
-    const backdrop = document.querySelector('.ModalAboutMe_backdrop__v1zHC');
+    const backdrop = document.querySelector(
+      '.ModalContactMe_backdropContactMe__MDbbj'
+    );
     backdrop.addEventListener('click', onHandlerClick);
 
     function onHandlerClick(evt) {
@@ -25,9 +26,8 @@ export const ModalAboutMe = () => {
 
     const closeBackdrop = () => {
       if (
-        box.classList.contains('torightfour') ||
-        box.classList.contains('default') ||
-        box.classList.contains('toleftfour')
+        box.classList.contains('torighttwo') ||
+        box.classList.contains('tolefttwo')
       ) {
         backdrop.classList.add('ModalAboutMe_ishidden__5OpwD');
         rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
@@ -43,18 +43,16 @@ export const ModalAboutMe = () => {
       switch (evt.keyCode) {
         case 13:
           if (
-            box.classList.contains('torightfour') ||
-            box.classList.contains('default') ||
-            box.classList.contains('toleftfour')
+            box.classList.contains('torighttwo') ||
+            box.classList.contains('tolefttwo')
           ) {
-            leftSide.classList.remove('Experience_leftSideCloseExp__Lg-qj');
             topSide.classList.remove('box__face--topCLosePortfolio');
             frontSide.classList.remove(
               'FrontAboutMe_frontSideClosePortfolio__KIc2U'
             );
             bottomSide.classList.remove('box__face--bottomClosePortfolio');
-            element.classList.remove('ModalAboutMe_ishidden__5OpwD');
-            leftSide.classList.add('Experience_leftSideOpen__ONILW');
+            element.classList.remove('ModalContactMe_ishidden__SfNTL');
+            leftSide.classList.add('Experience_experienceOpen__BM6ps');
             topSide.classList.add('box__face--topOpen');
             bottomSide.classList.add('box__face--bottomOpen');
             frontSide.classList.add('FrontAboutMe_frontSideOpen__zZ41Z');
@@ -63,16 +61,15 @@ export const ModalAboutMe = () => {
           break;
         case 27:
           if (
-            box.classList.contains('torightfour') ||
-            box.classList.contains('default') ||
-            box.classList.contains('toleftfour')
+            box.classList.contains('torighttwo') ||
+            box.classList.contains('tolefttwo')
           ) {
             rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
-            leftSide.classList.remove('Experience_leftSideOpen__ONILW');
+            leftSide.classList.remove('Experience_experienceOpen__BM6ps');
             topSide.classList.remove('box__face--topOpen');
             bottomSide.classList.remove('box__face--bottomOpen');
             frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
-            element.classList.add('ModalAboutMe_ishidden__5OpwD');
+            element.classList.add('ModalContactMe_ishidden__SfNTL');
           }
           break;
         default:
@@ -89,16 +86,20 @@ export const ModalAboutMe = () => {
 
   return (
     <>
-      <div className={`${styles.backdrop} ${styles.ishidden}`} ref={ref}>
-        <div className={styles.modal}>
+      <div
+        className={`${styles.backdropContactMe} ${styles.ishidden}`}
+        ref={ref}
+      >
+        <div className={styles.modalContactMe}>
           <div className={styles.box}>
             <div className={styles.textContainer}>
-              <h3 className={styles.title}>Front-end developer</h3>
+              <h3 className={styles.title}>Contact me</h3>
               <p className={styles.text}>
-                I am junior front-end developer looking for a full - time job.
-                Seeking to use my good JavaScript and React.js skills. I want
-                try to do my best on my future position in order to achieve the
-                maximum good result in the shortest possible time.
+                plspls pls pls pls pls pls pls pls pls pls pls pls pls pl spls
+                pls pls pls pls pls pls pls pls pls pls pls pls plspls pls pls
+                pls pls pls pls pls pls pls pls pls pls plspls pls pls pls pls
+                pls pls pls pls pls pls pls pls plspls pls pls pls pls pls pls
+                pls pls pls pls pls pls plspls pls pls pls pls pls pls pls pls
               </p>
             </div>
           </div>

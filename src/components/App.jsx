@@ -5,6 +5,10 @@ import { Arrows } from './Arrows/Arrows';
 import { ModalAboutMe } from './ModalAboutMe/ModalAboutMe';
 import { PortfolioModal } from './PortfolioModal/PortfolioModal';
 import { Portfolio } from './Portfolio/Portfolio';
+import { Experience } from './Experience/Experience';
+import { ContactMe } from './ContactMe/ContactMe';
+import { ModalContactMe } from './ModalContactMe/ModalContactMe';
+import { ModalExperience } from './ModalExperience/ModalExperience';
 
 export const App = () => {
   const ref = useRef(null);
@@ -16,10 +20,18 @@ export const App = () => {
       const portfolioBackdrop = document.querySelector(
         '.PortfolioModal_backdrop__XXUZr'
       );
+      const experienceBackdrop = document.querySelector(
+        '.ModalExperience_backdropExperience__q53Ru'
+      );
 
       if (
         !aboutMeBackdrop.classList.contains('ModalAboutMe_ishidden__5OpwD') ||
-        !portfolioBackdrop.classList.contains('PortfolioModal_ishidden__WK0Ud')
+        !portfolioBackdrop.classList.contains(
+          'PortfolioModal_ishidden__WK0Ud'
+        ) ||
+        !experienceBackdrop.classList.contains(
+          'ModalExperience_backdropExperience__q53Ru'
+        )
       ) {
         return;
       }
@@ -38,10 +50,10 @@ export const App = () => {
       <div className="container">
         <div className="scene">
           <div className="box default" id="box" ref={ref}>
-            <div className="box__face box__face--back">Back</div>
             <FrontAboutMe />
             <Portfolio />
-            <div className="box__face box__face--left">Left</div>
+            <Experience />
+            <ContactMe />
             <div className="box__face box__face--top"></div>
             <div className="box__face box__face--bottom"></div>
           </div>
@@ -50,6 +62,8 @@ export const App = () => {
       <Arrows />
       <ModalAboutMe />
       <PortfolioModal />
+      <ModalContactMe />
+      <ModalExperience />
     </>
   );
 };

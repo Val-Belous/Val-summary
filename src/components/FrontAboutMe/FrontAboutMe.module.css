@@ -17,7 +17,7 @@
   box-shadow: var(--boxShadow);
   border: var(--border);
   transform: rotateY(0deg) translateZ(var(--cube-half));
-  animation: frontSideClose 3s linear;
+  animation: frontSideClose 0.5s linear;
 }
 @keyframes frontSideClose {
   0% {
@@ -29,7 +29,7 @@
 }
 .frontSideOpen {
   transform: rotateY(0deg) translateZ(-249px);
-  animation: frontSideOpen 3s linear;
+  animation: frontSideOpen 0.5s linear;
 }
 @keyframes frontSideOpen {
   0% {
@@ -41,7 +41,7 @@
 }
 .frontSideOpenPortfolio {
   transform: rotateY(-90deg) translateZ(var(--cube-half));
-  animation: frontSideOpenPortfolio 3s linear;
+  animation: frontSideOpenPortfolio 0.5s linear;
 }
 @keyframes frontSideOpenPortfolio {
   0% {
@@ -53,7 +53,7 @@
 }
 .frontSideClosePortfolio {
   transform: rotateY(0deg) translateZ(var(--cube-half));
-  animation: frontSideClosePortfolio 3s linear;
+  animation: frontSideClosePortfolio 0.5s linear;
 }
 @keyframes frontSideClosePortfolio {
   0% {

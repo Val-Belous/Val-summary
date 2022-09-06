@@ -18,7 +18,7 @@
   transform: rotateY(90deg) translateZ(var(--cube-half));
 
   padding: 10px;
-  animation: rightSideClose 3s linear;
+  animation: rightSideClose 0.5s linear;
 }
 @keyframes rightSideClose {
   0% {
@@ -30,7 +30,7 @@
 }
 .rightSideOpen {
   transform: rotateY(180deg) translateZ(250px);
-  animation: rightSideOpen 3s linear;
+  animation: rightSideOpen 0.5s linear;
 }
 
 @keyframes rightSideOpen {
@@ -43,7 +43,7 @@
 }
 .rightSideOpenPortfolio {
   transform: rotateY(90deg) translateZ(-249px);
-  animation: rightSideOpenPortfolio 3s linear;
+  animation: rightSideOpenPortfolio 0.5s linear;
 }
 
 @keyframes rightSideOpenPortfolio {
@@ -56,7 +56,7 @@
 }
 .rightSideClosePortfolio {
   transform: rotateY(90deg) translateZ(var(--cube-half));
-  animation: rightSideClosePortfolio 3s linear;
+  animation: rightSideClosePortfolio 0.5s linear;
 }
 
 @keyframes rightSideClosePortfolio {
@@ -68,46 +68,26 @@
   }
 }
 
+.mainTitle {
+  margin-bottom: 30px;
+}
+
 .containerList {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .containerItem {
   display: flex;
   flex-direction: column;
-  font-size: 15px;
 }
 
-.itemContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.itemBox {
-  display: flex;
-  border-radius: 5px;
+.containerItemAnimation {
 }
 
 .itemImage {
-  width: 220px;
-  border-radius: 5px 0 0 5px;
-}
-
-.textBox {
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  border: 1px solid #fff;
-  border-left: none;
-  border-radius: 0 5px 5px 0;
-}
-
-.techText {
-  margin-bottom: 5px;
-}
-.descrText {
-  margin-bottom: 5px;
+  width: 200px;
+  height: 100px;
 }
