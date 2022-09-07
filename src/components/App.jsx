@@ -12,7 +12,9 @@ import { ModalExperience } from './ModalExperience/ModalExperience';
 
 export const App = () => {
   const ref = useRef(null);
+  console.log(ref);
   useEffect(() => {
+    let element = ref.current;
     const onKeyPress = evt => {
       const aboutMeBackdrop = document.querySelector(
         '.ModalAboutMe_backdrop__v1zHC'
@@ -41,7 +43,6 @@ export const App = () => {
       }
       keysFunc(element, evt.keyCode);
     };
-    let element = ref.current;
 
     window && window.addEventListener('keydown', onKeyPress);
     return () => {
