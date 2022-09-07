@@ -28,14 +28,22 @@ export const App = () => {
       );
 
       if (
-        !aboutMeBackdrop.classList.contains('ModalAboutMe_ishidden__5OpwD') ||
-        !portfolioBackdrop.classList.contains(
-          'PortfolioModal_ishidden__WK0Ud'
+        (!aboutMeBackdrop &&
+          aboutMeBackdrop.classList.contains('ModalAboutMe_ishidden__5OpwD')) ||
+        (!portfolioBackdrop &&
+          portfolioBackdrop.classList.contains(
+            'PortfolioModal_ishidden__WK0Ud'
+          )) ||
+        !(
+          experienceBackdrop &&
+          experienceBackdrop.classList.contains(
+            'ModalExperience_ishidden__I1iD2'
+          )
         ) ||
-        !experienceBackdrop.classList.contains(
-          'ModalExperience_ishidden__I1iD2'
-        ) ||
-        !contactBackdrop.classList.contains('ModalContactMe_ishidden__SfNTL')
+        !(
+          contactBackdrop &&
+          contactBackdrop.classList.contains('ModalContactMe_ishidden__SfNTL')
+        )
       ) {
         return;
       }
