@@ -4,9 +4,7 @@ export const ModalExperience = () => {
   const ref = useRef(null);
 
   useEffect(() => {
-    const backdrop = document.querySelector(
-      '.ModalExperience_backdropExperience__q53Ru'
-    );
+    const backdrop = document.querySelector('.backdropExperience');
     backdrop && backdrop.addEventListener('click', onHandlerClick);
 
     function onHandlerClick(evt) {
@@ -50,7 +48,7 @@ export const ModalExperience = () => {
           backSide.classList.remove('ContactMe_contactMeOpenExp__hXIey');
         backSide &&
           backSide.classList.add('ContactMe_contactMeCloseExp__wYUv1');
-        element.classList.add('ModalExperience_ishidden__I1iD2');
+        element.classList.add('ishidden');
         leftSide &&
           leftSide.classList.add('Experience_leftSideCloseExp__Lg-qj');
       }
@@ -78,7 +76,7 @@ export const ModalExperience = () => {
               backSide.classList.remove(
                 'ContactMe_contactMeCloseContact__UVuMg'
               );
-            element.classList.remove('ModalExperience_ishidden__I1iD2');
+            element.classList.remove('ishidden');
             leftSide &&
               leftSide.classList.add('Experience_leftSideOpenExp__qOlkK');
             leftSide &&
@@ -128,7 +126,7 @@ export const ModalExperience = () => {
               backSide.classList.remove('ContactMe_contactMeOpenExp__hXIey');
             backSide &&
               backSide.classList.add('ContactMe_contactMeCloseExp__wYUv1');
-            element.classList.add('ModalExperience_ishidden__I1iD2');
+            element.classList.add('ishidden');
             leftSide &&
               leftSide.classList.add('Experience_leftSideCloseExp__Lg-qj');
           }
@@ -147,10 +145,7 @@ export const ModalExperience = () => {
 
   return (
     <>
-      <div
-        className={`${styles.backdropExperience} ${styles.ishidden}`}
-        ref={ref}
-      >
+      <div className={`backdropExperience ishidden`} ref={ref}>
         <div className={styles.modalExperience}>
           <div className={styles.box}>
             <div className={styles.textContainer}>

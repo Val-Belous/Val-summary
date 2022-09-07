@@ -20,9 +20,7 @@ export const App = () => {
       const portfolioBackdrop = document.querySelector(
         '.PortfolioModal_backdrop__XXUZr'
       );
-      const experienceBackdrop = document.querySelector(
-        '.ModalExperience_backdropExperience__q53Ru'
-      );
+      const experienceBackdrop = document.querySelector('.backdropExperience');
       const contactBackdrop = document.querySelector(
         '.ModalContactMe_backdropContactMe__MDbbj'
       );
@@ -38,9 +36,7 @@ export const App = () => {
         ) ||
         !(
           experienceBackdrop &&
-          experienceBackdrop.classList.contains(
-            'ModalExperience_ishidden__I1iD2'
-          )
+          experienceBackdrop.classList.contains('ishidden')
         ) ||
         !(
           contactBackdrop &&
