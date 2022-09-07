@@ -19,8 +19,6 @@ export const FrontAboutMe = () => {
 
   return (
     <div className={styles.containerFront}>
-      <span className={styles.frontSideClosePortfolioExp}></span>
-      <span className={styles.frontSideOpenPortfolioExp}></span>
       <h2 className={styles.mainTitle}>
         Hello <br /> I'm Val
       </h2>
