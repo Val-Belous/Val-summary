@@ -32,7 +32,6 @@ export const ModalExperience = () => {
         box.classList.contains('toleftone') ||
         box.classList.contains('torightthree')
       ) {
-        backSide.classList.remove('ContactMe_contactMeCloseContact__UVuMg');
         bottomSide.classList.add('box__face--bottomCloseExp');
         bottomSide.classList.remove('box__face--bottomOpenExp');
         topSide.classList.remove('box__face--topOpenExp');

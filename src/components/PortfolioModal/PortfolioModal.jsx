@@ -35,8 +35,6 @@ export const PortfolioModal = () => {
         box.classList.contains('toleftthree')
       ) {
         topSide.classList.remove('box__face--topOpenPortfolio');
-        topSide.classList.add('box__face--topCLosePortfolio');
-        backSide.classList.add('ContactMe_contactMeClose__mMKHM');
         backSide.classList.remove('ContactMe_contactMeOpen__aZkxe');
         rightSide.classList.remove('Portfolio_rightSideOpenPortfolio__07BAa');
         bottomSide.classList.remove('box__face--bottomOpenPortfolio');
@@ -48,12 +46,13 @@ export const PortfolioModal = () => {
           'FrontAboutMe_frontSideOpenPortfolio__Nptph'
         );
         frontSide.classList.add('FrontAboutMe_frontSideClosePortfolio__KIc2U');
+        topSide.classList.add('box__face--topCLosePortfolio');
+        backSide.classList.add('ContactMe_contactMeClose__mMKHM');
         bottomSide.classList.add('box__face--bottomClosePortfolio');
         element.classList.add('PortfolioModal_ishidden__WK0Ud');
         rightSide.classList.add('Portfolio_rightSideClosePortfolio__zI+2E');
       }
     };
-    // Portfolio_rightSideOpenPortfolio__07BAa
     const onKeyPress = evt => {
       switch (evt.keyCode) {
         case 13:
@@ -80,8 +79,6 @@ export const PortfolioModal = () => {
             backSide.classList.remove('ContactMe_contactMeClose__mMKHM');
             backSide.classList.add('ContactMe_contactMeOpen__aZkxe');
             element.classList.remove('PortfolioModal_ishidden__WK0Ud');
-            // leftSide.classList.add('Experience_experienceOpen__BM6ps');
-            // topSide.classList.add('box__face--topOpen');
             bottomSide.classList.add('box__face--bottomOpenPortfolio');
             bottomSide.classList.remove('box__face--bottomClosePortfolio');
             frontSide.classList.add(

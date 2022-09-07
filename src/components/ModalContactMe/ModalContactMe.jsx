@@ -29,14 +29,21 @@ export const ModalContactMe = () => {
         box.classList.contains('torighttwo') ||
         box.classList.contains('tolefttwo')
       ) {
-        element.classList.add('ModalAboutMe_ishidden__5OpwD');
-        backdrop.classList.add('ModalAboutMe_ishidden__5OpwD');
-        backdrop.classList.remove('ContactMe_contactMeCloseContact__UVuMg');
-        // rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
-        // leftSide.classList.remove('Experience_experienceOpen__BM6ps');
-        // topSide.classList.remove('box__face--topOpen');
-        // bottomSide.classList.remove('box__face--bottomOpen');
-        // frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
+        bottomSide.classList.add('box__face--bottomCloseContact');
+        bottomSide.classList.remove('box__face--bottomOpenContact');
+        topSide.classList.add('box__face--topCloseContact');
+        topSide.classList.remove('box__face--topOpenContact');
+        leftSide.classList.add('Experience_leftSideCloseContact__fHPr+');
+        leftSide.classList.remove('Experience_leftSideOpenContact__8qQe1');
+        rightSide.classList.remove(
+          'Portfolio_rightSideOpenPortfolioContact__k4rNa'
+        );
+        rightSide.classList.add(
+          'Portfolio_rightSideClosePortfolioContact__AvV+Z'
+        );
+        element.classList.add('ModalContactMe_ishidden__SfNTL');
+        backSide.classList.remove('ContactMe_contactMeOpenContact__mrvlU');
+        backSide.classList.add('ContactMe_contactMeCloseContact__UVuMg');
       }
     };
 
@@ -63,13 +70,6 @@ export const ModalContactMe = () => {
             topSide.classList.remove('box__face--topCloseContact');
             bottomSide.classList.add('box__face--bottomOpenContact');
             bottomSide.classList.remove('box__face--bottomCloseContact');
-
-            // topSide.classList.remove('box__face--topCLosePortfolio');
-            // frontSide.classList.remove(
-            //   'FrontAboutMe_frontSideClosePortfolio__KIc2U'
-            // );
-            // bottomSide.classList.remove('box__face--bottomClosePortfolio');
-            // frontSide.classList.add('FrontAboutMe_frontSideOpen__zZ41Z');
           }
           break;
         case 27:
@@ -92,11 +92,6 @@ export const ModalContactMe = () => {
             element.classList.add('ModalContactMe_ishidden__SfNTL');
             backSide.classList.remove('ContactMe_contactMeOpenContact__mrvlU');
             backSide.classList.add('ContactMe_contactMeCloseContact__UVuMg');
-
-            // rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
-            // topSide.classList.remove('box__face--topOpen');
-            // bottomSide.classList.remove('box__face--bottomOpen');
-            // frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
           }
           break;
         default:

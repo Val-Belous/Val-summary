@@ -32,9 +32,11 @@ export const ModalAboutMe = () => {
         box.classList.contains('default') ||
         box.classList.contains('toleftfour')
       ) {
-        backdrop.classList.add('ModalAboutMe_ishidden__5OpwD');
+        rightSide.classList.remove(
+          'Portfolio_rightSideClosePortfolioContact__AvV+Z'
+        );
         rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
-        leftSide.classList.remove('Experience_experienceOpen__BM6ps');
+        leftSide.classList.remove('Experience_leftSideOpen__ONILW');
         topSide.classList.remove('box__face--topOpen');
         bottomSide.classList.remove('box__face--bottomOpen');
         frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');

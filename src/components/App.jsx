@@ -23,6 +23,9 @@ export const App = () => {
       const experienceBackdrop = document.querySelector(
         '.ModalExperience_backdropExperience__q53Ru'
       );
+      const contactBackdrop = document.querySelector(
+        '.ModalContactMe_backdropContactMe__MDbbj'
+      );
 
       if (
         !aboutMeBackdrop.classList.contains('ModalAboutMe_ishidden__5OpwD') ||
@@ -30,8 +33,9 @@ export const App = () => {
           'PortfolioModal_ishidden__WK0Ud'
         ) ||
         !experienceBackdrop.classList.contains(
-          'ModalExperience_backdropExperience__q53Ru'
-        )
+          'ModalExperience_ishidden__I1iD2'
+        ) ||
+        !contactBackdrop.classList.contains('ModalContactMe_ishidden__SfNTL')
       ) {
         return;
       }
