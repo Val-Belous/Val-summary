@@ -28,12 +28,14 @@ export const App = () => {
       );
 
       if (
-        (!aboutMeBackdrop &&
-          aboutMeBackdrop.classList.contains('ModalAboutMe_ishidden__5OpwD')) ||
-        (!portfolioBackdrop &&
-          portfolioBackdrop.classList.contains(
-            'PortfolioModal_ishidden__WK0Ud'
-          )) ||
+        !(
+          aboutMeBackdrop &&
+          aboutMeBackdrop.classList.contains('ModalAboutMe_ishidden__5OpwD')
+        ) ||
+        !(
+          portfolioBackdrop &&
+          portfolioBackdrop.classList.contains('PortfolioModal_ishidden__WK0Ud')
+        ) ||
         !(
           experienceBackdrop &&
           experienceBackdrop.classList.contains(
