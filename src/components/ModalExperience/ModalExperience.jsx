@@ -46,8 +46,10 @@ export const ModalExperience = () => {
           );
         leftSide &&
           leftSide.classList.remove('Experience_leftSideOpenExp__qOlkK');
-        backSide.classList.remove('ContactMe_contactMeOpenExp__hXIey');
-        backSide.classList.add('ContactMe_contactMeCloseExp__wYUv1');
+        backSide &&
+          backSide.classList.remove('ContactMe_contactMeOpenExp__hXIey');
+        backSide &&
+          backSide.classList.add('ContactMe_contactMeCloseExp__wYUv1');
         element.classList.add('ModalExperience_ishidden__I1iD2');
         leftSide &&
           leftSide.classList.add('Experience_leftSideCloseExp__Lg-qj');
@@ -72,15 +74,21 @@ export const ModalExperience = () => {
               rightSide.classList.remove(
                 'Portfolio_rightSideClosePortfolioContact__AvV+Z'
               );
-            backSide.classList.remove('ContactMe_contactMeCloseContact__UVuMg');
+            backSide &&
+              backSide.classList.remove(
+                'ContactMe_contactMeCloseContact__UVuMg'
+              );
             element.classList.remove('ModalExperience_ishidden__I1iD2');
             leftSide &&
               leftSide.classList.add('Experience_leftSideOpenExp__qOlkK');
             leftSide &&
               leftSide.classList.remove('Experience_leftSideCloseExp__Lg-qj');
-            backSide.classList.add('ContactMe_contactMeOpenExp__hXIey');
-            backSide.classList.remove('ContactMe_contactMeCloseExp__wYUv1');
-            backSide.classList.remove('ContactMe_contactMeClose__mMKHM');
+            backSide &&
+              backSide.classList.add('ContactMe_contactMeOpenExp__hXIey');
+            backSide &&
+              backSide.classList.remove('ContactMe_contactMeCloseExp__wYUv1');
+            backSide &&
+              backSide.classList.remove('ContactMe_contactMeClose__mMKHM');
             frontSide &&
               frontSide.classList.add(
                 'FrontAboutMe_frontSideOpenPortfolioExp__OwmDW'
@@ -116,8 +124,10 @@ export const ModalExperience = () => {
               );
             leftSide &&
               leftSide.classList.remove('Experience_leftSideOpenExp__qOlkK');
-            backSide.classList.remove('ContactMe_contactMeOpenExp__hXIey');
-            backSide.classList.add('ContactMe_contactMeCloseExp__wYUv1');
+            backSide &&
+              backSide.classList.remove('ContactMe_contactMeOpenExp__hXIey');
+            backSide &&
+              backSide.classList.add('ContactMe_contactMeCloseExp__wYUv1');
             element.classList.add('ModalExperience_ishidden__I1iD2');
             leftSide &&
               leftSide.classList.add('Experience_leftSideCloseExp__Lg-qj');

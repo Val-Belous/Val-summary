@@ -35,7 +35,7 @@ export const PortfolioModal = () => {
         box.classList.contains('toleftthree')
       ) {
         topSide && topSide.classList.remove('box__face--topOpenPortfolio');
-        backSide.classList.remove('ContactMe_contactMeOpen__aZkxe');
+        backSide && backSide.classList.remove('ContactMe_contactMeOpen__aZkxe');
         rightSide &&
           rightSide.classList.remove('Portfolio_rightSideOpenPortfolio__07BAa');
         bottomSide &&
@@ -55,7 +55,7 @@ export const PortfolioModal = () => {
             'FrontAboutMe_frontSideClosePortfolio__KIc2U'
           );
         topSide && topSide.classList.add('box__face--topCLosePortfolio');
-        backSide.classList.add('ContactMe_contactMeClose__mMKHM');
+        backSide && backSide.classList.add('ContactMe_contactMeClose__mMKHM');
         bottomSide &&
           bottomSide.classList.add('box__face--bottomClosePortfolio');
         element.classList.add('PortfolioModal_ishidden__WK0Ud');
@@ -81,7 +81,10 @@ export const PortfolioModal = () => {
               rightSide.classList.remove(
                 'Portfolio_rightSideClosePortfolioContact__AvV+Z'
               );
-            backSide.classList.remove('ContactMe_contactMeCloseContact__UVuMg');
+            backSide &&
+              backSide.classList.remove(
+                'ContactMe_contactMeCloseContact__UVuMg'
+              );
             frontSide &&
               frontSide.classList.remove(
                 'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
@@ -89,13 +92,16 @@ export const PortfolioModal = () => {
             bottomSide &&
               bottomSide.classList.remove('box__face--bottomCloseExp');
             topSide && topSide.classList.remove('box__face--topCloseExp');
-            backSide.classList.remove('ContactMe_contactMeCloseExp__wYUv1');
+            backSide &&
+              backSide.classList.remove('ContactMe_contactMeCloseExp__wYUv1');
             leftSide &&
               leftSide.classList.remove('Experience_leftSideCloseExp__Lg-qj');
             topSide && topSide.classList.remove('box__face--topCLosePortfolio');
             topSide && topSide.classList.add('box__face--topOpenPortfolio');
-            backSide.classList.remove('ContactMe_contactMeClose__mMKHM');
-            backSide.classList.add('ContactMe_contactMeOpen__aZkxe');
+            backSide &&
+              backSide.classList.remove('ContactMe_contactMeClose__mMKHM');
+            backSide &&
+              backSide.classList.add('ContactMe_contactMeOpen__aZkxe');
             element.classList.remove('PortfolioModal_ishidden__WK0Ud');
             bottomSide &&
               bottomSide.classList.add('box__face--bottomOpenPortfolio');
@@ -125,7 +131,8 @@ export const PortfolioModal = () => {
             box.classList.contains('toleftthree')
           ) {
             topSide && topSide.classList.remove('box__face--topOpenPortfolio');
-            backSide.classList.remove('ContactMe_contactMeOpen__aZkxe');
+            backSide &&
+              backSide.classList.remove('ContactMe_contactMeOpen__aZkxe');
             rightSide &&
               rightSide.classList.remove(
                 'Portfolio_rightSideOpenPortfolio__07BAa'
@@ -147,7 +154,8 @@ export const PortfolioModal = () => {
                 'FrontAboutMe_frontSideClosePortfolio__KIc2U'
               );
             topSide && topSide.classList.add('box__face--topCLosePortfolio');
-            backSide.classList.add('ContactMe_contactMeClose__mMKHM');
+            backSide &&
+              backSide.classList.add('ContactMe_contactMeClose__mMKHM');
             bottomSide &&
               bottomSide.classList.add('box__face--bottomClosePortfolio');
             element.classList.add('PortfolioModal_ishidden__WK0Ud');

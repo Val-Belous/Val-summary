@@ -62,7 +62,10 @@ export const ModalAboutMe = () => {
               leftSide.classList.remove(
                 'Experience_leftSideCloseContact__fHPr+'
               );
-            backSide.classList.remove('ContactMe_contactMeCloseContact__UVuMg');
+            backSide &&
+              backSide.classList.remove(
+                'ContactMe_contactMeCloseContact__UVuMg'
+              );
             frontSide &&
               frontSide.classList.remove(
                 'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'

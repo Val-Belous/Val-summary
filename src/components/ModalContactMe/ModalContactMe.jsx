@@ -47,8 +47,10 @@ export const ModalContactMe = () => {
             'Portfolio_rightSideClosePortfolioContact__AvV+Z'
           );
         element.classList.add('ModalContactMe_ishidden__SfNTL');
-        backSide.classList.remove('ContactMe_contactMeOpenContact__mrvlU');
-        backSide.classList.add('ContactMe_contactMeCloseContact__UVuMg');
+        backSide &&
+          backSide.classList.remove('ContactMe_contactMeOpenContact__mrvlU');
+        backSide &&
+          backSide.classList.add('ContactMe_contactMeCloseContact__UVuMg');
       }
     };
 
@@ -60,9 +62,14 @@ export const ModalContactMe = () => {
             box.classList.contains('tolefttwo')
           ) {
             element.classList.remove('ModalContactMe_ishidden__SfNTL');
-            backSide.classList.add('ContactMe_contactMeOpenContact__mrvlU');
-            backSide.classList.remove('ContactMe_contactMeCloseContact__UVuMg');
-            backSide.classList.remove('ContactMe_contactMeClose__mMKHM');
+            backSide &&
+              backSide.classList.add('ContactMe_contactMeOpenContact__mrvlU');
+            backSide &&
+              backSide.classList.remove(
+                'ContactMe_contactMeCloseContact__UVuMg'
+              );
+            backSide &&
+              backSide.classList.remove('ContactMe_contactMeClose__mMKHM');
             rightSide &&
               rightSide.classList.add(
                 'Portfolio_rightSideOpenPortfolioContact__k4rNa'
@@ -111,8 +118,12 @@ export const ModalContactMe = () => {
                 'Portfolio_rightSideClosePortfolioContact__AvV+Z'
               );
             element.classList.add('ModalContactMe_ishidden__SfNTL');
-            backSide.classList.remove('ContactMe_contactMeOpenContact__mrvlU');
-            backSide.classList.add('ContactMe_contactMeCloseContact__UVuMg');
+            backSide &&
+              backSide.classList.remove(
+                'ContactMe_contactMeOpenContact__mrvlU'
+              );
+            backSide &&
+              backSide.classList.add('ContactMe_contactMeCloseContact__UVuMg');
           }
           break;
         default:
