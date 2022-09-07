@@ -43,7 +43,7 @@ export const App = () => {
     };
     let element = ref.current;
 
-    window.addEventListener('keydown', onKeyPress);
+    window && window.addEventListener('keydown', onKeyPress);
     return () => {
       window.removeEventListener('keydown', onKeyPress);
     };

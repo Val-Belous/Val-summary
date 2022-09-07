@@ -9,7 +9,7 @@ export const PortfolioModal = () => {
 
   useEffect(() => {
     const backdrop = document.querySelector('.PortfolioModal_backdrop__XXUZr');
-    backdrop.addEventListener('click', onHandlerClick);
+    backdrop && backdrop.addEventListener('click', onHandlerClick);
 
     function onHandlerClick(evt) {
       if (evt.target === evt.currentTarget) {
@@ -127,7 +127,7 @@ export const PortfolioModal = () => {
     };
 
     const element = ref.current;
-    window.addEventListener('keydown', onKeyPress);
+    window && window.addEventListener('keydown', onKeyPress);
     return () => {
       window.removeEventListener('keydown', onKeyPress);
     };

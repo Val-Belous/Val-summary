@@ -7,7 +7,7 @@ export const ModalExperience = () => {
     const backdrop = document.querySelector(
       '.ModalExperience_backdropExperience__q53Ru'
     );
-    backdrop.addEventListener('click', onHandlerClick);
+    backdrop && backdrop.addEventListener('click', onHandlerClick);
 
     function onHandlerClick(evt) {
       if (evt.target === evt.currentTarget) {
@@ -110,7 +110,7 @@ export const ModalExperience = () => {
     };
 
     const element = ref.current;
-    window.addEventListener('keydown', onKeyPress);
+    window && window.addEventListener('keydown', onKeyPress);
     return () => {
       window.removeEventListener('keydown', onKeyPress);
     };

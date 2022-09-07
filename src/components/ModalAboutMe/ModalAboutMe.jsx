@@ -6,7 +6,7 @@ export const ModalAboutMe = () => {
 
   useEffect(() => {
     const backdrop = document.querySelector('.ModalAboutMe_backdrop__v1zHC');
-    backdrop.addEventListener('click', onHandlerClick);
+    backdrop && backdrop.addEventListener('click', onHandlerClick);
 
     function onHandlerClick(evt) {
       if (evt.target === evt.currentTarget) {
@@ -98,7 +98,7 @@ export const ModalAboutMe = () => {
     };
 
     const element = ref.current;
-    window.addEventListener('keydown', onKeyPress);
+    window && window.addEventListener('keydown', onKeyPress);
     return () => {
       window.removeEventListener('keydown', onKeyPress);
     };

@@ -8,7 +8,7 @@ export const FrontAboutMe = () => {
     const frontSide = document.querySelector(
       '.FrontAboutMe_containerFront__-xEOJ'
     );
-    frontSide.addEventListener('click', openFrontSide);
+    frontSide && frontSide.addEventListener('click', openFrontSide);
 
     function openFrontSide(evt) {
       if (evt.target !== evt.currentTarget) {

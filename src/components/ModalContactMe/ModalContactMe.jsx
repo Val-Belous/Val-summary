@@ -7,7 +7,7 @@ export const ModalContactMe = () => {
     const backdrop = document.querySelector(
       '.ModalContactMe_backdropContactMe__MDbbj'
     );
-    backdrop.addEventListener('click', onHandlerClick);
+    backdrop && backdrop.addEventListener('click', onHandlerClick);
 
     function onHandlerClick(evt) {
       if (evt.target === evt.currentTarget) {
@@ -100,7 +100,7 @@ export const ModalContactMe = () => {
     };
 
     const element = ref.current;
-    window.addEventListener('keydown', onKeyPress);
+    window && window.addEventListener('keydown', onKeyPress);
     return () => {
       window.removeEventListener('keydown', onKeyPress);
     };
