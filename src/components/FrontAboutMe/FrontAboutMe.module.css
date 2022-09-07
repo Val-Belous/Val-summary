@@ -63,6 +63,30 @@
     transform: rotateY(0deg) translateZ(var(--cube-half));
   }
 }
+.frontSideOpenPortfolioExp {
+  transform: rotateY(90deg) translateZ(var(--cube-half));
+  animation: frontSideOpenPortfolioExp 0.5s linear;
+}
+@keyframes frontSideOpenPortfolioExp {
+  0% {
+    transform: rotateY(0deg) translateZ(var(--cube-half));
+  }
+  100% {
+    transform: rotateY(90deg) translateZ(var(--cube-half));
+  }
+}
+.frontSideClosePortfolioExp {
+  transform: rotateY(0deg) translateZ(var(--cube-half));
+  animation: frontSideClosePortfolioExp 0.5s linear;
+}
+@keyframes frontSideClosePortfolioExp {
+  0% {
+    transform: rotateY(90deg) translateZ(var(--cube-half));
+  }
+  100% {
+    transform: rotateY(0deg) translateZ(var(--cube-half));
+  }
+}
 
 .mainTitle {
   font-weight: 900;

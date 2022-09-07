@@ -45,7 +45,6 @@
   transform: rotateY(90deg) translateZ(-249px);
   animation: rightSideOpenPortfolio 0.5s linear;
 }
-
 @keyframes rightSideOpenPortfolio {
   0% {
     transform: rotateY(90deg) translateZ(var(--cube-half));
@@ -54,14 +53,39 @@
     transform: rotateY(90deg) translateZ(-249px);
   }
 }
+
 .rightSideClosePortfolio {
   transform: rotateY(90deg) translateZ(var(--cube-half));
   animation: rightSideClosePortfolio 0.5s linear;
 }
-
 @keyframes rightSideClosePortfolio {
   0% {
     transform: rotateY(90deg) translateZ(-250px);
+  }
+  100% {
+    transform: rotateY(90deg) translateZ(var(--cube-half));
+  }
+}
+
+.rightSideOpenPortfolioContact {
+  transform: rotateY(0deg) translateZ(var(--cube-half));
+  animation: rightSideOpenPortfolioContact 0.5s linear;
+}
+@keyframes rightSideOpenPortfolioContact {
+  0% {
+    transform: rotateY(90deg) translateZ(var(--cube-half));
+  }
+  100% {
+    transform: rotateY(0deg) translateZ(var(--cube-half));
+  }
+}
+.rightSideClosePortfolioContact {
+  transform: rotateY(90deg) translateZ(var(--cube-half));
+  animation: rightSideClosePortfolioContact 0.5s linear;
+}
+@keyframes rightSideClosePortfolioContact {
+  0% {
+    transform: rotateY(0deg) translateZ(var(--cube-half));
   }
   100% {
     transform: rotateY(90deg) translateZ(var(--cube-half));

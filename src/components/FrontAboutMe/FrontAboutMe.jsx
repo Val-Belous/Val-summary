@@ -19,7 +19,8 @@ export const FrontAboutMe = () => {
 
   return (
     <div className={styles.containerFront}>
-      <span className={styles.frontSideClosePortfolio}></span>
+      <span className={styles.frontSideClosePortfolioExp}></span>
+      <span className={styles.frontSideOpenPortfolioExp}></span>
       <h2 className={styles.mainTitle}>
         Hello <br /> I'm Val
       </h2>
@@ -27,3 +28,6 @@ export const FrontAboutMe = () => {
     </div>
   );
 };
+
+// FrontAboutMe_frontSideClosePortfolioExp__dkVzp
+// FrontAboutMe_frontSideOpenPortfolioExp__OwmDW

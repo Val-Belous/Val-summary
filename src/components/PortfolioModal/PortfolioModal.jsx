@@ -61,6 +61,18 @@ export const PortfolioModal = () => {
             box.classList.contains('torightone') ||
             box.classList.contains('toleftthree')
           ) {
+            bottomSide.classList.remove('box__face--bottomCloseContact');
+            topSide.classList.remove('box__face--topCloseContact');
+            leftSide.classList.remove('Experience_leftSideCloseContact__fHPr+');
+            rightSide.classList.remove(
+              'Portfolio_rightSideClosePortfolioContact__AvV+Z'
+            );
+            backSide.classList.remove('ContactMe_contactMeCloseContact__UVuMg');
+            frontSide.classList.remove(
+              'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
+            );
+            bottomSide.classList.remove('box__face--bottomCloseExp');
+            topSide.classList.remove('box__face--topCloseExp');
             backSide.classList.remove('ContactMe_contactMeCloseExp__wYUv1');
             leftSide.classList.remove('Experience_leftSideCloseExp__Lg-qj');
             topSide.classList.remove('box__face--topCLosePortfolio');

@@ -20,25 +20,34 @@ export const ModalExperience = () => {
     const frontSide = document.querySelector(
       '.FrontAboutMe_containerFront__-xEOJ'
     );
-    const rightSide = document.querySelector('.Portfolio_container__hiJ0s');
     const topSide = document.querySelector('.box__face--top');
     const bottomSide = document.querySelector('.box__face--bottom');
     const backSide = document.querySelector(
       '.ContactMe_containerContactMe__kjOIz'
     );
+    const rightSide = document.querySelector('.Portfolio_container__hiJ0s');
 
     const closeBackdrop = () => {
       if (
         box.classList.contains('toleftone') ||
         box.classList.contains('torightthree')
       ) {
-        // backdrop.classList.add('ModalAboutMe_ishidden__5OpwD');
-        // rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
-        // leftSide.classList.remove('Experience_experienceOpen__BM6ps');
-        // topSide.classList.remove('box__face--topOpen');
-        // bottomSide.classList.remove('box__face--bottomOpen');
-        // frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
-        // element.classList.add('ModalExperience_ishidden__I1iD2');
+        backSide.classList.remove('ContactMe_contactMeCloseContact__UVuMg');
+        bottomSide.classList.add('box__face--bottomCloseExp');
+        bottomSide.classList.remove('box__face--bottomOpenExp');
+        topSide.classList.remove('box__face--topOpenExp');
+        topSide.classList.add('box__face--topCloseExp');
+        frontSide.classList.remove(
+          'FrontAboutMe_frontSideOpenPortfolioExp__OwmDW'
+        );
+        frontSide.classList.add(
+          'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
+        );
+        leftSide.classList.remove('Experience_leftSideOpenExp__qOlkK');
+        backSide.classList.remove('ContactMe_contactMeOpenExp__hXIey');
+        backSide.classList.add('ContactMe_contactMeCloseExp__wYUv1');
+        element.classList.add('ModalExperience_ishidden__I1iD2');
+        leftSide.classList.add('Experience_leftSideCloseExp__Lg-qj');
       }
     };
 
@@ -49,21 +58,29 @@ export const ModalExperience = () => {
             box.classList.contains('toleftone') ||
             box.classList.contains('torightthree')
           ) {
+            bottomSide.classList.remove('box__face--bottomCloseContact');
+            topSide.classList.remove('box__face--topCloseContact');
+            leftSide.classList.remove('Experience_leftSideCloseContact__fHPr+');
+            rightSide.classList.remove(
+              'Portfolio_rightSideClosePortfolioContact__AvV+Z'
+            );
+            backSide.classList.remove('ContactMe_contactMeCloseContact__UVuMg');
             element.classList.remove('ModalExperience_ishidden__I1iD2');
             leftSide.classList.add('Experience_leftSideOpenExp__qOlkK');
             leftSide.classList.remove('Experience_leftSideCloseExp__Lg-qj');
             backSide.classList.add('ContactMe_contactMeOpenExp__hXIey');
             backSide.classList.remove('ContactMe_contactMeCloseExp__wYUv1');
             backSide.classList.remove('ContactMe_contactMeClose__mMKHM');
-            // topSide.classList.remove('box__face--topCLosePortfolio');
-            // frontSide.classList.remove(
-            //   'FrontAboutMe_frontSideClosePortfolio__KIc2U'
-            // );
-            // bottomSide.classList.remove('box__face--bottomClosePortfolio');
-            // topSide.classList.add('box__face--topOpen');
-            // bottomSide.classList.add('box__face--bottomOpen');
-            // frontSide.classList.add('FrontAboutMe_frontSideOpen__zZ41Z');
-            // rightSide.classList.remove('ContactMe_contactMeCloseExp__wYUv1');
+            frontSide.classList.add(
+              'FrontAboutMe_frontSideOpenPortfolioExp__OwmDW'
+            );
+            frontSide.classList.remove(
+              'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
+            );
+            topSide.classList.add('box__face--topOpenExp');
+            topSide.classList.remove('box__face--topCloseExp');
+            bottomSide.classList.add('box__face--bottomOpenExp');
+            bottomSide.classList.remove('box__face--bottomCloseExp');
           }
           break;
         case 27:
@@ -71,17 +88,21 @@ export const ModalExperience = () => {
             box.classList.contains('toleftone') ||
             box.classList.contains('torightthree')
           ) {
+            bottomSide.classList.add('box__face--bottomCloseExp');
+            bottomSide.classList.remove('box__face--bottomOpenExp');
+            topSide.classList.remove('box__face--topOpenExp');
+            topSide.classList.add('box__face--topCloseExp');
+            frontSide.classList.remove(
+              'FrontAboutMe_frontSideOpenPortfolioExp__OwmDW'
+            );
+            frontSide.classList.add(
+              'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
+            );
             leftSide.classList.remove('Experience_leftSideOpenExp__qOlkK');
             backSide.classList.remove('ContactMe_contactMeOpenExp__hXIey');
             backSide.classList.add('ContactMe_contactMeCloseExp__wYUv1');
             element.classList.add('ModalExperience_ishidden__I1iD2');
             leftSide.classList.add('Experience_leftSideCloseExp__Lg-qj');
-
-            // rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
-            // leftSide.classList.remove('Experience_experienceOpen__BM6ps');
-            // topSide.classList.remove('box__face--topOpen');
-            // bottomSide.classList.remove('box__face--bottomOpen');
-            // frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
           }
           break;
         default:

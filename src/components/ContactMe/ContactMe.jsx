@@ -16,7 +16,8 @@ export const ContactMe = () => {
   // }, []);
   return (
     <div className={styles.containerContactMe}>
-      <span className={styles.contactMeCloseExp}></span>
+      <span className={styles.contactMeOpenContact}></span>
+      <span className={styles.contactMeCloseContact}></span>
       <h2>Contact Me</h2>
     </div>
   );

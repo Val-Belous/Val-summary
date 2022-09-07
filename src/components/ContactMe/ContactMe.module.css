@@ -67,3 +67,28 @@
     transform: rotateY(180deg) translateZ(var(--cube-half));
   }
 }
+
+.contactMeOpenContact {
+  transform: rotateY(180deg) translateZ(-250px);
+  animation: contactMeOpenContact 0.5s linear;
+}
+@keyframes contactMeOpenContact {
+  0% {
+    transform: rotateY(180deg) translateZ(var(--cube-half));
+  }
+  100% {
+    transform: rotateY(180deg) translateZ(-249px);
+  }
+}
+.contactMeCloseContact {
+  transform: rotateY(180deg) translateZ(var(--cube-half));
+  animation: contactMeCloseContact 0.5s linear;
+}
+@keyframes contactMeCloseContact {
+  0% {
+    transform: rotateY(180deg) translateZ(-249px);
+  }
+  100% {
+    transform: rotateY(180deg) translateZ(var(--cube-half));
+  }
+}

@@ -16,7 +16,8 @@ export const Experience = () => {
   // }, []);
   return (
     <div className={styles.containerLeft}>
-      <span className={styles.leftSideCloseExp}></span>
+      <span className={styles.leftSideOpenContact}></span>
+      <span className={styles.leftSideCloseContact}></span>
       <h2>Experience</h2>
     </div>
   );
