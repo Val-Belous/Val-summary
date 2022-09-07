@@ -106,7 +106,11 @@ export const ModalAboutMe = () => {
 
   return (
     <>
-      <div className={`${styles.backdrop} ${styles.ishidden}`} ref={ref}>
+      <div
+        id="modalAboutMe"
+        className={`${styles.backdrop} ${styles.ishidden}`}
+        ref={ref}
+      >
         <div className={styles.modal}>
           <div className={styles.box}>
             <div className={styles.textContainer}>

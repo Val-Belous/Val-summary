@@ -16,9 +16,7 @@ export const App = () => {
   useEffect(() => {
     let element = ref.current;
     const onKeyPress = evt => {
-      const aboutMeBackdrop = document.querySelector(
-        '.ModalAboutMe_backdrop__v1zHC'
-      );
+      const aboutMeBackdrop = document.querySelector('#modalAboutMe');
       const portfolioBackdrop = document.querySelector(
         '.PortfolioModal_backdrop__XXUZr'
       );
