@@ -32,21 +32,25 @@ export const ModalExperience = () => {
         box.classList.contains('toleftone') ||
         box.classList.contains('torightthree')
       ) {
-        bottomSide.classList.add('box__face--bottomCloseExp');
-        bottomSide.classList.remove('box__face--bottomOpenExp');
-        topSide.classList.remove('box__face--topOpenExp');
-        topSide.classList.add('box__face--topCloseExp');
-        frontSide.classList.remove(
-          'FrontAboutMe_frontSideOpenPortfolioExp__OwmDW'
-        );
-        frontSide.classList.add(
-          'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
-        );
-        leftSide.classList.remove('Experience_leftSideOpenExp__qOlkK');
+        bottomSide && bottomSide.classList.add('box__face--bottomCloseExp');
+        bottomSide && bottomSide.classList.remove('box__face--bottomOpenExp');
+        topSide && topSide.classList.remove('box__face--topOpenExp');
+        topSide && topSide.classList.add('box__face--topCloseExp');
+        frontSide &&
+          frontSide.classList.remove(
+            'FrontAboutMe_frontSideOpenPortfolioExp__OwmDW'
+          );
+        frontSide &&
+          frontSide.classList.add(
+            'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
+          );
+        leftSide &&
+          leftSide.classList.remove('Experience_leftSideOpenExp__qOlkK');
         backSide.classList.remove('ContactMe_contactMeOpenExp__hXIey');
         backSide.classList.add('ContactMe_contactMeCloseExp__wYUv1');
         element.classList.add('ModalExperience_ishidden__I1iD2');
-        leftSide.classList.add('Experience_leftSideCloseExp__Lg-qj');
+        leftSide &&
+          leftSide.classList.add('Experience_leftSideCloseExp__Lg-qj');
       }
     };
 
@@ -57,29 +61,39 @@ export const ModalExperience = () => {
             box.classList.contains('toleftone') ||
             box.classList.contains('torightthree')
           ) {
-            bottomSide.classList.remove('box__face--bottomCloseContact');
-            topSide.classList.remove('box__face--topCloseContact');
-            leftSide.classList.remove('Experience_leftSideCloseContact__fHPr+');
-            rightSide.classList.remove(
-              'Portfolio_rightSideClosePortfolioContact__AvV+Z'
-            );
+            bottomSide &&
+              bottomSide.classList.remove('box__face--bottomCloseContact');
+            topSide && topSide.classList.remove('box__face--topCloseContact');
+            leftSide &&
+              leftSide.classList.remove(
+                'Experience_leftSideCloseContact__fHPr+'
+              );
+            rightSide &&
+              rightSide.classList.remove(
+                'Portfolio_rightSideClosePortfolioContact__AvV+Z'
+              );
             backSide.classList.remove('ContactMe_contactMeCloseContact__UVuMg');
             element.classList.remove('ModalExperience_ishidden__I1iD2');
-            leftSide.classList.add('Experience_leftSideOpenExp__qOlkK');
-            leftSide.classList.remove('Experience_leftSideCloseExp__Lg-qj');
+            leftSide &&
+              leftSide.classList.add('Experience_leftSideOpenExp__qOlkK');
+            leftSide &&
+              leftSide.classList.remove('Experience_leftSideCloseExp__Lg-qj');
             backSide.classList.add('ContactMe_contactMeOpenExp__hXIey');
             backSide.classList.remove('ContactMe_contactMeCloseExp__wYUv1');
             backSide.classList.remove('ContactMe_contactMeClose__mMKHM');
-            frontSide.classList.add(
-              'FrontAboutMe_frontSideOpenPortfolioExp__OwmDW'
-            );
-            frontSide.classList.remove(
-              'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
-            );
-            topSide.classList.add('box__face--topOpenExp');
-            topSide.classList.remove('box__face--topCloseExp');
-            bottomSide.classList.add('box__face--bottomOpenExp');
-            bottomSide.classList.remove('box__face--bottomCloseExp');
+            frontSide &&
+              frontSide.classList.add(
+                'FrontAboutMe_frontSideOpenPortfolioExp__OwmDW'
+              );
+            frontSide &&
+              frontSide.classList.remove(
+                'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
+              );
+            topSide && topSide.classList.add('box__face--topOpenExp');
+            topSide && topSide.classList.remove('box__face--topCloseExp');
+            bottomSide && bottomSide.classList.add('box__face--bottomOpenExp');
+            bottomSide &&
+              bottomSide.classList.remove('box__face--bottomCloseExp');
           }
           break;
         case 27:
@@ -87,21 +101,26 @@ export const ModalExperience = () => {
             box.classList.contains('toleftone') ||
             box.classList.contains('torightthree')
           ) {
-            bottomSide.classList.add('box__face--bottomCloseExp');
-            bottomSide.classList.remove('box__face--bottomOpenExp');
-            topSide.classList.remove('box__face--topOpenExp');
-            topSide.classList.add('box__face--topCloseExp');
-            frontSide.classList.remove(
-              'FrontAboutMe_frontSideOpenPortfolioExp__OwmDW'
-            );
-            frontSide.classList.add(
-              'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
-            );
-            leftSide.classList.remove('Experience_leftSideOpenExp__qOlkK');
+            bottomSide && bottomSide.classList.add('box__face--bottomCloseExp');
+            bottomSide &&
+              bottomSide.classList.remove('box__face--bottomOpenExp');
+            topSide && topSide.classList.remove('box__face--topOpenExp');
+            topSide && topSide.classList.add('box__face--topCloseExp');
+            frontSide &&
+              frontSide.classList.remove(
+                'FrontAboutMe_frontSideOpenPortfolioExp__OwmDW'
+              );
+            frontSide &&
+              frontSide.classList.add(
+                'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
+              );
+            leftSide &&
+              leftSide.classList.remove('Experience_leftSideOpenExp__qOlkK');
             backSide.classList.remove('ContactMe_contactMeOpenExp__hXIey');
             backSide.classList.add('ContactMe_contactMeCloseExp__wYUv1');
             element.classList.add('ModalExperience_ishidden__I1iD2');
-            leftSide.classList.add('Experience_leftSideCloseExp__Lg-qj');
+            leftSide &&
+              leftSide.classList.add('Experience_leftSideCloseExp__Lg-qj');
           }
           break;
         default:

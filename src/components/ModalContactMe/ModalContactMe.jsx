@@ -29,18 +29,23 @@ export const ModalContactMe = () => {
         box.classList.contains('torighttwo') ||
         box.classList.contains('tolefttwo')
       ) {
-        bottomSide.classList.add('box__face--bottomCloseContact');
-        bottomSide.classList.remove('box__face--bottomOpenContact');
-        topSide.classList.add('box__face--topCloseContact');
-        topSide.classList.remove('box__face--topOpenContact');
-        leftSide.classList.add('Experience_leftSideCloseContact__fHPr+');
-        leftSide.classList.remove('Experience_leftSideOpenContact__8qQe1');
-        rightSide.classList.remove(
-          'Portfolio_rightSideOpenPortfolioContact__k4rNa'
-        );
-        rightSide.classList.add(
-          'Portfolio_rightSideClosePortfolioContact__AvV+Z'
-        );
+        bottomSide && bottomSide.classList.add('box__face--bottomCloseContact');
+        bottomSide &&
+          bottomSide.classList.remove('box__face--bottomOpenContact');
+        topSide && topSide.classList.add('box__face--topCloseContact');
+        topSide && topSide.classList.remove('box__face--topOpenContact');
+        leftSide &&
+          leftSide.classList.add('Experience_leftSideCloseContact__fHPr+');
+        leftSide &&
+          leftSide.classList.remove('Experience_leftSideOpenContact__8qQe1');
+        rightSide &&
+          rightSide.classList.remove(
+            'Portfolio_rightSideOpenPortfolioContact__k4rNa'
+          );
+        rightSide &&
+          rightSide.classList.add(
+            'Portfolio_rightSideClosePortfolioContact__AvV+Z'
+          );
         element.classList.add('ModalContactMe_ishidden__SfNTL');
         backSide.classList.remove('ContactMe_contactMeOpenContact__mrvlU');
         backSide.classList.add('ContactMe_contactMeCloseContact__UVuMg');
@@ -58,18 +63,26 @@ export const ModalContactMe = () => {
             backSide.classList.add('ContactMe_contactMeOpenContact__mrvlU');
             backSide.classList.remove('ContactMe_contactMeCloseContact__UVuMg');
             backSide.classList.remove('ContactMe_contactMeClose__mMKHM');
-            rightSide.classList.add(
-              'Portfolio_rightSideOpenPortfolioContact__k4rNa'
-            );
-            rightSide.classList.remove(
-              'Portfolio_rightSideClosePortfolioContact__AvV+Z'
-            );
-            leftSide.classList.add('Experience_leftSideOpenContact__8qQe1');
-            leftSide.classList.remove('Experience_leftSideCloseContact__fHPr+');
-            topSide.classList.add('box__face--topOpenContact');
-            topSide.classList.remove('box__face--topCloseContact');
-            bottomSide.classList.add('box__face--bottomOpenContact');
-            bottomSide.classList.remove('box__face--bottomCloseContact');
+            rightSide &&
+              rightSide.classList.add(
+                'Portfolio_rightSideOpenPortfolioContact__k4rNa'
+              );
+            rightSide &&
+              rightSide.classList.remove(
+                'Portfolio_rightSideClosePortfolioContact__AvV+Z'
+              );
+            leftSide &&
+              leftSide.classList.add('Experience_leftSideOpenContact__8qQe1');
+            leftSide &&
+              leftSide.classList.remove(
+                'Experience_leftSideCloseContact__fHPr+'
+              );
+            topSide && topSide.classList.add('box__face--topOpenContact');
+            topSide && topSide.classList.remove('box__face--topCloseContact');
+            bottomSide &&
+              bottomSide.classList.add('box__face--bottomOpenContact');
+            bottomSide &&
+              bottomSide.classList.remove('box__face--bottomCloseContact');
           }
           break;
         case 27:
@@ -77,18 +90,26 @@ export const ModalContactMe = () => {
             box.classList.contains('torighttwo') ||
             box.classList.contains('tolefttwo')
           ) {
-            bottomSide.classList.add('box__face--bottomCloseContact');
-            bottomSide.classList.remove('box__face--bottomOpenContact');
-            topSide.classList.add('box__face--topCloseContact');
-            topSide.classList.remove('box__face--topOpenContact');
-            leftSide.classList.add('Experience_leftSideCloseContact__fHPr+');
-            leftSide.classList.remove('Experience_leftSideOpenContact__8qQe1');
-            rightSide.classList.remove(
-              'Portfolio_rightSideOpenPortfolioContact__k4rNa'
-            );
-            rightSide.classList.add(
-              'Portfolio_rightSideClosePortfolioContact__AvV+Z'
-            );
+            bottomSide &&
+              bottomSide.classList.add('box__face--bottomCloseContact');
+            bottomSide &&
+              bottomSide.classList.remove('box__face--bottomOpenContact');
+            topSide && topSide.classList.add('box__face--topCloseContact');
+            topSide && topSide.classList.remove('box__face--topOpenContact');
+            leftSide &&
+              leftSide.classList.add('Experience_leftSideCloseContact__fHPr+');
+            leftSide &&
+              leftSide.classList.remove(
+                'Experience_leftSideOpenContact__8qQe1'
+              );
+            rightSide &&
+              rightSide.classList.remove(
+                'Portfolio_rightSideOpenPortfolioContact__k4rNa'
+              );
+            rightSide &&
+              rightSide.classList.add(
+                'Portfolio_rightSideClosePortfolioContact__AvV+Z'
+              );
             element.classList.add('ModalContactMe_ishidden__SfNTL');
             backSide.classList.remove('ContactMe_contactMeOpenContact__mrvlU');
             backSide.classList.add('ContactMe_contactMeCloseContact__UVuMg');

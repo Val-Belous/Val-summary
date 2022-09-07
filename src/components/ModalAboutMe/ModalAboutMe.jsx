@@ -28,18 +28,21 @@ export const ModalAboutMe = () => {
 
     const closeBackdrop = () => {
       if (
-        box.classList.contains('torightfour') ||
-        box.classList.contains('default') ||
-        box.classList.contains('toleftfour')
+        (box && box.classList.contains('torightfour')) ||
+        (box && box.classList.contains('default')) ||
+        (box && box.classList.contains('toleftfour'))
       ) {
-        rightSide.classList.remove(
-          'Portfolio_rightSideClosePortfolioContact__AvV+Z'
-        );
-        rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
-        leftSide.classList.remove('Experience_leftSideOpen__ONILW');
-        topSide.classList.remove('box__face--topOpen');
-        bottomSide.classList.remove('box__face--bottomOpen');
-        frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
+        rightSide &&
+          rightSide.classList.remove(
+            'Portfolio_rightSideClosePortfolioContact__AvV+Z'
+          );
+        rightSide &&
+          rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
+        leftSide && leftSide.classList.remove('Experience_leftSideOpen__ONILW');
+        topSide && topSide.classList.remove('box__face--topOpen');
+        bottomSide && bottomSide.classList.remove('box__face--bottomOpen');
+        frontSide &&
+          frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
         element.classList.add('ModalAboutMe_ishidden__5OpwD');
       }
     };
@@ -48,47 +51,63 @@ export const ModalAboutMe = () => {
       switch (evt.keyCode) {
         case 13:
           if (
-            box.classList.contains('torightfour') ||
-            box.classList.contains('default') ||
-            box.classList.contains('toleftfour')
+            (box && box.classList.contains('torightfour')) ||
+            (box && box.classList.contains('default')) ||
+            (box && box.classList.contains('toleftfour'))
           ) {
-            bottomSide.classList.remove('box__face--bottomCloseContact');
-            topSide.classList.remove('box__face--topCloseContact');
-            leftSide.classList.remove('Experience_leftSideCloseContact__fHPr+');
+            bottomSide &&
+              bottomSide.classList.remove('box__face--bottomCloseContact');
+            topSide && topSide.classList.remove('box__face--topCloseContact');
+            leftSide &&
+              leftSide.classList.remove(
+                'Experience_leftSideCloseContact__fHPr+'
+              );
             backSide.classList.remove('ContactMe_contactMeCloseContact__UVuMg');
-            frontSide.classList.remove(
-              'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
-            );
-            bottomSide.classList.remove('box__face--bottomCloseExp');
-            topSide.classList.remove('box__face--topCloseExp');
-            leftSide.classList.remove('Experience_leftSideCloseExp__Lg-qj');
-            topSide.classList.remove('box__face--topCLosePortfolio');
-            frontSide.classList.remove(
-              'FrontAboutMe_frontSideClosePortfolio__KIc2U'
-            );
-            bottomSide.classList.remove('box__face--bottomClosePortfolio');
+            frontSide &&
+              frontSide.classList.remove(
+                'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
+              );
+            bottomSide &&
+              bottomSide.classList.remove('box__face--bottomCloseExp');
+            topSide && topSide.classList.remove('box__face--topCloseExp');
+            leftSide &&
+              leftSide.classList.remove('Experience_leftSideCloseExp__Lg-qj');
+            topSide && topSide.classList.remove('box__face--topCLosePortfolio');
+            frontSide &&
+              frontSide.classList.remove(
+                'FrontAboutMe_frontSideClosePortfolio__KIc2U'
+              );
+            bottomSide &&
+              bottomSide.classList.remove('box__face--bottomClosePortfolio');
             element.classList.remove('ModalAboutMe_ishidden__5OpwD');
-            leftSide.classList.add('Experience_leftSideOpen__ONILW');
-            topSide.classList.add('box__face--topOpen');
-            bottomSide.classList.add('box__face--bottomOpen');
-            frontSide.classList.add('FrontAboutMe_frontSideOpen__zZ41Z');
-            rightSide.classList.add('Portfolio_rightSideOpen__-Niiy');
+            leftSide &&
+              leftSide.classList.add('Experience_leftSideOpen__ONILW');
+            topSide && topSide.classList.add('box__face--topOpen');
+            bottomSide && bottomSide.classList.add('box__face--bottomOpen');
+            frontSide &&
+              frontSide.classList.add('FrontAboutMe_frontSideOpen__zZ41Z');
+            rightSide &&
+              rightSide.classList.add('Portfolio_rightSideOpen__-Niiy');
           }
           break;
         case 27:
           if (
-            box.classList.contains('torightfour') ||
-            box.classList.contains('default') ||
-            box.classList.contains('toleftfour')
+            (box && box.classList.contains('torightfour')) ||
+            (box && box.classList.contains('default')) ||
+            (box && box.classList.contains('toleftfour'))
           ) {
-            rightSide.classList.remove(
-              'Portfolio_rightSideClosePortfolioContact__AvV+Z'
-            );
-            rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
-            leftSide.classList.remove('Experience_leftSideOpen__ONILW');
-            topSide.classList.remove('box__face--topOpen');
-            bottomSide.classList.remove('box__face--bottomOpen');
-            frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
+            rightSide &&
+              rightSide.classList.remove(
+                'Portfolio_rightSideClosePortfolioContact__AvV+Z'
+              );
+            rightSide &&
+              rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
+            leftSide &&
+              leftSide.classList.remove('Experience_leftSideOpen__ONILW');
+            topSide && topSide.classList.remove('box__face--topOpen');
+            bottomSide && bottomSide.classList.remove('box__face--bottomOpen');
+            frontSide &&
+              frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
             element.classList.add('ModalAboutMe_ishidden__5OpwD');
           }
           break;

@@ -34,23 +34,33 @@ export const PortfolioModal = () => {
         box.classList.contains('torightone') ||
         box.classList.contains('toleftthree')
       ) {
-        topSide.classList.remove('box__face--topOpenPortfolio');
+        topSide && topSide.classList.remove('box__face--topOpenPortfolio');
         backSide.classList.remove('ContactMe_contactMeOpen__aZkxe');
-        rightSide.classList.remove('Portfolio_rightSideOpenPortfolio__07BAa');
-        bottomSide.classList.remove('box__face--bottomOpenPortfolio');
-        rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
-        leftSide.classList.remove('Experience_experienceOpen__BM6ps');
-        topSide.classList.remove('box__face--topOpen');
-        bottomSide.classList.remove('box__face--bottomOpen');
-        frontSide.classList.remove(
-          'FrontAboutMe_frontSideOpenPortfolio__Nptph'
-        );
-        frontSide.classList.add('FrontAboutMe_frontSideClosePortfolio__KIc2U');
-        topSide.classList.add('box__face--topCLosePortfolio');
+        rightSide &&
+          rightSide.classList.remove('Portfolio_rightSideOpenPortfolio__07BAa');
+        bottomSide &&
+          bottomSide.classList.remove('box__face--bottomOpenPortfolio');
+        rightSide &&
+          rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
+        leftSide &&
+          leftSide.classList.remove('Experience_experienceOpen__BM6ps');
+        topSide && topSide.classList.remove('box__face--topOpen');
+        bottomSide && bottomSide.classList.remove('box__face--bottomOpen');
+        frontSide &&
+          frontSide.classList.remove(
+            'FrontAboutMe_frontSideOpenPortfolio__Nptph'
+          );
+        frontSide &&
+          frontSide.classList.add(
+            'FrontAboutMe_frontSideClosePortfolio__KIc2U'
+          );
+        topSide && topSide.classList.add('box__face--topCLosePortfolio');
         backSide.classList.add('ContactMe_contactMeClose__mMKHM');
-        bottomSide.classList.add('box__face--bottomClosePortfolio');
+        bottomSide &&
+          bottomSide.classList.add('box__face--bottomClosePortfolio');
         element.classList.add('PortfolioModal_ishidden__WK0Ud');
-        rightSide.classList.add('Portfolio_rightSideClosePortfolio__zI+2E');
+        rightSide &&
+          rightSide.classList.add('Portfolio_rightSideClosePortfolio__zI+2E');
       }
     };
     const onKeyPress = evt => {
@@ -60,65 +70,91 @@ export const PortfolioModal = () => {
             box.classList.contains('torightone') ||
             box.classList.contains('toleftthree')
           ) {
-            bottomSide.classList.remove('box__face--bottomCloseContact');
-            topSide.classList.remove('box__face--topCloseContact');
-            leftSide.classList.remove('Experience_leftSideCloseContact__fHPr+');
-            rightSide.classList.remove(
-              'Portfolio_rightSideClosePortfolioContact__AvV+Z'
-            );
+            bottomSide &&
+              bottomSide.classList.remove('box__face--bottomCloseContact');
+            topSide && topSide.classList.remove('box__face--topCloseContact');
+            leftSide &&
+              leftSide.classList.remove(
+                'Experience_leftSideCloseContact__fHPr+'
+              );
+            rightSide &&
+              rightSide.classList.remove(
+                'Portfolio_rightSideClosePortfolioContact__AvV+Z'
+              );
             backSide.classList.remove('ContactMe_contactMeCloseContact__UVuMg');
-            frontSide.classList.remove(
-              'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
-            );
-            bottomSide.classList.remove('box__face--bottomCloseExp');
-            topSide.classList.remove('box__face--topCloseExp');
+            frontSide &&
+              frontSide.classList.remove(
+                'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
+              );
+            bottomSide &&
+              bottomSide.classList.remove('box__face--bottomCloseExp');
+            topSide && topSide.classList.remove('box__face--topCloseExp');
             backSide.classList.remove('ContactMe_contactMeCloseExp__wYUv1');
-            leftSide.classList.remove('Experience_leftSideCloseExp__Lg-qj');
-            topSide.classList.remove('box__face--topCLosePortfolio');
-            topSide.classList.add('box__face--topOpenPortfolio');
+            leftSide &&
+              leftSide.classList.remove('Experience_leftSideCloseExp__Lg-qj');
+            topSide && topSide.classList.remove('box__face--topCLosePortfolio');
+            topSide && topSide.classList.add('box__face--topOpenPortfolio');
             backSide.classList.remove('ContactMe_contactMeClose__mMKHM');
             backSide.classList.add('ContactMe_contactMeOpen__aZkxe');
             element.classList.remove('PortfolioModal_ishidden__WK0Ud');
-            bottomSide.classList.add('box__face--bottomOpenPortfolio');
-            bottomSide.classList.remove('box__face--bottomClosePortfolio');
-            frontSide.classList.add(
-              'FrontAboutMe_frontSideOpenPortfolio__Nptph'
-            );
-            frontSide.classList.remove(
-              'FrontAboutMe_frontSideClosePortfolio__KIc2U'
-            );
-            rightSide.classList.add('Portfolio_rightSideOpenPortfolio__07BAa');
+            bottomSide &&
+              bottomSide.classList.add('box__face--bottomOpenPortfolio');
+            bottomSide &&
+              bottomSide.classList.remove('box__face--bottomClosePortfolio');
+            frontSide &&
+              frontSide.classList.add(
+                'FrontAboutMe_frontSideOpenPortfolio__Nptph'
+              );
+            frontSide &&
+              frontSide.classList.remove(
+                'FrontAboutMe_frontSideClosePortfolio__KIc2U'
+              );
+            rightSide &&
+              rightSide.classList.add(
+                'Portfolio_rightSideOpenPortfolio__07BAa'
+              );
           }
-          rightSide.classList.remove(
-            'Portfolio_rightSideClosePortfolio__zI+2E'
-          );
+          rightSide &&
+            rightSide.classList.remove(
+              'Portfolio_rightSideClosePortfolio__zI+2E'
+            );
           break;
         case 27:
           if (
             box.classList.contains('torightone') ||
             box.classList.contains('toleftthree')
           ) {
-            topSide.classList.remove('box__face--topOpenPortfolio');
+            topSide && topSide.classList.remove('box__face--topOpenPortfolio');
             backSide.classList.remove('ContactMe_contactMeOpen__aZkxe');
-            rightSide.classList.remove(
-              'Portfolio_rightSideOpenPortfolio__07BAa'
-            );
-            bottomSide.classList.remove('box__face--bottomOpenPortfolio');
-            rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
-            leftSide.classList.remove('Experience_experienceOpen__BM6ps');
-            topSide.classList.remove('box__face--topOpen');
-            bottomSide.classList.remove('box__face--bottomOpen');
-            frontSide.classList.remove(
-              'FrontAboutMe_frontSideOpenPortfolio__Nptph'
-            );
-            frontSide.classList.add(
-              'FrontAboutMe_frontSideClosePortfolio__KIc2U'
-            );
-            topSide.classList.add('box__face--topCLosePortfolio');
+            rightSide &&
+              rightSide.classList.remove(
+                'Portfolio_rightSideOpenPortfolio__07BAa'
+              );
+            bottomSide &&
+              bottomSide.classList.remove('box__face--bottomOpenPortfolio');
+            rightSide &&
+              rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
+            leftSide &&
+              leftSide.classList.remove('Experience_experienceOpen__BM6ps');
+            topSide && topSide.classList.remove('box__face--topOpen');
+            bottomSide && bottomSide.classList.remove('box__face--bottomOpen');
+            frontSide &&
+              frontSide.classList.remove(
+                'FrontAboutMe_frontSideOpenPortfolio__Nptph'
+              );
+            frontSide &&
+              frontSide.classList.add(
+                'FrontAboutMe_frontSideClosePortfolio__KIc2U'
+              );
+            topSide && topSide.classList.add('box__face--topCLosePortfolio');
             backSide.classList.add('ContactMe_contactMeClose__mMKHM');
-            bottomSide.classList.add('box__face--bottomClosePortfolio');
+            bottomSide &&
+              bottomSide.classList.add('box__face--bottomClosePortfolio');
             element.classList.add('PortfolioModal_ishidden__WK0Ud');
-            rightSide.classList.add('Portfolio_rightSideClosePortfolio__zI+2E');
+            rightSide &&
+              rightSide.classList.add(
+                'Portfolio_rightSideClosePortfolio__zI+2E'
+              );
           }
           break;
         default:

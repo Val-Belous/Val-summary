@@ -3,10 +3,10 @@ import styles from './ContactMe.module.css';
 export const ContactMe = () => {
   // useEffect(() => {
   //   const backdrop = document.querySelector('.ModalAboutMe_backdrop__v1zHC');
-  //   const frontSide = document.querySelector(
+  //   const frontSide  = document.querySelector(
   //     '.FrontAboutMe_containerFront__-xEOJ'
   //   );
-  //   frontSide && frontSide.addEventListener('click', openFrontSide);
+  //   frontSide && frontSide && frontSide && frontSide.addEventListener('click', openFrontSide);
 
   //   function openFrontSide(evt) {
   //     if (evt.target !== evt.currentTarget) {

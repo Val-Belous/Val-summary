@@ -12,7 +12,7 @@ export const FrontAboutMe = () => {
 
     function openFrontSide(evt) {
       if (evt.target !== evt.currentTarget) {
-        backdrop.classList.remove('ModalAboutMe_ishidden__5OpwD');
+        backdrop && backdrop.classList.remove('ModalAboutMe_ishidden__5OpwD');
       }
     }
   }, []);
