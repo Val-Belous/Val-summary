@@ -19,7 +19,6 @@ export const ModalExperience = () => {
     const bottomSide = document.querySelector('.box__face--bottom');
     const backSide = document.querySelector('.containerContactMe');
     const rightSide = document.querySelector('.containerPortfolio');
-
     const closeBackdrop = () => {
       if (
         box.classList.contains('toleftone') ||

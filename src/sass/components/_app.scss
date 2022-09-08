@@ -18,10 +18,6 @@
   transform-style: preserve-3d;
   transform: translateX(0) translateY(0px) translateZ(-100px) rotateY(0deg)
     rotateX(0deg) scale(1);
-
-  &:hover {
-    background-color: gold;
-  }
 }
 
 .box__face {

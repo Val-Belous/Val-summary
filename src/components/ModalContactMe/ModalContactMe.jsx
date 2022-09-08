@@ -25,13 +25,11 @@ export const ModalContactMe = () => {
         box.classList.contains('tolefttwo')
       ) {
         bottomSide.classList.add('box__face--bottomCloseContact');
-
         bottomSide.classList.remove('box__face--bottomOpenContact');
         topSide.classList.add('box__face--topCloseContact');
         topSide.classList.remove('box__face--topOpenContact');
         leftSide.classList.add('leftSideCloseContact');
         leftSide.classList.remove('leftSideOpenContact');
-
         rightSide.classList.remove('rightSideOpenPortfolioContact');
         rightSide.classList.add('rightSideClosePortfolioContact');
         element.classList.add('ishiddenContactMe');
@@ -51,17 +49,13 @@ export const ModalContactMe = () => {
             backSide.classList.add('contactMeOpenContact');
             backSide.classList.remove('contactMeCloseContact');
             backSide.classList.remove('contactMeClose');
-
             rightSide.classList.add('rightSideOpenPortfolioContact');
-
             rightSide.classList.remove('rightSideClosePortfolioContact');
             leftSide.classList.add('leftSideOpenContact');
             leftSide.classList.remove('leftSideCloseContact');
             topSide.classList.add('box__face--topOpenContact');
             topSide.classList.remove('box__face--topCloseContact');
-
             bottomSide.classList.add('box__face--bottomOpenContact');
-
             bottomSide.classList.remove('box__face--bottomCloseContact');
           }
           break;
@@ -71,15 +65,12 @@ export const ModalContactMe = () => {
             box.classList.contains('tolefttwo')
           ) {
             bottomSide.classList.add('box__face--bottomCloseContact');
-
             bottomSide.classList.remove('box__face--bottomOpenContact');
             topSide.classList.add('box__face--topCloseContact');
             topSide.classList.remove('box__face--topOpenContact');
             leftSide.classList.add('leftSideCloseContact');
             leftSide.classList.remove('leftSideOpenContact');
-
             rightSide.classList.remove('rightSideOpenPortfolioContact');
-
             rightSide.classList.add('rightSideClosePortfolioContact');
             element.classList.add('ishiddenContactMe');
             backSide.classList.remove('contactMeOpenContact');

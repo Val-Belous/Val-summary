@@ -19,7 +19,7 @@ export const FrontAboutMe = () => {
       <h2 className="mainTitle">
         Hello <br /> I'm Val
       </h2>
-      <img className="image" src={`.${photo}`} alt="" />
+      <img className="image" src={photo} alt="" />
     </div>
   );
 };

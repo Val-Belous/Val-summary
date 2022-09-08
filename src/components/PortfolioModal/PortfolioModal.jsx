@@ -58,12 +58,9 @@ export const PortfolioModal = () => {
             bottomSide.classList.remove('box__face--bottomCloseContact');
             topSide.classList.remove('box__face--topCloseContact');
             leftSide.classList.remove('leftSideCloseContact');
-
             rightSide.classList.remove('rightSideClosePortfolioContact');
             backSide.classList.remove('contactMeCloseContact');
-
             frontSide.classList.remove('frontSideClosePortfolioExp');
-
             bottomSide.classList.remove('box__face--bottomCloseExp');
             topSide.classList.remove('box__face--topCloseExp');
             backSide.classList.remove('contactMeCloseExp');
@@ -73,9 +70,7 @@ export const PortfolioModal = () => {
             backSide.classList.remove('contactMeClose');
             backSide.classList.add('contactMeOpen');
             element.classList.remove('ishiddenPortfolio');
-
             bottomSide.classList.add('box__face--bottomOpenPortfolio');
-
             bottomSide.classList.remove('box__face--bottomClosePortfolio');
             frontSide.classList.add('frontSideOpenPortfolio');
             frontSide.classList.remove('frontSideClosePortfolio');
@@ -91,7 +86,6 @@ export const PortfolioModal = () => {
             topSide.classList.remove('box__face--topOpenPortfolio');
             backSide.classList.remove('contactMeOpen');
             rightSide.classList.remove('rightSideOpenPortfolio');
-
             bottomSide.classList.remove('box__face--bottomOpenPortfolio');
             rightSide.classList.remove('rightSideOpen');
             leftSide.classList.remove('experienceOpen');
@@ -101,7 +95,6 @@ export const PortfolioModal = () => {
             frontSide.classList.add('frontSideClosePortfolio');
             topSide.classList.add('box__face--topCLosePortfolio');
             backSide.classList.add('contactMeClose');
-
             bottomSide.classList.add('box__face--bottomClosePortfolio');
             element.classList.add('ishiddenPortfolio');
             rightSide.classList.add('rightSideClosePortfolio');
