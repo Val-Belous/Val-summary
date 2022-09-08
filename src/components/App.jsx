@@ -22,29 +22,17 @@ export const App = () => {
       const contactBackdrop = document.querySelector('.backdropContactMe');
 
       if (
-        !(
-          aboutMeBackdrop &&
-          aboutMeBackdrop.classList.contains('ishiddenAboutMe')
-        ) ||
-        !(
-          portfolioBackdrop &&
-          portfolioBackdrop.classList.contains('ishiddenPortfolio')
-        ) ||
-        !(
-          experienceBackdrop &&
-          experienceBackdrop.classList.contains('ishidden')
-        ) ||
-        !(
-          contactBackdrop &&
-          contactBackdrop.classList.contains('ishiddenContactMe')
-        )
+        !aboutMeBackdrop.classList.contains('ishiddenAboutMe') ||
+        !portfolioBackdrop.classList.contains('ishiddenPortfolio') ||
+        !experienceBackdrop.classList.contains('ishidden') ||
+        !contactBackdrop.classList.contains('ishiddenContactMe')
       ) {
         return;
       }
       keysFunc(element, evt.keyCode);
     };
 
-    window && window.addEventListener('keydown', onKeyPress);
+    window.addEventListener('keydown', onKeyPress);
     return () => {
       window.removeEventListener('keydown', onKeyPress);
     };

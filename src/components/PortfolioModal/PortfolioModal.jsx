@@ -8,7 +8,7 @@ export const PortfolioModal = () => {
 
   useEffect(() => {
     const backdrop = document.querySelector('.backdropPortfolio');
-    backdrop && backdrop.addEventListener('click', onHandlerClick);
+    backdrop.addEventListener('click', onHandlerClick);
 
     function onHandlerClick(evt) {
       if (evt.target === evt.currentTarget) {
@@ -29,23 +29,23 @@ export const PortfolioModal = () => {
         box.classList.contains('torightone') ||
         box.classList.contains('toleftthree')
       ) {
-        topSide && topSide.classList.remove('box__face--topOpenPortfolio');
-        backSide && backSide.classList.remove('contactMeOpen');
-        rightSide && rightSide.classList.remove('rightSideOpenPortfolio');
-        bottomSide &&
-          bottomSide.classList.remove('box__face--bottomOpenPortfolio');
-        rightSide && rightSide.classList.remove('rightSideOpen');
-        leftSide && leftSide.classList.remove('experienceOpen');
-        topSide && topSide.classList.remove('box__face--topOpen');
-        bottomSide && bottomSide.classList.remove('box__face--bottomOpen');
-        frontSide && frontSide.classList.remove('frontSideOpenPortfolio');
-        frontSide && frontSide.classList.add('frontSideClosePortfolio');
-        topSide && topSide.classList.add('box__face--topCLosePortfolio');
-        backSide && backSide.classList.add('contactMeClose');
-        bottomSide &&
-          bottomSide.classList.add('box__face--bottomClosePortfolio');
+        topSide.classList.remove('box__face--topOpenPortfolio');
+        backSide.classList.remove('contactMeOpen');
+        rightSide.classList.remove('rightSideOpenPortfolio');
+
+        bottomSide.classList.remove('box__face--bottomOpenPortfolio');
+        rightSide.classList.remove('rightSideOpen');
+        leftSide.classList.remove('experienceOpen');
+        topSide.classList.remove('box__face--topOpen');
+        bottomSide.classList.remove('box__face--bottomOpen');
+        frontSide.classList.remove('frontSideOpenPortfolio');
+        frontSide.classList.add('frontSideClosePortfolio');
+        topSide.classList.add('box__face--topCLosePortfolio');
+        backSide.classList.add('contactMeClose');
+
+        bottomSide.classList.add('box__face--bottomClosePortfolio');
         element.classList.add('ishiddenPortfolio');
-        rightSide && rightSide.classList.add('rightSideClosePortfolio');
+        rightSide.classList.add('rightSideClosePortfolio');
       }
     };
     const onKeyPress = evt => {
@@ -55,57 +55,56 @@ export const PortfolioModal = () => {
             box.classList.contains('torightone') ||
             box.classList.contains('toleftthree')
           ) {
-            bottomSide &&
-              bottomSide.classList.remove('box__face--bottomCloseContact');
-            topSide && topSide.classList.remove('box__face--topCloseContact');
-            leftSide && leftSide.classList.remove('leftSideCloseContact');
-            rightSide &&
-              rightSide.classList.remove('rightSideClosePortfolioContact');
-            backSide && backSide.classList.remove('contactMeCloseContact');
-            frontSide &&
-              frontSide.classList.remove('frontSideClosePortfolioExp');
-            bottomSide &&
-              bottomSide.classList.remove('box__face--bottomCloseExp');
-            topSide && topSide.classList.remove('box__face--topCloseExp');
-            backSide && backSide.classList.remove('contactMeCloseExp');
-            leftSide && leftSide.classList.remove('leftSideCloseExp');
-            topSide && topSide.classList.remove('box__face--topCLosePortfolio');
-            topSide && topSide.classList.add('box__face--topOpenPortfolio');
-            backSide && backSide.classList.remove('contactMeClose');
-            backSide && backSide.classList.add('contactMeOpen');
+            bottomSide.classList.remove('box__face--bottomCloseContact');
+            topSide.classList.remove('box__face--topCloseContact');
+            leftSide.classList.remove('leftSideCloseContact');
+
+            rightSide.classList.remove('rightSideClosePortfolioContact');
+            backSide.classList.remove('contactMeCloseContact');
+
+            frontSide.classList.remove('frontSideClosePortfolioExp');
+
+            bottomSide.classList.remove('box__face--bottomCloseExp');
+            topSide.classList.remove('box__face--topCloseExp');
+            backSide.classList.remove('contactMeCloseExp');
+            leftSide.classList.remove('leftSideCloseExp');
+            topSide.classList.remove('box__face--topCLosePortfolio');
+            topSide.classList.add('box__face--topOpenPortfolio');
+            backSide.classList.remove('contactMeClose');
+            backSide.classList.add('contactMeOpen');
             element.classList.remove('ishiddenPortfolio');
-            bottomSide &&
-              bottomSide.classList.add('box__face--bottomOpenPortfolio');
-            bottomSide &&
-              bottomSide.classList.remove('box__face--bottomClosePortfolio');
-            frontSide && frontSide.classList.add('frontSideOpenPortfolio');
-            frontSide && frontSide.classList.remove('frontSideClosePortfolio');
-            rightSide && rightSide.classList.add('rightSideOpenPortfolio');
+
+            bottomSide.classList.add('box__face--bottomOpenPortfolio');
+
+            bottomSide.classList.remove('box__face--bottomClosePortfolio');
+            frontSide.classList.add('frontSideOpenPortfolio');
+            frontSide.classList.remove('frontSideClosePortfolio');
+            rightSide.classList.add('rightSideOpenPortfolio');
           }
-          rightSide && rightSide.classList.remove('rightSideClosePortfolio');
+          rightSide.classList.remove('rightSideClosePortfolio');
           break;
         case 27:
           if (
             box.classList.contains('torightone') ||
             box.classList.contains('toleftthree')
           ) {
-            topSide && topSide.classList.remove('box__face--topOpenPortfolio');
-            backSide && backSide.classList.remove('contactMeOpen');
-            rightSide && rightSide.classList.remove('rightSideOpenPortfolio');
-            bottomSide &&
-              bottomSide.classList.remove('box__face--bottomOpenPortfolio');
-            rightSide && rightSide.classList.remove('rightSideOpen');
-            leftSide && leftSide.classList.remove('experienceOpen');
-            topSide && topSide.classList.remove('box__face--topOpen');
-            bottomSide && bottomSide.classList.remove('box__face--bottomOpen');
-            frontSide && frontSide.classList.remove('frontSideOpenPortfolio');
-            frontSide && frontSide.classList.add('frontSideClosePortfolio');
-            topSide && topSide.classList.add('box__face--topCLosePortfolio');
-            backSide && backSide.classList.add('contactMeClose');
-            bottomSide &&
-              bottomSide.classList.add('box__face--bottomClosePortfolio');
+            topSide.classList.remove('box__face--topOpenPortfolio');
+            backSide.classList.remove('contactMeOpen');
+            rightSide.classList.remove('rightSideOpenPortfolio');
+
+            bottomSide.classList.remove('box__face--bottomOpenPortfolio');
+            rightSide.classList.remove('rightSideOpen');
+            leftSide.classList.remove('experienceOpen');
+            topSide.classList.remove('box__face--topOpen');
+            bottomSide.classList.remove('box__face--bottomOpen');
+            frontSide.classList.remove('frontSideOpenPortfolio');
+            frontSide.classList.add('frontSideClosePortfolio');
+            topSide.classList.add('box__face--topCLosePortfolio');
+            backSide.classList.add('contactMeClose');
+
+            bottomSide.classList.add('box__face--bottomClosePortfolio');
             element.classList.add('ishiddenPortfolio');
-            rightSide && rightSide.classList.add('rightSideClosePortfolio');
+            rightSide.classList.add('rightSideClosePortfolio');
           }
           break;
         default:
@@ -114,7 +113,7 @@ export const PortfolioModal = () => {
     };
 
     const element = ref.current;
-    window && window.addEventListener('keydown', onKeyPress);
+    window.addEventListener('keydown', onKeyPress);
     return () => {
       window.removeEventListener('keydown', onKeyPress);
     };

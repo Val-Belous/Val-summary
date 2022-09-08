@@ -4,7 +4,7 @@ export const ModalContactMe = () => {
 
   useEffect(() => {
     const backdrop = document.querySelector('.backdropContactMe');
-    backdrop && backdrop.addEventListener('click', onHandlerClick);
+    backdrop.addEventListener('click', onHandlerClick);
 
     function onHandlerClick(evt) {
       if (evt.target === evt.currentTarget) {
@@ -24,19 +24,19 @@ export const ModalContactMe = () => {
         box.classList.contains('torighttwo') ||
         box.classList.contains('tolefttwo')
       ) {
-        bottomSide && bottomSide.classList.add('box__face--bottomCloseContact');
-        bottomSide &&
-          bottomSide.classList.remove('box__face--bottomOpenContact');
-        topSide && topSide.classList.add('box__face--topCloseContact');
-        topSide && topSide.classList.remove('box__face--topOpenContact');
-        leftSide && leftSide.classList.add('leftSideCloseContact');
-        leftSide && leftSide.classList.remove('leftSideOpenContact');
-        rightSide &&
-          rightSide.classList.remove('rightSideOpenPortfolioContact');
-        rightSide && rightSide.classList.add('rightSideClosePortfolioContact');
+        bottomSide.classList.add('box__face--bottomCloseContact');
+
+        bottomSide.classList.remove('box__face--bottomOpenContact');
+        topSide.classList.add('box__face--topCloseContact');
+        topSide.classList.remove('box__face--topOpenContact');
+        leftSide.classList.add('leftSideCloseContact');
+        leftSide.classList.remove('leftSideOpenContact');
+
+        rightSide.classList.remove('rightSideOpenPortfolioContact');
+        rightSide.classList.add('rightSideClosePortfolioContact');
         element.classList.add('ishiddenContactMe');
-        backSide && backSide.classList.remove('contactMeOpenContact');
-        backSide && backSide.classList.add('contactMeCloseContact');
+        backSide.classList.remove('contactMeOpenContact');
+        backSide.classList.add('contactMeCloseContact');
       }
     };
 
@@ -48,21 +48,21 @@ export const ModalContactMe = () => {
             box.classList.contains('tolefttwo')
           ) {
             element.classList.remove('ishiddenContactMe');
-            backSide && backSide.classList.add('contactMeOpenContact');
-            backSide && backSide.classList.remove('contactMeCloseContact');
-            backSide && backSide.classList.remove('contactMeClose');
-            rightSide &&
-              rightSide.classList.add('rightSideOpenPortfolioContact');
-            rightSide &&
-              rightSide.classList.remove('rightSideClosePortfolioContact');
-            leftSide && leftSide.classList.add('leftSideOpenContact');
-            leftSide && leftSide.classList.remove('leftSideCloseContact');
-            topSide && topSide.classList.add('box__face--topOpenContact');
-            topSide && topSide.classList.remove('box__face--topCloseContact');
-            bottomSide &&
-              bottomSide.classList.add('box__face--bottomOpenContact');
-            bottomSide &&
-              bottomSide.classList.remove('box__face--bottomCloseContact');
+            backSide.classList.add('contactMeOpenContact');
+            backSide.classList.remove('contactMeCloseContact');
+            backSide.classList.remove('contactMeClose');
+
+            rightSide.classList.add('rightSideOpenPortfolioContact');
+
+            rightSide.classList.remove('rightSideClosePortfolioContact');
+            leftSide.classList.add('leftSideOpenContact');
+            leftSide.classList.remove('leftSideCloseContact');
+            topSide.classList.add('box__face--topOpenContact');
+            topSide.classList.remove('box__face--topCloseContact');
+
+            bottomSide.classList.add('box__face--bottomOpenContact');
+
+            bottomSide.classList.remove('box__face--bottomCloseContact');
           }
           break;
         case 27:
@@ -70,21 +70,20 @@ export const ModalContactMe = () => {
             box.classList.contains('torighttwo') ||
             box.classList.contains('tolefttwo')
           ) {
-            bottomSide &&
-              bottomSide.classList.add('box__face--bottomCloseContact');
-            bottomSide &&
-              bottomSide.classList.remove('box__face--bottomOpenContact');
-            topSide && topSide.classList.add('box__face--topCloseContact');
-            topSide && topSide.classList.remove('box__face--topOpenContact');
-            leftSide && leftSide.classList.add('leftSideCloseContact');
-            leftSide && leftSide.classList.remove('leftSideOpenContact');
-            rightSide &&
-              rightSide.classList.remove('rightSideOpenPortfolioContact');
-            rightSide &&
-              rightSide.classList.add('rightSideClosePortfolioContact');
+            bottomSide.classList.add('box__face--bottomCloseContact');
+
+            bottomSide.classList.remove('box__face--bottomOpenContact');
+            topSide.classList.add('box__face--topCloseContact');
+            topSide.classList.remove('box__face--topOpenContact');
+            leftSide.classList.add('leftSideCloseContact');
+            leftSide.classList.remove('leftSideOpenContact');
+
+            rightSide.classList.remove('rightSideOpenPortfolioContact');
+
+            rightSide.classList.add('rightSideClosePortfolioContact');
             element.classList.add('ishiddenContactMe');
-            backSide && backSide.classList.remove('contactMeOpenContact');
-            backSide && backSide.classList.add('contactMeCloseContact');
+            backSide.classList.remove('contactMeOpenContact');
+            backSide.classList.add('contactMeCloseContact');
           }
           break;
         default:
@@ -93,7 +92,7 @@ export const ModalContactMe = () => {
     };
 
     const element = ref.current;
-    window && window.addEventListener('keydown', onKeyPress);
+    window.addEventListener('keydown', onKeyPress);
     return () => {
       window.removeEventListener('keydown', onKeyPress);
     };

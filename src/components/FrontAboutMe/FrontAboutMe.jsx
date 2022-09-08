@@ -5,11 +5,11 @@ export const FrontAboutMe = () => {
   useEffect(() => {
     const backdrop = document.querySelector('.backdropAboutMe');
     const frontSide = document.querySelector('.containerFront');
-    frontSide && frontSide.addEventListener('click', openFrontSide);
+    frontSide.addEventListener('click', openFrontSide);
 
     function openFrontSide(evt) {
       if (evt.target !== evt.currentTarget) {
-        backdrop && backdrop.classList.remove('ishiddenAboutMe');
+        backdrop.classList.remove('ishiddenAboutMe');
       }
     }
   }, []);

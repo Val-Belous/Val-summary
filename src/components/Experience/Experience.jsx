@@ -5,7 +5,7 @@ export const Experience = () => {
   //   const frontSide  = document.querySelector(
   //     '.containerFront'
   //   );
-  //   frontSide && frontSide && frontSide && frontSide.addEventListener('click', openFrontSide);
+  //         frontSide.addEventListener('click', openFrontSide);
 
   //   function openFrontSide(evt) {
   //     if (evt.target !== evt.currentTarget) {
