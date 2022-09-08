@@ -4,7 +4,7 @@ export const ModalExperience = () => {
 
   useEffect(() => {
     const backdrop = document.querySelector('.backdropExperience');
-    backdrop && backdrop.addEventListener('click', onHandlerClick);
+    backdrop.addEventListener('click', onHandlerClick);
 
     function onHandlerClick(evt) {
       if (evt.target === evt.currentTarget) {
@@ -25,17 +25,17 @@ export const ModalExperience = () => {
         box.classList.contains('toleftone') ||
         box.classList.contains('torightthree')
       ) {
-        bottomSide && bottomSide.classList.add('box__face--bottomCloseExp');
-        bottomSide && bottomSide.classList.remove('box__face--bottomOpenExp');
-        topSide && topSide.classList.remove('box__face--topOpenExp');
-        topSide && topSide.classList.add('box__face--topCloseExp');
-        frontSide && frontSide.classList.remove('frontSideOpenPortfolioExp');
-        frontSide && frontSide.classList.add('frontSideClosePortfolioExp');
-        leftSide && leftSide.classList.remove('leftSideOpenEx');
-        backSide && backSide.classList.remove('contactMeOpenExp');
-        backSide && backSide.classList.add('contactMeCloseExp');
+        bottomSide.classList.add('box__face--bottomCloseExp');
+        bottomSide.classList.remove('box__face--bottomOpenExp');
+        topSide.classList.remove('box__face--topOpenExp');
+        topSide.classList.add('box__face--topCloseExp');
+        frontSide.classList.remove('frontSideOpenPortfolioExp');
+        frontSide.classList.add('frontSideClosePortfolioExp');
+        leftSide.classList.remove('leftSideOpenExp');
+        backSide.classList.remove('contactMeOpenExp');
+        backSide.classList.add('contactMeCloseExp');
         element.classList.add('ishidden');
-        leftSide && leftSide.classList.add('leftSideCloseExp');
+        leftSide.classList.add('leftSideCloseExp');
       }
     };
 
@@ -46,27 +46,23 @@ export const ModalExperience = () => {
             box.classList.contains('toleftone') ||
             box.classList.contains('torightthree')
           ) {
-            bottomSide &&
-              bottomSide.classList.remove('box__face--bottomCloseContact');
-            topSide && topSide.classList.remove('box__face--topCloseContact');
-            leftSide && leftSide.classList.remove('leftSideCloseContact');
-            rightSide &&
-              rightSide.classList.remove('rightSideClosePortfolioContact');
-            backSide && backSide.classList.remove('contactMeCloseContact');
+            leftSide.classList.add('leftSideOpenExp');
+            bottomSide.classList.remove('box__face--bottomCloseContact');
+            topSide.classList.remove('box__face--topCloseContact');
+            leftSide.classList.remove('leftSideCloseContact');
+            rightSide.classList.remove('rightSideClosePortfolioContact');
+            backSide.classList.remove('contactMeCloseContact');
             element.classList.remove('ishidden');
-            leftSide && leftSide.classList.add('leftSideOpenEx');
-            leftSide && leftSide.classList.remove('leftSideCloseExp');
-            backSide && backSide.classList.add('contactMeOpenExp');
-            backSide && backSide.classList.remove('contactMeCloseExp');
-            backSide && backSide.classList.remove('contactMeClose');
-            frontSide && frontSide.classList.add('frontSideOpenPortfolioExp');
-            frontSide &&
-              frontSide.classList.remove('frontSideClosePortfolioExp');
-            topSide && topSide.classList.add('box__face--topOpenExp');
-            topSide && topSide.classList.remove('box__face--topCloseExp');
-            bottomSide && bottomSide.classList.add('box__face--bottomOpenExp');
-            bottomSide &&
-              bottomSide.classList.remove('box__face--bottomCloseExp');
+            leftSide.classList.remove('leftSideCloseExp');
+            backSide.classList.add('contactMeOpenExp');
+            backSide.classList.remove('contactMeCloseExp');
+            backSide.classList.remove('contactMeClose');
+            frontSide.classList.add('frontSideOpenPortfolioExp');
+            frontSide.classList.remove('frontSideClosePortfolioExp');
+            topSide.classList.add('box__face--topOpenExp');
+            topSide.classList.remove('box__face--topCloseExp');
+            bottomSide.classList.add('box__face--bottomOpenExp');
+            bottomSide.classList.remove('box__face--bottomCloseExp');
           }
           break;
         case 27:
@@ -74,19 +70,17 @@ export const ModalExperience = () => {
             box.classList.contains('toleftone') ||
             box.classList.contains('torightthree')
           ) {
-            bottomSide && bottomSide.classList.add('box__face--bottomCloseExp');
-            bottomSide &&
-              bottomSide.classList.remove('box__face--bottomOpenExp');
-            topSide && topSide.classList.remove('box__face--topOpenExp');
-            topSide && topSide.classList.add('box__face--topCloseExp');
-            frontSide &&
-              frontSide.classList.remove('frontSideOpenPortfolioExp');
-            frontSide && frontSide.classList.add('frontSideClosePortfolioExp');
-            leftSide && leftSide.classList.remove('leftSideOpenEx');
-            backSide && backSide.classList.remove('contactMeOpenExp');
-            backSide && backSide.classList.add('contactMeCloseExp');
+            bottomSide.classList.add('box__face--bottomCloseExp');
+            bottomSide.classList.remove('box__face--bottomOpenExp');
+            topSide.classList.remove('box__face--topOpenExp');
+            topSide.classList.add('box__face--topCloseExp');
+            frontSide.classList.remove('frontSideOpenPortfolioExp');
+            frontSide.classList.add('frontSideClosePortfolioExp');
+            leftSide.classList.remove('leftSideOpenExp');
+            backSide.classList.remove('contactMeOpenExp');
+            backSide.classList.add('contactMeCloseExp');
             element.classList.add('ishidden');
-            leftSide && leftSide.classList.add('leftSideCloseExp');
+            leftSide.classList.add('leftSideCloseExp');
           }
           break;
         default:
@@ -95,7 +89,7 @@ export const ModalExperience = () => {
     };
 
     const element = ref.current;
-    window && window.addEventListener('keydown', onKeyPress);
+    window.addEventListener('keydown', onKeyPress);
     return () => {
       window.removeEventListener('keydown', onKeyPress);
     };
