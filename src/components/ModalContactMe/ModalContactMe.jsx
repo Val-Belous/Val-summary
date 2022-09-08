@@ -1,12 +1,9 @@
-import styles from './ModalContactMe.module.css';
 import { useRef, useEffect } from 'react';
 export const ModalContactMe = () => {
   const ref = useRef(null);
 
   useEffect(() => {
-    const backdrop = document.querySelector(
-      '.ModalContactMe_backdropContactMe__MDbbj'
-    );
+    const backdrop = document.querySelector('.backdropContactMe');
     backdrop && backdrop.addEventListener('click', onHandlerClick);
 
     function onHandlerClick(evt) {
@@ -16,13 +13,11 @@ export const ModalContactMe = () => {
     }
 
     const box = document.querySelector('.box');
-    const leftSide = document.querySelector('.Experience_containerLeft__MNcmh');
-    const rightSide = document.querySelector('.Portfolio_container__hiJ0s');
+    const leftSide = document.querySelector('.containerLeft');
+    const rightSide = document.querySelector('.containerPortfolio');
     const topSide = document.querySelector('.box__face--top');
     const bottomSide = document.querySelector('.box__face--bottom');
-    const backSide = document.querySelector(
-      '.ContactMe_containerContactMe__kjOIz'
-    );
+    const backSide = document.querySelector('.containerContactMe');
 
     const closeBackdrop = () => {
       if (
@@ -34,23 +29,14 @@ export const ModalContactMe = () => {
           bottomSide.classList.remove('box__face--bottomOpenContact');
         topSide && topSide.classList.add('box__face--topCloseContact');
         topSide && topSide.classList.remove('box__face--topOpenContact');
-        leftSide &&
-          leftSide.classList.add('Experience_leftSideCloseContact__fHPr+');
-        leftSide &&
-          leftSide.classList.remove('Experience_leftSideOpenContact__8qQe1');
+        leftSide && leftSide.classList.add('leftSideCloseContact');
+        leftSide && leftSide.classList.remove('leftSideOpenContact');
         rightSide &&
-          rightSide.classList.remove(
-            'Portfolio_rightSideOpenPortfolioContact__k4rNa'
-          );
-        rightSide &&
-          rightSide.classList.add(
-            'Portfolio_rightSideClosePortfolioContact__AvV+Z'
-          );
-        element.classList.add('ModalContactMe_ishidden__SfNTL');
-        backSide &&
-          backSide.classList.remove('ContactMe_contactMeOpenContact__mrvlU');
-        backSide &&
-          backSide.classList.add('ContactMe_contactMeCloseContact__UVuMg');
+          rightSide.classList.remove('rightSideOpenPortfolioContact');
+        rightSide && rightSide.classList.add('rightSideClosePortfolioContact');
+        element.classList.add('ishiddenContactMe');
+        backSide && backSide.classList.remove('contactMeOpenContact');
+        backSide && backSide.classList.add('contactMeCloseContact');
       }
     };
 
@@ -61,29 +47,16 @@ export const ModalContactMe = () => {
             box.classList.contains('torighttwo') ||
             box.classList.contains('tolefttwo')
           ) {
-            element.classList.remove('ModalContactMe_ishidden__SfNTL');
-            backSide &&
-              backSide.classList.add('ContactMe_contactMeOpenContact__mrvlU');
-            backSide &&
-              backSide.classList.remove(
-                'ContactMe_contactMeCloseContact__UVuMg'
-              );
-            backSide &&
-              backSide.classList.remove('ContactMe_contactMeClose__mMKHM');
+            element.classList.remove('ishiddenContactMe');
+            backSide && backSide.classList.add('contactMeOpenContact');
+            backSide && backSide.classList.remove('contactMeCloseContact');
+            backSide && backSide.classList.remove('contactMeClose');
             rightSide &&
-              rightSide.classList.add(
-                'Portfolio_rightSideOpenPortfolioContact__k4rNa'
-              );
+              rightSide.classList.add('rightSideOpenPortfolioContact');
             rightSide &&
-              rightSide.classList.remove(
-                'Portfolio_rightSideClosePortfolioContact__AvV+Z'
-              );
-            leftSide &&
-              leftSide.classList.add('Experience_leftSideOpenContact__8qQe1');
-            leftSide &&
-              leftSide.classList.remove(
-                'Experience_leftSideCloseContact__fHPr+'
-              );
+              rightSide.classList.remove('rightSideClosePortfolioContact');
+            leftSide && leftSide.classList.add('leftSideOpenContact');
+            leftSide && leftSide.classList.remove('leftSideCloseContact');
             topSide && topSide.classList.add('box__face--topOpenContact');
             topSide && topSide.classList.remove('box__face--topCloseContact');
             bottomSide &&
@@ -103,27 +76,15 @@ export const ModalContactMe = () => {
               bottomSide.classList.remove('box__face--bottomOpenContact');
             topSide && topSide.classList.add('box__face--topCloseContact');
             topSide && topSide.classList.remove('box__face--topOpenContact');
-            leftSide &&
-              leftSide.classList.add('Experience_leftSideCloseContact__fHPr+');
-            leftSide &&
-              leftSide.classList.remove(
-                'Experience_leftSideOpenContact__8qQe1'
-              );
+            leftSide && leftSide.classList.add('leftSideCloseContact');
+            leftSide && leftSide.classList.remove('leftSideOpenContact');
             rightSide &&
-              rightSide.classList.remove(
-                'Portfolio_rightSideOpenPortfolioContact__k4rNa'
-              );
+              rightSide.classList.remove('rightSideOpenPortfolioContact');
             rightSide &&
-              rightSide.classList.add(
-                'Portfolio_rightSideClosePortfolioContact__AvV+Z'
-              );
-            element.classList.add('ModalContactMe_ishidden__SfNTL');
-            backSide &&
-              backSide.classList.remove(
-                'ContactMe_contactMeOpenContact__mrvlU'
-              );
-            backSide &&
-              backSide.classList.add('ContactMe_contactMeCloseContact__UVuMg');
+              rightSide.classList.add('rightSideClosePortfolioContact');
+            element.classList.add('ishiddenContactMe');
+            backSide && backSide.classList.remove('contactMeOpenContact');
+            backSide && backSide.classList.add('contactMeCloseContact');
           }
           break;
         default:
@@ -140,15 +101,12 @@ export const ModalContactMe = () => {
 
   return (
     <>
-      <div
-        className={`${styles.backdropContactMe} ${styles.ishidden}`}
-        ref={ref}
-      >
-        <div className={styles.modalContactMe}>
-          <div className={styles.box}>
-            <div className={styles.textContainer}>
-              <h3 className={styles.title}>Contact me</h3>
-              <p className={styles.text}>
+      <div className="backdropContactMe ishiddenContactMe" ref={ref}>
+        <div className="modalContactMe">
+          <div>
+            <div>
+              <h3>Contact me</h3>
+              <p>
                 plspls pls pls pls pls pls pls pls pls pls pls pls pls pl spls
                 pls pls pls pls pls pls pls pls pls pls pls pls plspls pls pls
                 pls pls pls pls pls pls pls pls pls pls plspls pls pls pls pls

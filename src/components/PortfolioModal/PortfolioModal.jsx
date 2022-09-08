@@ -1,4 +1,3 @@
-import styles from './PortfolioModal.module.css';
 import { useRef, useEffect } from 'react';
 import kapustaImage from '../../images/kapusta-preview.PNG';
 import filmotekaImage from '../../images/filmoteka-preview.PNG';
@@ -8,7 +7,7 @@ export const PortfolioModal = () => {
   const ref = useRef(null);
 
   useEffect(() => {
-    const backdrop = document.querySelector('.PortfolioModal_backdrop__XXUZr');
+    const backdrop = document.querySelector('.backdropPortfolio');
     backdrop && backdrop.addEventListener('click', onHandlerClick);
 
     function onHandlerClick(evt) {
@@ -18,16 +17,12 @@ export const PortfolioModal = () => {
     }
 
     const box = document.querySelector('.box');
-    const leftSide = document.querySelector('.Experience_containerLeft__MNcmh');
-    const frontSide = document.querySelector(
-      '.FrontAboutMe_containerFront__-xEOJ'
-    );
-    const rightSide = document.querySelector('.Portfolio_container__hiJ0s');
+    const leftSide = document.querySelector('.containerLeft');
+    const frontSide = document.querySelector('.containerFront');
+    const rightSide = document.querySelector('.containerPortfolio');
     const topSide = document.querySelector('.box__face--top');
     const bottomSide = document.querySelector('.box__face--bottom');
-    const backSide = document.querySelector(
-      '.ContactMe_containerContactMe__kjOIz'
-    );
+    const backSide = document.querySelector('.containerContactMe');
 
     const closeBackdrop = () => {
       if (
@@ -35,32 +30,22 @@ export const PortfolioModal = () => {
         box.classList.contains('toleftthree')
       ) {
         topSide && topSide.classList.remove('box__face--topOpenPortfolio');
-        backSide && backSide.classList.remove('ContactMe_contactMeOpen__aZkxe');
-        rightSide &&
-          rightSide.classList.remove('Portfolio_rightSideOpenPortfolio__07BAa');
+        backSide && backSide.classList.remove('contactMeOpen');
+        rightSide && rightSide.classList.remove('rightSideOpenPortfolio');
         bottomSide &&
           bottomSide.classList.remove('box__face--bottomOpenPortfolio');
-        rightSide &&
-          rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
-        leftSide &&
-          leftSide.classList.remove('Experience_experienceOpen__BM6ps');
+        rightSide && rightSide.classList.remove('rightSideOpen');
+        leftSide && leftSide.classList.remove('experienceOpen');
         topSide && topSide.classList.remove('box__face--topOpen');
         bottomSide && bottomSide.classList.remove('box__face--bottomOpen');
-        frontSide &&
-          frontSide.classList.remove(
-            'FrontAboutMe_frontSideOpenPortfolio__Nptph'
-          );
-        frontSide &&
-          frontSide.classList.add(
-            'FrontAboutMe_frontSideClosePortfolio__KIc2U'
-          );
+        frontSide && frontSide.classList.remove('frontSideOpenPortfolio');
+        frontSide && frontSide.classList.add('frontSideClosePortfolio');
         topSide && topSide.classList.add('box__face--topCLosePortfolio');
-        backSide && backSide.classList.add('ContactMe_contactMeClose__mMKHM');
+        backSide && backSide.classList.add('contactMeClose');
         bottomSide &&
           bottomSide.classList.add('box__face--bottomClosePortfolio');
-        element.classList.add('PortfolioModal_ishidden__WK0Ud');
-        rightSide &&
-          rightSide.classList.add('Portfolio_rightSideClosePortfolio__zI+2E');
+        element.classList.add('ishiddenPortfolio');
+        rightSide && rightSide.classList.add('rightSideClosePortfolio');
       }
     };
     const onKeyPress = evt => {
@@ -73,57 +58,31 @@ export const PortfolioModal = () => {
             bottomSide &&
               bottomSide.classList.remove('box__face--bottomCloseContact');
             topSide && topSide.classList.remove('box__face--topCloseContact');
-            leftSide &&
-              leftSide.classList.remove(
-                'Experience_leftSideCloseContact__fHPr+'
-              );
+            leftSide && leftSide.classList.remove('leftSideCloseContact');
             rightSide &&
-              rightSide.classList.remove(
-                'Portfolio_rightSideClosePortfolioContact__AvV+Z'
-              );
-            backSide &&
-              backSide.classList.remove(
-                'ContactMe_contactMeCloseContact__UVuMg'
-              );
+              rightSide.classList.remove('rightSideClosePortfolioContact');
+            backSide && backSide.classList.remove('contactMeCloseContact');
             frontSide &&
-              frontSide.classList.remove(
-                'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
-              );
+              frontSide.classList.remove('frontSideClosePortfolioExp');
             bottomSide &&
               bottomSide.classList.remove('box__face--bottomCloseExp');
             topSide && topSide.classList.remove('box__face--topCloseExp');
-            backSide &&
-              backSide.classList.remove('ContactMe_contactMeCloseExp__wYUv1');
-            leftSide &&
-              leftSide.classList.remove('Experience_leftSideCloseExp__Lg-qj');
+            backSide && backSide.classList.remove('contactMeCloseExp');
+            leftSide && leftSide.classList.remove('leftSideCloseExp');
             topSide && topSide.classList.remove('box__face--topCLosePortfolio');
             topSide && topSide.classList.add('box__face--topOpenPortfolio');
-            backSide &&
-              backSide.classList.remove('ContactMe_contactMeClose__mMKHM');
-            backSide &&
-              backSide.classList.add('ContactMe_contactMeOpen__aZkxe');
-            element.classList.remove('PortfolioModal_ishidden__WK0Ud');
+            backSide && backSide.classList.remove('contactMeClose');
+            backSide && backSide.classList.add('contactMeOpen');
+            element.classList.remove('ishiddenPortfolio');
             bottomSide &&
               bottomSide.classList.add('box__face--bottomOpenPortfolio');
             bottomSide &&
               bottomSide.classList.remove('box__face--bottomClosePortfolio');
-            frontSide &&
-              frontSide.classList.add(
-                'FrontAboutMe_frontSideOpenPortfolio__Nptph'
-              );
-            frontSide &&
-              frontSide.classList.remove(
-                'FrontAboutMe_frontSideClosePortfolio__KIc2U'
-              );
-            rightSide &&
-              rightSide.classList.add(
-                'Portfolio_rightSideOpenPortfolio__07BAa'
-              );
+            frontSide && frontSide.classList.add('frontSideOpenPortfolio');
+            frontSide && frontSide.classList.remove('frontSideClosePortfolio');
+            rightSide && rightSide.classList.add('rightSideOpenPortfolio');
           }
-          rightSide &&
-            rightSide.classList.remove(
-              'Portfolio_rightSideClosePortfolio__zI+2E'
-            );
+          rightSide && rightSide.classList.remove('rightSideClosePortfolio');
           break;
         case 27:
           if (
@@ -131,38 +90,22 @@ export const PortfolioModal = () => {
             box.classList.contains('toleftthree')
           ) {
             topSide && topSide.classList.remove('box__face--topOpenPortfolio');
-            backSide &&
-              backSide.classList.remove('ContactMe_contactMeOpen__aZkxe');
-            rightSide &&
-              rightSide.classList.remove(
-                'Portfolio_rightSideOpenPortfolio__07BAa'
-              );
+            backSide && backSide.classList.remove('contactMeOpen');
+            rightSide && rightSide.classList.remove('rightSideOpenPortfolio');
             bottomSide &&
               bottomSide.classList.remove('box__face--bottomOpenPortfolio');
-            rightSide &&
-              rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
-            leftSide &&
-              leftSide.classList.remove('Experience_experienceOpen__BM6ps');
+            rightSide && rightSide.classList.remove('rightSideOpen');
+            leftSide && leftSide.classList.remove('experienceOpen');
             topSide && topSide.classList.remove('box__face--topOpen');
             bottomSide && bottomSide.classList.remove('box__face--bottomOpen');
-            frontSide &&
-              frontSide.classList.remove(
-                'FrontAboutMe_frontSideOpenPortfolio__Nptph'
-              );
-            frontSide &&
-              frontSide.classList.add(
-                'FrontAboutMe_frontSideClosePortfolio__KIc2U'
-              );
+            frontSide && frontSide.classList.remove('frontSideOpenPortfolio');
+            frontSide && frontSide.classList.add('frontSideClosePortfolio');
             topSide && topSide.classList.add('box__face--topCLosePortfolio');
-            backSide &&
-              backSide.classList.add('ContactMe_contactMeClose__mMKHM');
+            backSide && backSide.classList.add('contactMeClose');
             bottomSide &&
               bottomSide.classList.add('box__face--bottomClosePortfolio');
-            element.classList.add('PortfolioModal_ishidden__WK0Ud');
-            rightSide &&
-              rightSide.classList.add(
-                'Portfolio_rightSideClosePortfolio__zI+2E'
-              );
+            element.classList.add('ishiddenPortfolio');
+            rightSide && rightSide.classList.add('rightSideClosePortfolio');
           }
           break;
         default:
@@ -179,24 +122,19 @@ export const PortfolioModal = () => {
 
   return (
     <>
-      <div className={`${styles.backdrop} ${styles.ishidden}`} ref={ref}>
-        <div className={styles.modal}>
-          <div className={styles.box}>
-            <div className={styles.textContainer}>
-              <ul className={styles.list}>
-                <li className={styles.listItem}>
+      <div className="backdropPortfolio ishiddenPortfolio" ref={ref}>
+        <div className="modalPortfolio">
+          <div>
+            <div>
+              <ul className="list">
+                <li className="listItem">
                   <a
                     rel="noopener noreferrer"
                     target="_blank"
-                    className={styles.listItemLink}
                     href="https://kapusta-project-app.netlify.app/"
                   >
-                    <img
-                      className={styles.itemImage}
-                      src={kapustaImage}
-                      alt=""
-                    />
-                    <div className={styles.listItemBox}>
+                    <img className="itemImage" src={kapustaImage} alt="" />
+                    <div className="listItemBox">
                       <p>[HTML, CSS, React, Redux, Formik, Chart.js]</p>
                       <p>
                         A app with a responsive layout. For finance management.
@@ -206,19 +144,14 @@ export const PortfolioModal = () => {
                     </div>
                   </a>
                 </li>
-                <li className={styles.listItem}>
+                <li className="listItem">
                   <a
                     rel="noopener noreferrer"
                     target="_blank"
-                    className={styles.listItemLink}
                     href="https://jasper935.github.io/filmoteka-project/"
                   >
-                    <img
-                      className={styles.itemImage}
-                      src={filmotekaImage}
-                      alt=""
-                    />
-                    <div className={styles.listItemBox}>
+                    <img className="itemImage" src={filmotekaImage} alt="" />
+                    <div className="listItemBox">
                       <p>[HTML, CSS, React, Redux, Formik, Chart.js]</p>
                       <p>
                         A app with a responsive layout. For finance management.
@@ -228,19 +161,14 @@ export const PortfolioModal = () => {
                     </div>
                   </a>
                 </li>
-                <li className={styles.listItem}>
+                <li className="listItem">
                   <a
                     rel="noopener noreferrer"
                     target="_blank"
-                    className={styles.listItemLink}
                     href="https://mr-nihility.github.io/pixel_hunters_project/"
                   >
-                    <img
-                      className={styles.itemImage}
-                      src={hellenImage}
-                      alt=""
-                    />
-                    <div className={styles.listItemBox}>
+                    <img className="itemImage" src={hellenImage} alt="" />
+                    <div className="listItemBox">
                       <p>[HTML, CSS, React, Redux, Formik, Chart.js]</p>
                       <p>
                         A app with a responsive layout. For finance management.

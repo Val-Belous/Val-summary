@@ -1,11 +1,10 @@
-import styles from './ModalAboutMe.module.css';
 import { useRef, useEffect } from 'react';
 
 export const ModalAboutMe = () => {
   const ref = useRef(null);
 
   useEffect(() => {
-    const backdrop = document.querySelector('.ModalAboutMe_backdrop__v1zHC');
+    const backdrop = document.querySelector('.backdropAboutMe');
     backdrop && backdrop.addEventListener('click', onHandlerClick);
 
     function onHandlerClick(evt) {
@@ -15,16 +14,12 @@ export const ModalAboutMe = () => {
     }
 
     const box = document.querySelector('.box');
-    const leftSide = document.querySelector('.Experience_containerLeft__MNcmh');
-    const frontSide = document.querySelector(
-      '.FrontAboutMe_containerFront__-xEOJ'
-    );
-    const rightSide = document.querySelector('.Portfolio_container__hiJ0s');
+    const leftSide = document.querySelector('.containerLeft');
+    const frontSide = document.querySelector('.containerFront');
+    const rightSide = document.querySelector('.containerPortfolio');
     const topSide = document.querySelector('.box__face--top');
     const bottomSide = document.querySelector('.box__face--bottom');
-    const backSide = document.querySelector(
-      '.ContactMe_containerContactMe__kjOIz'
-    );
+    const backSide = document.querySelector('.containerContactMe');
 
     const closeBackdrop = () => {
       if (
@@ -33,17 +28,13 @@ export const ModalAboutMe = () => {
         (box && box.classList.contains('toleftfour'))
       ) {
         rightSide &&
-          rightSide.classList.remove(
-            'Portfolio_rightSideClosePortfolioContact__AvV+Z'
-          );
-        rightSide &&
-          rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
-        leftSide && leftSide.classList.remove('Experience_leftSideOpen__ONILW');
+          rightSide.classList.remove('rightSideClosePortfolioContact');
+        rightSide && rightSide.classList.remove('rightSideOpen');
+        leftSide && leftSide.classList.remove('leftSideOpen');
         topSide && topSide.classList.remove('box__face--topOpen');
         bottomSide && bottomSide.classList.remove('box__face--bottomOpen');
-        frontSide &&
-          frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
-        element.classList.add('ModalAboutMe_ishidden__5OpwD');
+        frontSide && frontSide.classList.remove('frontSideOpen');
+        element.classList.add('ishiddenAboutMe');
       }
     };
 
@@ -58,39 +49,24 @@ export const ModalAboutMe = () => {
             bottomSide &&
               bottomSide.classList.remove('box__face--bottomCloseContact');
             topSide && topSide.classList.remove('box__face--topCloseContact');
-            leftSide &&
-              leftSide.classList.remove(
-                'Experience_leftSideCloseContact__fHPr+'
-              );
-            backSide &&
-              backSide.classList.remove(
-                'ContactMe_contactMeCloseContact__UVuMg'
-              );
+            leftSide && leftSide.classList.remove('leftSideCloseContact');
+            backSide && backSide.classList.remove('contactMeCloseContact');
             frontSide &&
-              frontSide.classList.remove(
-                'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
-              );
+              frontSide.classList.remove('frontSideClosePortfolioExp');
             bottomSide &&
               bottomSide.classList.remove('box__face--bottomCloseExp');
             topSide && topSide.classList.remove('box__face--topCloseExp');
-            leftSide &&
-              leftSide.classList.remove('Experience_leftSideCloseExp__Lg-qj');
+            leftSide && leftSide.classList.remove('leftSideCloseExp');
             topSide && topSide.classList.remove('box__face--topCLosePortfolio');
-            frontSide &&
-              frontSide.classList.remove(
-                'FrontAboutMe_frontSideClosePortfolio__KIc2U'
-              );
+            frontSide && frontSide.classList.remove('frontSideClosePortfolio');
             bottomSide &&
               bottomSide.classList.remove('box__face--bottomClosePortfolio');
-            element.classList.remove('ModalAboutMe_ishidden__5OpwD');
-            leftSide &&
-              leftSide.classList.add('Experience_leftSideOpen__ONILW');
+            element.classList.remove('ishiddenAboutMe');
+            leftSide && leftSide.classList.add('leftSideOpen');
             topSide && topSide.classList.add('box__face--topOpen');
             bottomSide && bottomSide.classList.add('box__face--bottomOpen');
-            frontSide &&
-              frontSide.classList.add('FrontAboutMe_frontSideOpen__zZ41Z');
-            rightSide &&
-              rightSide.classList.add('Portfolio_rightSideOpen__-Niiy');
+            frontSide && frontSide.classList.add('frontSideOpen');
+            rightSide && rightSide.classList.add('rightSideOpen');
           }
           break;
         case 27:
@@ -100,18 +76,13 @@ export const ModalAboutMe = () => {
             (box && box.classList.contains('toleftfour'))
           ) {
             rightSide &&
-              rightSide.classList.remove(
-                'Portfolio_rightSideClosePortfolioContact__AvV+Z'
-              );
-            rightSide &&
-              rightSide.classList.remove('Portfolio_rightSideOpen__-Niiy');
-            leftSide &&
-              leftSide.classList.remove('Experience_leftSideOpen__ONILW');
+              rightSide.classList.remove('rightSideClosePortfolioContact');
+            rightSide && rightSide.classList.remove('rightSideOpen');
+            leftSide && leftSide.classList.remove('leftSideOpen');
             topSide && topSide.classList.remove('box__face--topOpen');
             bottomSide && bottomSide.classList.remove('box__face--bottomOpen');
-            frontSide &&
-              frontSide.classList.remove('FrontAboutMe_frontSideOpen__zZ41Z');
-            element.classList.add('ModalAboutMe_ishidden__5OpwD');
+            frontSide && frontSide.classList.remove('frontSideOpen');
+            element.classList.add('ishiddenAboutMe');
           }
           break;
         default:
@@ -130,14 +101,14 @@ export const ModalAboutMe = () => {
     <>
       <div
         id="modalAboutMe"
-        className={`${styles.backdrop} ${styles.ishidden}`}
+        className="backdropAboutMe ishiddenAboutMe"
         ref={ref}
       >
-        <div className={styles.modal}>
-          <div className={styles.box}>
-            <div className={styles.textContainer}>
-              <h3 className={styles.title}>Front-end developer</h3>
-              <p className={styles.text}>
+        <div className="modalAboutMe">
+          <div>
+            <div>
+              <h3>Front-end developer</h3>
+              <p>
                 I am junior front-end developer looking for a full - time job.
                 Seeking to use my good JavaScript and React.js skills. I want
                 try to do my best on my future position in order to achieve the

@@ -1,4 +1,4 @@
-.container {
+.arrow-container {
   position: absolute;
   bottom: 5%;
   left: 5%;
@@ -20,7 +20,7 @@
   }
 }
 
-.box {
+.arrow-box {
   display: flex;
   justify-content: space-between;
   gap: 50px;

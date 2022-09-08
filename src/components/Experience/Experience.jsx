@@ -1,23 +1,20 @@
-import styles from './Experience.module.css';
 // import { useEffect } from 'react';
 export const Experience = () => {
   // useEffect(() => {
-  //   const backdrop = document.querySelector('.ModalAboutMe_backdrop__v1zHC');
+  //   const backdrop = document.querySelector('.backdropAboutMe');
   //   const frontSide  = document.querySelector(
-  //     '.FrontAboutMe_containerFront__-xEOJ'
+  //     '.containerFront'
   //   );
   //   frontSide && frontSide && frontSide && frontSide.addEventListener('click', openFrontSide);
 
   //   function openFrontSide(evt) {
   //     if (evt.target !== evt.currentTarget) {
-  //       backdrop.classList.remove('ModalAboutMe_ishidden__5OpwD');
+  //       backdrop.classList.remove('ishiddenAboutMe');
   //     }
   //   }
   // }, []);
   return (
-    <div className={styles.containerLeft}>
-      <span className={styles.leftSideOpenContact}></span>
-      <span className={styles.leftSideCloseContact}></span>
+    <div className="containerLeft">
       <h2>Experience</h2>
     </div>
   );

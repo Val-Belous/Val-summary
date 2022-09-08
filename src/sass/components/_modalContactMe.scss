@@ -1,9 +1,8 @@
-.backdrop {
+.backdropContactMe {
   backdrop-filter: blur(5px);
   position: fixed;
   top: 0;
   left: 50%;
-  /* transform: translateX(-50%); */
   z-index: 1000;
 
   width: 100vw;
@@ -12,21 +11,18 @@
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
-  /* transition: opacity 500ms ease, visibility 500ms ease; */
 }
 
-.ishidden {
+.ishiddenContactMe {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.modal {
+.modalContactMe {
   position: absolute;
   bottom: 45%;
   left: 15%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 5000ms ease-in-out 5000ms;
 
   color: black;
   width: 100%;
@@ -37,16 +33,5 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  /* animation: modal 8s linear; */
   opacity: 1;
-}
-@keyframes modal {
-  0% {
-    transform: translate(0, 0) scale(0);
-    transition: transform 2500ms ease-in-out 2500ms;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 2500ms ease-in-out 2500ms;
-  }
 }

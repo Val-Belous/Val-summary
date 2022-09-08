@@ -17,22 +17,18 @@ export const App = () => {
     let element = ref.current;
     const onKeyPress = evt => {
       const aboutMeBackdrop = document.querySelector('#modalAboutMe');
-      const portfolioBackdrop = document.querySelector(
-        '.PortfolioModal_backdrop__XXUZr'
-      );
+      const portfolioBackdrop = document.querySelector('.backdropPortfolio');
       const experienceBackdrop = document.querySelector('.backdropExperience');
-      const contactBackdrop = document.querySelector(
-        '.ModalContactMe_backdropContactMe__MDbbj'
-      );
+      const contactBackdrop = document.querySelector('.backdropContactMe');
 
       if (
         !(
           aboutMeBackdrop &&
-          aboutMeBackdrop.classList.contains('ModalAboutMe_ishidden__5OpwD')
+          aboutMeBackdrop.classList.contains('ishiddenAboutMe')
         ) ||
         !(
           portfolioBackdrop &&
-          portfolioBackdrop.classList.contains('PortfolioModal_ishidden__WK0Ud')
+          portfolioBackdrop.classList.contains('ishiddenPortfolio')
         ) ||
         !(
           experienceBackdrop &&
@@ -40,7 +36,7 @@ export const App = () => {
         ) ||
         !(
           contactBackdrop &&
-          contactBackdrop.classList.contains('ModalContactMe_ishidden__SfNTL')
+          contactBackdrop.classList.contains('ishiddenContactMe')
         )
       ) {
         return;

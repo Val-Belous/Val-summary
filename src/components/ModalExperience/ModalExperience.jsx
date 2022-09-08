@@ -1,4 +1,3 @@
-import styles from './ModalExperience.module.css';
 import { useRef, useEffect } from 'react';
 export const ModalExperience = () => {
   const ref = useRef(null);
@@ -14,16 +13,12 @@ export const ModalExperience = () => {
     }
 
     const box = document.querySelector('.box');
-    const leftSide = document.querySelector('.Experience_containerLeft__MNcmh');
-    const frontSide = document.querySelector(
-      '.FrontAboutMe_containerFront__-xEOJ'
-    );
+    const leftSide = document.querySelector('.containerLeft');
+    const frontSide = document.querySelector('.containerFront');
     const topSide = document.querySelector('.box__face--top');
     const bottomSide = document.querySelector('.box__face--bottom');
-    const backSide = document.querySelector(
-      '.ContactMe_containerContactMe__kjOIz'
-    );
-    const rightSide = document.querySelector('.Portfolio_container__hiJ0s');
+    const backSide = document.querySelector('.containerContactMe');
+    const rightSide = document.querySelector('.containerPortfolio');
 
     const closeBackdrop = () => {
       if (
@@ -34,23 +29,13 @@ export const ModalExperience = () => {
         bottomSide && bottomSide.classList.remove('box__face--bottomOpenExp');
         topSide && topSide.classList.remove('box__face--topOpenExp');
         topSide && topSide.classList.add('box__face--topCloseExp');
-        frontSide &&
-          frontSide.classList.remove(
-            'FrontAboutMe_frontSideOpenPortfolioExp__OwmDW'
-          );
-        frontSide &&
-          frontSide.classList.add(
-            'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
-          );
-        leftSide &&
-          leftSide.classList.remove('Experience_leftSideOpenExp__qOlkK');
-        backSide &&
-          backSide.classList.remove('ContactMe_contactMeOpenExp__hXIey');
-        backSide &&
-          backSide.classList.add('ContactMe_contactMeCloseExp__wYUv1');
+        frontSide && frontSide.classList.remove('frontSideOpenPortfolioExp');
+        frontSide && frontSide.classList.add('frontSideClosePortfolioExp');
+        leftSide && leftSide.classList.remove('leftSideOpenEx');
+        backSide && backSide.classList.remove('contactMeOpenExp');
+        backSide && backSide.classList.add('contactMeCloseExp');
         element.classList.add('ishidden');
-        leftSide &&
-          leftSide.classList.add('Experience_leftSideCloseExp__Lg-qj');
+        leftSide && leftSide.classList.add('leftSideCloseExp');
       }
     };
 
@@ -64,37 +49,19 @@ export const ModalExperience = () => {
             bottomSide &&
               bottomSide.classList.remove('box__face--bottomCloseContact');
             topSide && topSide.classList.remove('box__face--topCloseContact');
-            leftSide &&
-              leftSide.classList.remove(
-                'Experience_leftSideCloseContact__fHPr+'
-              );
+            leftSide && leftSide.classList.remove('leftSideCloseContact');
             rightSide &&
-              rightSide.classList.remove(
-                'Portfolio_rightSideClosePortfolioContact__AvV+Z'
-              );
-            backSide &&
-              backSide.classList.remove(
-                'ContactMe_contactMeCloseContact__UVuMg'
-              );
+              rightSide.classList.remove('rightSideClosePortfolioContact');
+            backSide && backSide.classList.remove('contactMeCloseContact');
             element.classList.remove('ishidden');
-            leftSide &&
-              leftSide.classList.add('Experience_leftSideOpenExp__qOlkK');
-            leftSide &&
-              leftSide.classList.remove('Experience_leftSideCloseExp__Lg-qj');
-            backSide &&
-              backSide.classList.add('ContactMe_contactMeOpenExp__hXIey');
-            backSide &&
-              backSide.classList.remove('ContactMe_contactMeCloseExp__wYUv1');
-            backSide &&
-              backSide.classList.remove('ContactMe_contactMeClose__mMKHM');
+            leftSide && leftSide.classList.add('leftSideOpenEx');
+            leftSide && leftSide.classList.remove('leftSideCloseExp');
+            backSide && backSide.classList.add('contactMeOpenExp');
+            backSide && backSide.classList.remove('contactMeCloseExp');
+            backSide && backSide.classList.remove('contactMeClose');
+            frontSide && frontSide.classList.add('frontSideOpenPortfolioExp');
             frontSide &&
-              frontSide.classList.add(
-                'FrontAboutMe_frontSideOpenPortfolioExp__OwmDW'
-              );
-            frontSide &&
-              frontSide.classList.remove(
-                'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
-              );
+              frontSide.classList.remove('frontSideClosePortfolioExp');
             topSide && topSide.classList.add('box__face--topOpenExp');
             topSide && topSide.classList.remove('box__face--topCloseExp');
             bottomSide && bottomSide.classList.add('box__face--bottomOpenExp');
@@ -113,22 +80,13 @@ export const ModalExperience = () => {
             topSide && topSide.classList.remove('box__face--topOpenExp');
             topSide && topSide.classList.add('box__face--topCloseExp');
             frontSide &&
-              frontSide.classList.remove(
-                'FrontAboutMe_frontSideOpenPortfolioExp__OwmDW'
-              );
-            frontSide &&
-              frontSide.classList.add(
-                'FrontAboutMe_frontSideClosePortfolioExp__dkVzp'
-              );
-            leftSide &&
-              leftSide.classList.remove('Experience_leftSideOpenExp__qOlkK');
-            backSide &&
-              backSide.classList.remove('ContactMe_contactMeOpenExp__hXIey');
-            backSide &&
-              backSide.classList.add('ContactMe_contactMeCloseExp__wYUv1');
+              frontSide.classList.remove('frontSideOpenPortfolioExp');
+            frontSide && frontSide.classList.add('frontSideClosePortfolioExp');
+            leftSide && leftSide.classList.remove('leftSideOpenEx');
+            backSide && backSide.classList.remove('contactMeOpenExp');
+            backSide && backSide.classList.add('contactMeCloseExp');
             element.classList.add('ishidden');
-            leftSide &&
-              leftSide.classList.add('Experience_leftSideCloseExp__Lg-qj');
+            leftSide && leftSide.classList.add('leftSideCloseExp');
           }
           break;
         default:
@@ -145,12 +103,12 @@ export const ModalExperience = () => {
 
   return (
     <>
-      <div className={`backdropExperience ishidden`} ref={ref}>
-        <div className={styles.modalExperience}>
-          <div className={styles.box}>
-            <div className={styles.textContainer}>
-              <h3 className={styles.title}>Contact me</h3>
-              <p className={styles.text}>
+      <div className="backdropExperience ishidden" ref={ref}>
+        <div className="modalExperience">
+          <div className="box">
+            <div className="textContainer">
+              <h3 className="title">Contact me</h3>
+              <p className="text">
                 exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp
                 exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp
                 exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp
