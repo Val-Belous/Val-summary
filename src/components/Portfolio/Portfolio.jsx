@@ -1,6 +1,6 @@
-import kapustaImage from '../../images/kapusta-preview.PNG';
-import filmotekaImage from '../../images/filmoteka-preview.PNG';
-import hellenImage from '../../images/hellen-preview.PNG';
+import kapustaImage from '.../../images/kapusta-preview.PNG';
+import filmotekaImage from '.../../images/filmoteka-preview.PNG';
+import hellenImage from '.../../images/hellen-preview.PNG';
 
 export const Portfolio = () => {
   return (
