@@ -49,3 +49,16 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   opacity: 1;
 }
+
+.boxAboutMeThird {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--backgroundCube);
+
+  border: var(--border);
+  padding: 15px;
+}

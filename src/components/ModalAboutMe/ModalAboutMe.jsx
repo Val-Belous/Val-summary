@@ -13,9 +13,7 @@ export const ModalAboutMe = () => {
     const topSide = document.querySelector('.box__face--top');
     const bottomSide = document.querySelector('.box__face--bottom');
     const backSide = document.querySelector('.containerContactMe');
-    const boxAboutMeFirst = document.querySelector('.boxAboutMeFirst');
-    const boxAboutMeSecond = document.querySelector('.boxAboutMeSecond');
-    const boxAboutMeFour = document.querySelector('.boxAboutMeFour');
+    const AboutMe__box = document.querySelector('.AboutMe__box');
 
     const currentSideModal = document.querySelector('.modalAboutMe');
     currentSideModal.addEventListener('click', closeFrontSide);
@@ -23,15 +21,13 @@ export const ModalAboutMe = () => {
     function closeFrontSide(evt) {
       if (evt.target === evt.currentTarget) {
         backdrop.classList.add('ishiddenAboutMe');
-        boxAboutMeFour.classList.remove('four');
-        boxAboutMeSecond.classList.remove('second');
-        boxAboutMeFirst.classList.remove('first');
         rightSide.classList.remove('rightSideClosePortfolioContact');
         rightSide.classList.remove('rightSideOpen');
         leftSide.classList.remove('leftSideOpen');
         topSide.classList.remove('box__face--topOpen');
         bottomSide.classList.remove('box__face--bottomOpen');
         frontSide.classList.remove('frontSideOpen');
+        AboutMe__box.classList.remove('third');
       }
     }
 
@@ -43,10 +39,8 @@ export const ModalAboutMe = () => {
             box.classList.contains('default') ||
             box.classList.contains('toleftfour')
           ) {
-            boxAboutMeFirst.classList.add('first');
-            boxAboutMeSecond.classList.add('second');
-            boxAboutMeFour.classList.add('four');
-            // ======
+            rightSide.classList.remove('rightSideClosePortfolioContact');
+            AboutMe__box.classList.add('third');
             bottomSide.classList.remove('box__face--bottomCloseContact');
             topSide.classList.remove('box__face--topCloseContact');
             leftSide.classList.remove('leftSideCloseContact');
@@ -73,9 +67,7 @@ export const ModalAboutMe = () => {
             box.classList.contains('default') ||
             box.classList.contains('toleftfour')
           ) {
-            boxAboutMeFour.classList.remove('four');
-            boxAboutMeSecond.classList.remove('second');
-            boxAboutMeFirst.classList.remove('first');
+            AboutMe__box.classList.remove('third');
             rightSide.classList.remove('rightSideClosePortfolioContact');
             rightSide.classList.remove('rightSideOpen');
             leftSide.classList.remove('leftSideOpen');
@@ -105,59 +97,60 @@ export const ModalAboutMe = () => {
         ref={ref}
       >
         <div className="modalAboutMe">
-          <div className="boxAboutMeFirst">
-            <img className="image" src={photo} alt="" />
-            <div className="text-box">
-              <h2 className="titleAboutMe">Valentyn Belous</h2>
-              <p>
-                I am junior front-end developer looking for a full - time job.
-                Seeking to use my good JavaScript and React.js skills. I want
-                try to do my best on my future position in order to achieve the
-                maximum good result in the shortest possible time.
-              </p>
-            </div>
-          </div>
-          <div className="boxAboutMeSecond">
-            <div className="skills-box">
-              <h2 className="titleAboutMe">Skills</h2>
-              <div className="skills-text-box">
-                <h3 className="textAboutMe">Hard</h3>
-                <h3 className="textAboutMe">Soft</h3>
-              </div>
-              <div className="skills-text-box">
+          <div className="AboutMe__box">
+            <div className="boxAboutMeFirst">
+              <img className="image" src={photo} alt="" />
+              <div className="text-box">
+                <h2 className="titleAboutMe">Valentyn Belous</h2>
                 <p>
-                  HTML5/CSS/SASS, Responsive/Adaptive design, GIT, JavaScript,
-                  React, Redux, Axios, Parcel, MaterialUI, Chart.js
-                </p>
-                <p>
-                  Teamwork, Good communication, Capable, Honest, Good sense of
-                  humour.
+                  I am junior front-end developer looking for a full - time job.
+                  Seeking to use my good JavaScript and React.js skills. I want
+                  try to do my best on my future position in order to achieve
+                  the maximum good result in the shortest possible time.
                 </p>
               </div>
             </div>
-          </div>
-
-          <div className="boxAboutMeFour">
-            <div className="work-box">
-              <h2 className="titleAboutMe">Education</h2>
-              <h3 className="textAboutMe">Chernivtsi Polytechnic College</h3>
-              <ul className="work-text-box">
-                <li>
-                  <p className="work-text">2009 - 2013</p>
-                  <p className="work-text">
-                    Construction and civil engineering
+            <div className="boxAboutMeSecond">
+              <div className="skills-box">
+                <h2 className="titleAboutMe">Skills</h2>
+                <div className="skills-text-box">
+                  <h3 className="textAboutMe">Hard</h3>
+                  <h3 className="textAboutMe">Soft</h3>
+                </div>
+                <div className="skills-text-box">
+                  <p>
+                    HTML5/CSS/SASS, Responsive/Adaptive design, GIT, JavaScript,
+                    React, Redux, Axios, Parcel, MaterialUI, Chart.js
                   </p>
-                </li>
-                <li>
-                  <h3 className="textAboutMe">
-                    Odessa Academy of Civil Engineering and Architecture
-                  </h3>
-                  <p className="work-text">2013 - 2017</p>
-                  <p className="work-text">
-                    Construction and civil engineering
+                  <p>
+                    Teamwork, Good communication, Capable, Honest, Good sense of
+                    humour.
                   </p>
-                </li>
-              </ul>
+                </div>
+              </div>
+            </div>
+            <div className="boxAboutMeFour">
+              <div className="work-box">
+                <h2 className="titleAboutMe">Education</h2>
+                <h3 className="textAboutMe">Chernivtsi Polytechnic College</h3>
+                <ul className="work-text-box">
+                  <li>
+                    <p className="work-text">2009 - 2013</p>
+                    <p className="work-text">
+                      Construction and civil engineering
+                    </p>
+                  </li>
+                  <li>
+                    <h3 className="textAboutMe">
+                      Odessa Academy of Civil Engineering and Architecture
+                    </h3>
+                    <p className="work-text">2013 - 2017</p>
+                    <p className="work-text">
+                      Construction and civil engineering
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

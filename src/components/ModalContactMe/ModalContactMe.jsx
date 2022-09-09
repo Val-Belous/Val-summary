@@ -7,30 +7,23 @@ import resume from '../../resume/cv-val-bilous.pdf';
 
 export const ModalContactMe = () => {
   const ref = useRef(null);
-  console.log(FontAwesomeIcon);
 
   useEffect(() => {
     const backdrop = document.querySelector('.backdropContactMe');
-    backdrop.addEventListener('click', onHandlerClick);
-
     const box = document.querySelector('.box');
     const leftSide = document.querySelector('.containerLeft');
     const rightSide = document.querySelector('.containerPortfolio');
     const topSide = document.querySelector('.box__face--top');
     const bottomSide = document.querySelector('.box__face--bottom');
     const backSide = document.querySelector('.containerContactMe');
+    const ContactMe__box = document.querySelector('.modalContactMe__box');
 
-    function onHandlerClick(evt) {
+    const currentSideModal = document.querySelector('.modalContactMe');
+    currentSideModal.addEventListener('click', closeCurrentSide);
+
+    function closeCurrentSide(evt) {
       if (evt.target === evt.currentTarget) {
-        closeBackdrop();
-      }
-    }
-
-    const closeBackdrop = () => {
-      if (
-        box.classList.contains('torighttwo') ||
-        box.classList.contains('tolefttwo')
-      ) {
+        backdrop.classList.add('ishiddenContactMe');
         bottomSide.classList.add('box__face--bottomCloseContact');
         bottomSide.classList.remove('box__face--bottomOpenContact');
         topSide.classList.add('box__face--topCloseContact');
@@ -39,11 +32,11 @@ export const ModalContactMe = () => {
         leftSide.classList.remove('leftSideOpenContact');
         rightSide.classList.remove('rightSideOpenPortfolioContact');
         rightSide.classList.add('rightSideClosePortfolioContact');
-        element.classList.add('ishiddenContactMe');
         backSide.classList.remove('contactMeOpenContact');
         backSide.classList.add('contactMeCloseContact');
+        ContactMe__box.classList.remove('third');
       }
-    };
+    }
 
     const onKeyPress = evt => {
       switch (evt.keyCode) {
@@ -52,6 +45,7 @@ export const ModalContactMe = () => {
             box.classList.contains('torighttwo') ||
             box.classList.contains('tolefttwo')
           ) {
+            ContactMe__box.classList.add('third');
             element.classList.remove('ishiddenContactMe');
             backSide.classList.add('contactMeOpenContact');
             backSide.classList.remove('contactMeCloseContact');
@@ -71,6 +65,7 @@ export const ModalContactMe = () => {
             box.classList.contains('torighttwo') ||
             box.classList.contains('tolefttwo')
           ) {
+            ContactMe__box.classList.remove('third');
             bottomSide.classList.add('box__face--bottomCloseContact');
             bottomSide.classList.remove('box__face--bottomOpenContact');
             topSide.classList.add('box__face--topCloseContact');
@@ -79,9 +74,9 @@ export const ModalContactMe = () => {
             leftSide.classList.remove('leftSideOpenContact');
             rightSide.classList.remove('rightSideOpenPortfolioContact');
             rightSide.classList.add('rightSideClosePortfolioContact');
-            element.classList.add('ishiddenContactMe');
             backSide.classList.remove('contactMeOpenContact');
             backSide.classList.add('contactMeCloseContact');
+            element.classList.add('ishiddenContactMe');
           }
           break;
         default:

@@ -12,19 +12,15 @@ export const FrontAboutMe = () => {
     const topSide = document.querySelector('.box__face--top');
     const bottomSide = document.querySelector('.box__face--bottom');
     const backSide = document.querySelector('.containerContactMe');
-    const boxAboutMeFirst = document.querySelector('.boxAboutMeFirst');
-    const boxAboutMeSecond = document.querySelector('.boxAboutMeSecond');
-    const boxAboutMeFour = document.querySelector('.boxAboutMeFour');
+    const AboutMe__box = document.querySelector('.AboutMe__box');
 
     function openFrontSide(evt) {
       if (
         evt.target === evt.currentTarget ||
         !evt.target.classList.contains('containerFront')
       ) {
-        boxAboutMeFirst.classList.add('first');
-        boxAboutMeSecond.classList.add('second');
-        boxAboutMeFour.classList.add('four');
-        // ======
+        AboutMe__box.classList.add('third');
+        rightSide.classList.remove('rightSideClosePortfolioContact');
         bottomSide.classList.remove('box__face--bottomCloseContact');
         topSide.classList.remove('box__face--topCloseContact');
         leftSide.classList.remove('leftSideCloseContact');
@@ -49,9 +45,11 @@ export const FrontAboutMe = () => {
 
   return (
     <div className="containerFront">
-      <h2 className="mainTitle">Hello!</h2>
-      <h3>My name is Val</h3>
-      <p>Press "Enter" to read information about me</p>
+      <h2 className="mainTitleAbout">
+        Hello! <br />
+        My name is Val
+      </h2>
+      <p>"Click" or press "Enter" to read information about me</p>
     </div>
   );
 };

@@ -50,12 +50,12 @@
   opacity: 1;
 }
 
-.modalAboutMe > div {
-  width: 32%;
-}
+.AboutMe__box {
+  width: 80%;
+  height: 80%;
 
-.boxAboutMe {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
@@ -69,85 +69,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background-color: var(--backgroundCube);
-
-  border: var(--border);
   padding: 15px;
 }
 
 .boxAboutMeSecond {
   display: flex;
   justify-content: center;
-
-  background-color: var(--backgroundCube);
-
-  border: var(--border);
-  padding: 15px;
-}
-
-.boxAboutMeThird {
-  display: flex;
-  justify-content: center;
-
-  background-color: var(--backgroundCube);
-
-  border: var(--border);
   padding: 15px;
 }
 
 .boxAboutMeFour {
   display: flex;
   justify-content: center;
-
-  background-color: var(--backgroundCube);
-
-  border: var(--border);
   padding: 15px;
 }
 
-.first {
-  // backdrop-filter: blur(5px);
-  animation: modalFirst 1s linear;
-}
-@keyframes modalFirst {
-  0% {
-    transform: translate(30%, 30%) scale(0);
-  }
-  50% {
-    transform: translate(30%, 30%) scale(0);
-  }
-  100% {
-    transform: translate(0%, 0%) scale(1);
-  }
-}
-.firstClose {
-  animation: firstClose 1s linear;
-}
-@keyframes firstClose {
-  0% {
-    transform: translate(0%, 0%) scale(1);
-  }
-  100% {
-    transform: translate(30%, 30%) scale(0);
-  }
-}
-
-.second {
-  // backdrop-filter: blur(5px);
-  animation: modalSecond 1s linear;
-}
-@keyframes modalSecond {
-  0% {
-    transform: translate(-30%, 30%) scale(0);
-  }
-  50% {
-    transform: translate(-30%, 30%) scale(0);
-  }
-  100% {
-    transform: translate(0%, 0%) scale(1);
-  }
-}
 .third {
   animation: modalthird 1s linear;
 }
@@ -157,21 +93,6 @@
   }
   50% {
     transform: translate(0%, 0%) scale(0);
-  }
-  100% {
-    transform: translate(0%, 0%) scale(1);
-  }
-}
-
-.four {
-  animation: modalfour 1s linear;
-}
-@keyframes modalfour {
-  0% {
-    transform: translate(-30%, 30%) scale(0);
-  }
-  50% {
-    transform: translate(-30%, -30%) scale(0);
   }
   100% {
     transform: translate(0%, 0%) scale(1);

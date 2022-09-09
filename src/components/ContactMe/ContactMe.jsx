@@ -10,12 +10,14 @@ export const ContactMe = () => {
     const topSide = document.querySelector('.box__face--top');
     const bottomSide = document.querySelector('.box__face--bottom');
     const backSide = document.querySelector('.containerContactMe');
+    const ContactMe__box = document.querySelector('.modalContactMe__box');
 
     function openCurrentSide(evt) {
       if (
         evt.target === evt.currentTarget ||
         !evt.target.classList.contains('containerContactMe')
       ) {
+        ContactMe__box.classList.add('third');
         backSide.classList.add('contactMeOpenContact');
         backSide.classList.remove('contactMeCloseContact');
         backSide.classList.remove('contactMeClose');
@@ -34,6 +36,8 @@ export const ContactMe = () => {
   return (
     <div className="containerContactMe">
       <h2>Contact Me</h2>
+
+      <p>"Click" or press "Enter" for details</p>
     </div>
   );
 };
