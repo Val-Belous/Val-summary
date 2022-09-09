@@ -1,6 +1,7 @@
 import { ContactForm } from 'components/Form/Form';
 import { useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export const ModalContactMe = () => {
@@ -145,7 +146,9 @@ export const ModalContactMe = () => {
               </li>
             </ul>
             <div>
-              <a href=""></a>
+              <p>Download CV</p>
+              <FontAwesomeIcon className="fa" icon={faFolder} />
+              <a href="" download></a>
             </div>
             <ContactForm />
           </div>
