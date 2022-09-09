@@ -8,8 +8,20 @@ export const FrontAboutMe = () => {
     currentSide.addEventListener('click', openFrontSide);
     currentSideModal.addEventListener('click', closeFrontSide);
 
+    const leftSide = document.querySelector('.containerLeft');
+    const frontSide = document.querySelector('.containerFront');
+    const rightSide = document.querySelector('.containerPortfolio');
+    const topSide = document.querySelector('.box__face--top');
+    const bottomSide = document.querySelector('.box__face--bottom');
+    const backSide = document.querySelector('.containerContactMe');
+    const boxAboutMeFirst = document.querySelector('.boxAboutMeFirst');
+    const boxAboutMeSecond = document.querySelector('.boxAboutMeSecond');
+    const boxAboutMeThird = document.querySelector('.boxAboutMeThird');
+    const boxAboutMeFour = document.querySelector('.boxAboutMeFour');
+
     function closeFrontSide(evt) {
       if (evt.target === evt.currentTarget) {
+        backdrop.classList.add('ishiddenAboutMe');
         boxAboutMeFour.classList.remove('four');
         boxAboutMeThird.classList.remove('third');
         boxAboutMeSecond.classList.remove('second');
@@ -22,17 +34,6 @@ export const FrontAboutMe = () => {
         frontSide.classList.remove('frontSideOpen');
       }
     }
-
-    const leftSide = document.querySelector('.containerLeft');
-    const frontSide = document.querySelector('.containerFront');
-    const rightSide = document.querySelector('.containerPortfolio');
-    const topSide = document.querySelector('.box__face--top');
-    const bottomSide = document.querySelector('.box__face--bottom');
-    const backSide = document.querySelector('.containerContactMe');
-    const boxAboutMeFirst = document.querySelector('.boxAboutMeFirst');
-    const boxAboutMeSecond = document.querySelector('.boxAboutMeSecond');
-    const boxAboutMeThird = document.querySelector('.boxAboutMeThird');
-    const boxAboutMeFour = document.querySelector('.boxAboutMeFour');
 
     function openFrontSide(evt) {
       if (evt.target !== evt.currentTarget) {
