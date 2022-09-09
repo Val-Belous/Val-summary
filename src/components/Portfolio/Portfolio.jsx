@@ -6,11 +6,43 @@ import { useEffect } from 'react';
 export const Portfolio = () => {
   useEffect(() => {
     const backdrop = document.querySelector('.backdropPortfolio');
+    const currentSide = document.querySelector('.containerPortfolio');
+    currentSide.addEventListener('click', openFrontSide);
+
+    const leftSide = document.querySelector('.containerLeft');
+    const frontSide = document.querySelector('.containerFront');
     const rightSide = document.querySelector('.containerPortfolio');
-    rightSide.addEventListener('click', openFrontSide);
+    const topSide = document.querySelector('.box__face--top');
+    const bottomSide = document.querySelector('.box__face--bottom');
+    const backSide = document.querySelector('.containerContactMe');
+    const portfolioList = document.querySelector('.portfolioList');
 
     function openFrontSide(evt) {
-      if (evt.target !== evt.currentTarget) {
+      if (
+        evt.target === evt.currentTarget ||
+        !evt.target.classList.contains('containerPortfolio')
+      ) {
+        portfolioList.classList.add('modalPortfolioList');
+        bottomSide.classList.remove('box__face--bottomCloseContact');
+        topSide.classList.remove('box__face--topCloseContact');
+        leftSide.classList.remove('leftSideCloseContact');
+        rightSide.classList.remove('rightSideClosePortfolioContact');
+        backSide.classList.remove('contactMeCloseContact');
+        frontSide.classList.remove('frontSideClosePortfolioExp');
+        bottomSide.classList.remove('box__face--bottomCloseExp');
+        topSide.classList.remove('box__face--topCloseExp');
+        backSide.classList.remove('contactMeCloseExp');
+        leftSide.classList.remove('leftSideCloseExp');
+        topSide.classList.remove('box__face--topCLosePortfolio');
+        topSide.classList.add('box__face--topOpenPortfolio');
+        backSide.classList.remove('contactMeClose');
+        backSide.classList.add('contactMeOpen');
+        bottomSide.classList.add('box__face--bottomOpenPortfolio');
+        bottomSide.classList.remove('box__face--bottomClosePortfolio');
+        frontSide.classList.add('frontSideOpenPortfolio');
+        frontSide.classList.remove('frontSideClosePortfolio');
+        rightSide.classList.add('rightSideOpenPortfolio');
+        rightSide.classList.remove('rightSideClosePortfolio');
         backdrop.classList.remove('ishiddenPortfolio');
       }
     }

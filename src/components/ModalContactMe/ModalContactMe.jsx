@@ -1,3 +1,4 @@
+import { ContactForm } from 'components/Form/Form';
 import { useRef, useEffect } from 'react';
 export const ModalContactMe = () => {
   const ref = useRef(null);
@@ -6,18 +7,18 @@ export const ModalContactMe = () => {
     const backdrop = document.querySelector('.backdropContactMe');
     backdrop.addEventListener('click', onHandlerClick);
 
-    function onHandlerClick(evt) {
-      if (evt.target === evt.currentTarget) {
-        closeBackdrop();
-      }
-    }
-
     const box = document.querySelector('.box');
     const leftSide = document.querySelector('.containerLeft');
     const rightSide = document.querySelector('.containerPortfolio');
     const topSide = document.querySelector('.box__face--top');
     const bottomSide = document.querySelector('.box__face--bottom');
     const backSide = document.querySelector('.containerContactMe');
+
+    function onHandlerClick(evt) {
+      if (evt.target === evt.currentTarget) {
+        closeBackdrop();
+      }
+    }
 
     const closeBackdrop = () => {
       if (
@@ -93,17 +94,49 @@ export const ModalContactMe = () => {
     <>
       <div className="backdropContactMe ishiddenContactMe" ref={ref}>
         <div className="modalContactMe">
-          <div>
-            <div>
-              <h3>Contact me</h3>
-              <p>
-                plspls pls pls pls pls pls pls pls pls pls pls pls pls pl spls
-                pls pls pls pls pls pls pls pls pls pls pls pls plspls pls pls
-                pls pls pls pls pls pls pls pls pls pls plspls pls pls pls pls
-                pls pls pls pls pls pls pls pls plspls pls pls pls pls pls pls
-                pls pls pls pls pls pls plspls pls pls pls pls pls pls pls pls
-              </p>
-            </div>
+          <div className="modalContactMe__box">
+            <h3 className="titleAboutMe">Contact information</h3>
+            <ul className="modalContactMe__list">
+              <li className="modalContactMe__item">
+                <a className="modalContactMe__link" href="tel:+380953307070">
+                  +38 095 330 70 70
+                </a>
+              </li>
+              <li className="modalContactMe__item">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modalContactMe__link"
+                  href="mailto:vaaalbelous@gmail.com"
+                >
+                  vaaalbelous@gmail.com
+                </a>
+              </li>
+              <li className="modalContactMe__item">
+                <a
+                  className="modalContactMe__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/val-belous/"
+                >
+                  www.linkedin.com/in/valbelous
+                </a>
+              </li>
+              <li className="modalContactMe__item">
+                <a
+                  className="modalContactMe__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/Val-Belous"
+                >
+                  https://github.com/ValBelous
+                </a>
+              </li>
+              <li className="modalContactMe__item">
+                <p>Chernivtsi, Ukraine</p>
+              </li>
+            </ul>
+            <ContactForm />
           </div>
         </div>
       </div>

@@ -15,7 +15,6 @@ export const ModalAboutMe = () => {
     const backSide = document.querySelector('.containerContactMe');
     const boxAboutMeFirst = document.querySelector('.boxAboutMeFirst');
     const boxAboutMeSecond = document.querySelector('.boxAboutMeSecond');
-    const boxAboutMeThird = document.querySelector('.boxAboutMeThird');
     const boxAboutMeFour = document.querySelector('.boxAboutMeFour');
 
     const currentSideModal = document.querySelector('.modalAboutMe');
@@ -25,7 +24,6 @@ export const ModalAboutMe = () => {
       if (evt.target === evt.currentTarget) {
         backdrop.classList.add('ishiddenAboutMe');
         boxAboutMeFour.classList.remove('four');
-        boxAboutMeThird.classList.remove('third');
         boxAboutMeSecond.classList.remove('second');
         boxAboutMeFirst.classList.remove('first');
         rightSide.classList.remove('rightSideClosePortfolioContact');
@@ -47,7 +45,6 @@ export const ModalAboutMe = () => {
           ) {
             boxAboutMeFirst.classList.add('first');
             boxAboutMeSecond.classList.add('second');
-            boxAboutMeThird.classList.add('third');
             boxAboutMeFour.classList.add('four');
             // ======
             bottomSide.classList.remove('box__face--bottomCloseContact');
@@ -77,7 +74,6 @@ export const ModalAboutMe = () => {
             box.classList.contains('toleftfour')
           ) {
             boxAboutMeFour.classList.remove('four');
-            boxAboutMeThird.classList.remove('third');
             boxAboutMeSecond.classList.remove('second');
             boxAboutMeFirst.classList.remove('first');
             rightSide.classList.remove('rightSideClosePortfolioContact');
@@ -140,39 +136,7 @@ export const ModalAboutMe = () => {
               </div>
             </div>
           </div>
-          <div className="boxAboutMeThird">
-            <div className="work-box">
-              <h2 className="titleAboutMe">Work Experience</h2>
-              <h3 className="textAboutMe">Ekvator Holiday</h3>
-              <ul className="work-text-box">
-                <li>
-                  <p className="work-text">
-                    Сanteen cashier | May 2015 - October 2017
-                  </p>
-                  <p className="work-text">Responsibilities:</p>
-                  <ul className="work-list">
-                    <li>Communication with clients</li>
-                    <li>Ordered goods</li>
-                  </ul>
-                </li>
-                <li>
-                  <p className="work-text">
-                    Canteen Administrator | May 2018 - October 2021
-                  </p>
-                  <p className="work-text">Responsibilities:</p>
-                  <ul className="work-list">
-                    <li>Communication with clients</li>
-                    <li>Work with staff</li>
-                    <li>Control of quality and service</li>
-                  </ul>
-                </li>
-                <li>
-                  <h3 className="textAboutMe">Alex Group</h3>
-                  <p className="work-text">October 2018 - 2022</p>
-                </li>
-              </ul>
-            </div>
-          </div>
+
           <div className="boxAboutMeFour">
             <div className="work-box">
               <h2 className="titleAboutMe">Education</h2>

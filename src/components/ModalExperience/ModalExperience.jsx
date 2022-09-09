@@ -4,14 +4,6 @@ export const ModalExperience = () => {
 
   useEffect(() => {
     const backdrop = document.querySelector('.backdropExperience');
-    backdrop.addEventListener('click', onHandlerClick);
-
-    function onHandlerClick(evt) {
-      if (evt.target === evt.currentTarget) {
-        closeBackdrop();
-      }
-    }
-
     const box = document.querySelector('.box');
     const leftSide = document.querySelector('.containerLeft');
     const frontSide = document.querySelector('.containerFront');
@@ -19,11 +11,15 @@ export const ModalExperience = () => {
     const bottomSide = document.querySelector('.box__face--bottom');
     const backSide = document.querySelector('.containerContactMe');
     const rightSide = document.querySelector('.containerPortfolio');
-    const closeBackdrop = () => {
-      if (
-        box.classList.contains('toleftone') ||
-        box.classList.contains('torightthree')
-      ) {
+    const boxAboutMeThird = document.querySelector('.boxAboutMeThird');
+
+    const currentSideModal = document.querySelector('.modalExperience');
+    currentSideModal.addEventListener('click', closeCurrentSide);
+
+    function closeCurrentSide(evt) {
+      if (evt.target === evt.currentTarget) {
+        backdrop.classList.add('ishidden');
+        boxAboutMeThird.classList.remove('third');
         bottomSide.classList.add('box__face--bottomCloseExp');
         bottomSide.classList.remove('box__face--bottomOpenExp');
         topSide.classList.remove('box__face--topOpenExp');
@@ -33,10 +29,9 @@ export const ModalExperience = () => {
         leftSide.classList.remove('leftSideOpenExp');
         backSide.classList.remove('contactMeOpenExp');
         backSide.classList.add('contactMeCloseExp');
-        element.classList.add('ishidden');
         leftSide.classList.add('leftSideCloseExp');
       }
-    };
+    }
 
     const onKeyPress = evt => {
       switch (evt.keyCode) {
@@ -45,13 +40,13 @@ export const ModalExperience = () => {
             box.classList.contains('toleftone') ||
             box.classList.contains('torightthree')
           ) {
+            boxAboutMeThird.classList.add('third');
             leftSide.classList.add('leftSideOpenExp');
             bottomSide.classList.remove('box__face--bottomCloseContact');
             topSide.classList.remove('box__face--topCloseContact');
             leftSide.classList.remove('leftSideCloseContact');
             rightSide.classList.remove('rightSideClosePortfolioContact');
             backSide.classList.remove('contactMeCloseContact');
-            element.classList.remove('ishidden');
             leftSide.classList.remove('leftSideCloseExp');
             backSide.classList.add('contactMeOpenExp');
             backSide.classList.remove('contactMeCloseExp');
@@ -62,6 +57,7 @@ export const ModalExperience = () => {
             topSide.classList.remove('box__face--topCloseExp');
             bottomSide.classList.add('box__face--bottomOpenExp');
             bottomSide.classList.remove('box__face--bottomCloseExp');
+            element.classList.remove('ishidden');
           }
           break;
         case 27:
@@ -69,6 +65,7 @@ export const ModalExperience = () => {
             box.classList.contains('toleftone') ||
             box.classList.contains('torightthree')
           ) {
+            boxAboutMeThird.classList.remove('third');
             bottomSide.classList.add('box__face--bottomCloseExp');
             bottomSide.classList.remove('box__face--bottomOpenExp');
             topSide.classList.remove('box__face--topOpenExp');
@@ -98,16 +95,37 @@ export const ModalExperience = () => {
     <>
       <div className="backdropExperience ishidden" ref={ref}>
         <div className="modalExperience">
-          <div className="box">
-            <div className="textContainer">
-              <h3 className="title">Contact me</h3>
-              <p className="text">
-                exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp
-                exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp
-                exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp
-                exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp
-                exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp exp
-              </p>
+          <div className="boxAboutMeThird">
+            <div className="work-box">
+              <h2 className="titleAboutMe">Work Experience</h2>
+              <h3 className="textAboutMe">Ekvator Holiday</h3>
+              <ul className="work-text-box">
+                <li>
+                  <p className="work-text">
+                    Сanteen cashier | May 2015 - October 2017
+                  </p>
+                  <p className="work-text">Responsibilities:</p>
+                  <ul className="work-list">
+                    <li>Communication with clients</li>
+                    <li>Ordered goods</li>
+                  </ul>
+                </li>
+                <li>
+                  <p className="work-text">
+                    Canteen Administrator | May 2018 - October 2021
+                  </p>
+                  <p className="work-text">Responsibilities:</p>
+                  <ul className="work-list">
+                    <li>Communication with clients</li>
+                    <li>Work with staff</li>
+                    <li>Control of quality and service</li>
+                  </ul>
+                </li>
+                <li>
+                  <h3 className="textAboutMe">Alex Group</h3>
+                  <p className="work-text">October 2018 - 2022</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

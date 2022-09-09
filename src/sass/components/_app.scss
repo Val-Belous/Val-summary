@@ -51,7 +51,7 @@
 
 .box__face--top {
   box-shadow: var(--boxShadow);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(10px);
   transform: rotateX(90deg) translateZ(var(--cube-half));
   animation: topSideClose 0.5s linear;
 }

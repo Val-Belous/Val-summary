@@ -14,14 +14,15 @@ export const FrontAboutMe = () => {
     const backSide = document.querySelector('.containerContactMe');
     const boxAboutMeFirst = document.querySelector('.boxAboutMeFirst');
     const boxAboutMeSecond = document.querySelector('.boxAboutMeSecond');
-    const boxAboutMeThird = document.querySelector('.boxAboutMeThird');
     const boxAboutMeFour = document.querySelector('.boxAboutMeFour');
 
     function openFrontSide(evt) {
-      if (evt.target !== evt.currentTarget) {
+      if (
+        evt.target === evt.currentTarget ||
+        !evt.target.classList.contains('containerFront')
+      ) {
         boxAboutMeFirst.classList.add('first');
         boxAboutMeSecond.classList.add('second');
-        boxAboutMeThird.classList.add('third');
         boxAboutMeFour.classList.add('four');
         // ======
         bottomSide.classList.remove('box__face--bottomCloseContact');

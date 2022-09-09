@@ -12,7 +12,6 @@ import { ModalExperience } from './ModalExperience/ModalExperience';
 
 export const App = () => {
   const ref = useRef(null);
-  console.log(ref);
   useEffect(() => {
     let element = ref.current;
     const onKeyPress = evt => {

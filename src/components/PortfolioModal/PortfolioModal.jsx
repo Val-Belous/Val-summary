@@ -8,14 +8,6 @@ export const PortfolioModal = () => {
 
   useEffect(() => {
     const backdrop = document.querySelector('.backdropPortfolio');
-    backdrop.addEventListener('click', onHandlerClick);
-
-    function onHandlerClick(evt) {
-      if (evt.target === evt.currentTarget) {
-        closeBackdrop();
-      }
-    }
-
     const box = document.querySelector('.box');
     const leftSide = document.querySelector('.containerLeft');
     const frontSide = document.querySelector('.containerFront');
@@ -23,13 +15,18 @@ export const PortfolioModal = () => {
     const topSide = document.querySelector('.box__face--top');
     const bottomSide = document.querySelector('.box__face--bottom');
     const backSide = document.querySelector('.containerContactMe');
-    const portfolioListItem = document.querySelector('.modalPortfolio');
+    const portfolioList = document.querySelector('.portfolioList');
 
-    const closeBackdrop = () => {
+    const portfolioListItem = document.querySelector('.modalPortfolio');
+    portfolioListItem.addEventListener('click', onHandlerClick);
+
+    function onHandlerClick(evt) {
       if (
-        box.classList.contains('torightone') ||
-        box.classList.contains('toleftthree')
+        evt.target === evt.currentTarget ||
+        evt.target.classList.contains('portfolioList')
       ) {
+        backdrop.classList.add('ishiddenPortfolio');
+        portfolioList.classList.remove('modalPortfolioList');
         topSide.classList.remove('box__face--topOpenPortfolio');
         backSide.classList.remove('contactMeOpen');
         rightSide.classList.remove('rightSideOpenPortfolio');
@@ -43,10 +40,10 @@ export const PortfolioModal = () => {
         topSide.classList.add('box__face--topCLosePortfolio');
         backSide.classList.add('contactMeClose');
         bottomSide.classList.add('box__face--bottomClosePortfolio');
-        element.classList.add('ishiddenPortfolio');
         rightSide.classList.add('rightSideClosePortfolio');
       }
-    };
+    }
+
     const onKeyPress = evt => {
       switch (evt.keyCode) {
         case 13:
@@ -54,7 +51,7 @@ export const PortfolioModal = () => {
             box.classList.contains('torightone') ||
             box.classList.contains('toleftthree')
           ) {
-            portfolioListItem.classList.add('modalPortfolioAnimation');
+            portfolioList.classList.add('modalPortfolioList');
             bottomSide.classList.remove('box__face--bottomCloseContact');
             topSide.classList.remove('box__face--topCloseContact');
             leftSide.classList.remove('leftSideCloseContact');
@@ -83,7 +80,7 @@ export const PortfolioModal = () => {
             box.classList.contains('torightone') ||
             box.classList.contains('toleftthree')
           ) {
-            portfolioListItem.classList.remove('modalPortfolioAnimation');
+            portfolioList.classList.remove('modalPortfolioList');
             topSide.classList.remove('box__face--topOpenPortfolio');
             backSide.classList.remove('contactMeOpen');
             rightSide.classList.remove('rightSideOpenPortfolio');
@@ -118,61 +115,59 @@ export const PortfolioModal = () => {
       <div className="backdropPortfolio ishiddenPortfolio" ref={ref}>
         <div className="modalPortfolio">
           <div>
-            <div>
-              <ul className="portfolioList">
-                <li className="portfolioListItem">
-                  <a
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    href="https://kapusta-project-app.netlify.app/"
-                  >
-                    <img className="itemImage" src={kapustaImage} alt="" />
-                    <div className="listItemBox">
-                      <p>[HTML, CSS, React, Redux, Formik, Chart.js]</p>
-                      <p>
-                        A app with a responsive layout. For finance management.
-                        Worked with Chart.js logic and styles.
-                      </p>
-                      <p>Position: Developer</p>
-                    </div>
-                  </a>
-                </li>
-                <li className="portfolioListItem">
-                  <a
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    href="https://jasper935.github.io/filmoteka-project/"
-                  >
-                    <img className="itemImage" src={filmotekaImage} alt="" />
-                    <div className="listItemBox">
-                      <p>[HTML, CSS, React, Redux, Formik, Chart.js]</p>
-                      <p>
-                        A app with a responsive layout. For finance management.
-                        Worked with Chart.js logic and styles.
-                      </p>
-                      <p>Position: Developer</p>
-                    </div>
-                  </a>
-                </li>
-                <li className="portfolioListItem">
-                  <a
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    href="https://mr-nihility.github.io/pixel_hunters_project/"
-                  >
-                    <img className="itemImage" src={hellenImage} alt="" />
-                    <div className="listItemBox">
-                      <p>[HTML, CSS, React, Redux, Formik, Chart.js]</p>
-                      <p>
-                        A app with a responsive layout. For finance management.
-                        Worked with Chart.js logic and styles.
-                      </p>
-                      <p>Position: Developer</p>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <ul className="portfolioList">
+              <li className="portfolioListItem">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://kapusta-project-app.netlify.app/"
+                >
+                  <img className="itemImage" src={kapustaImage} alt="" />
+                  <div className="listItemBox">
+                    <p>[HTML, CSS, React, Redux, Formik, Chart.js]</p>
+                    <p>
+                      A app with a responsive layout. For finance management.
+                      Worked with Chart.js logic and styles.
+                    </p>
+                    <p>Position: Developer</p>
+                  </div>
+                </a>
+              </li>
+              <li className="portfolioListItem">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://jasper935.github.io/filmoteka-project/"
+                >
+                  <img className="itemImage" src={filmotekaImage} alt="" />
+                  <div className="listItemBox">
+                    <p>[HTML, CSS, React, Redux, Formik, Chart.js]</p>
+                    <p>
+                      A app with a responsive layout. For finance management.
+                      Worked with Chart.js logic and styles.
+                    </p>
+                    <p>Position: Developer</p>
+                  </div>
+                </a>
+              </li>
+              <li className="portfolioListItem">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://mr-nihility.github.io/pixel_hunters_project/"
+                >
+                  <img className="itemImage" src={hellenImage} alt="" />
+                  <div className="listItemBox">
+                    <p>[HTML, CSS, React, Redux, Formik, Chart.js]</p>
+                    <p>
+                      A app with a responsive layout. For finance management.
+                      Worked with Chart.js logic and styles.
+                    </p>
+                    <p>Position: Developer</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

@@ -1,12 +1,11 @@
 .containerLeft {
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(10px);
   position: absolute;
   width: 100%;
   height: 100%;
-  color: #fff;
 
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   justify-content: space-evenly;
