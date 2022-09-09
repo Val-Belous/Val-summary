@@ -3,6 +3,7 @@ import { useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import resume from '../../resume/cv-val-bilous.pdf';
 
 export const ModalContactMe = () => {
   const ref = useRef(null);
@@ -146,9 +147,10 @@ export const ModalContactMe = () => {
               </li>
             </ul>
             <div>
-              <p>Download CV</p>
-              <FontAwesomeIcon className="fa" icon={faFolder} />
-              <a href="" download></a>
+              <a className="modalContactMe__link-cv" href={resume} download>
+                <FontAwesomeIcon className="fa" icon={faFolder} />
+                <p>Download CV</p>
+              </a>
             </div>
             <ContactForm />
           </div>
