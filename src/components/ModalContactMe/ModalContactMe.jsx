@@ -1,7 +1,11 @@
 import { ContactForm } from 'components/Form/Form';
 import { useRef, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 export const ModalContactMe = () => {
   const ref = useRef(null);
+  console.log(FontAwesomeIcon);
 
   useEffect(() => {
     const backdrop = document.querySelector('.backdropContactMe');
@@ -113,29 +117,36 @@ export const ModalContactMe = () => {
                 </a>
               </li>
               <li className="modalContactMe__item">
-                <a
-                  className="modalContactMe__link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.linkedin.com/in/val-belous/"
-                >
-                  www.linkedin.com/in/valbelous
-                </a>
-              </li>
-              <li className="modalContactMe__item">
-                <a
-                  className="modalContactMe__link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://github.com/Val-Belous"
-                >
-                  https://github.com/ValBelous
-                </a>
+                <ul className="modalContactMe__item-social">
+                  <li>
+                    <a
+                      className="modalContactMe__link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.linkedin.com/in/val-belous/"
+                    >
+                      <FontAwesomeIcon className="fa" icon={faLinkedin} />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="modalContactMe__link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://github.com/Val-Belous"
+                    >
+                      <FontAwesomeIcon className="fa" icon={faGithub} />
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li className="modalContactMe__item">
                 <p>Chernivtsi, Ukraine</p>
               </li>
             </ul>
+            <div>
+              <a href=""></a>
+            </div>
             <ContactForm />
           </div>
         </div>
