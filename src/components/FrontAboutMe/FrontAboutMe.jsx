@@ -4,9 +4,7 @@ export const FrontAboutMe = () => {
   useEffect(() => {
     const backdrop = document.querySelector('.backdropAboutMe');
     const currentSide = document.querySelector('.containerFront');
-    const currentSideModal = document.querySelector('.modalAboutMe');
     currentSide.addEventListener('click', openFrontSide);
-    currentSideModal.addEventListener('click', closeFrontSide);
 
     const leftSide = document.querySelector('.containerLeft');
     const frontSide = document.querySelector('.containerFront');
@@ -18,22 +16,6 @@ export const FrontAboutMe = () => {
     const boxAboutMeSecond = document.querySelector('.boxAboutMeSecond');
     const boxAboutMeThird = document.querySelector('.boxAboutMeThird');
     const boxAboutMeFour = document.querySelector('.boxAboutMeFour');
-
-    function closeFrontSide(evt) {
-      if (evt.target === evt.currentTarget) {
-        backdrop.classList.add('ishiddenAboutMe');
-        boxAboutMeFour.classList.remove('four');
-        boxAboutMeThird.classList.remove('third');
-        boxAboutMeSecond.classList.remove('second');
-        boxAboutMeFirst.classList.remove('first');
-        rightSide.classList.remove('rightSideClosePortfolioContact');
-        rightSide.classList.remove('rightSideOpen');
-        leftSide.classList.remove('leftSideOpen');
-        topSide.classList.remove('box__face--topOpen');
-        bottomSide.classList.remove('box__face--bottomOpen');
-        frontSide.classList.remove('frontSideOpen');
-      }
-    }
 
     function openFrontSide(evt) {
       if (evt.target !== evt.currentTarget) {
@@ -58,6 +40,7 @@ export const FrontAboutMe = () => {
         bottomSide.classList.add('box__face--bottomOpen');
         frontSide.classList.add('frontSideOpen');
         rightSide.classList.add('rightSideOpen');
+        rightSide.classList.remove('rightSideClosePortfolio');
         backdrop.classList.remove('ishiddenAboutMe');
       }
     }

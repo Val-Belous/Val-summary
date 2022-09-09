@@ -75,8 +75,8 @@ export const PortfolioModal = () => {
             frontSide.classList.add('frontSideOpenPortfolio');
             frontSide.classList.remove('frontSideClosePortfolio');
             rightSide.classList.add('rightSideOpenPortfolio');
+            rightSide.classList.remove('rightSideClosePortfolio');
           }
-          rightSide.classList.remove('rightSideClosePortfolio');
           break;
         case 27:
           if (

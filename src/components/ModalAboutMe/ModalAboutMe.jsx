@@ -6,14 +6,6 @@ export const ModalAboutMe = () => {
 
   useEffect(() => {
     const backdrop = document.querySelector('.backdropAboutMe');
-    backdrop.addEventListener('click', onHandlerClick);
-
-    function onHandlerClick(evt) {
-      if (evt.target === evt.currentTarget) {
-        return closeBackdrop();
-      }
-    }
-
     const box = document.querySelector('.box');
     const leftSide = document.querySelector('.containerLeft');
     const frontSide = document.querySelector('.containerFront');
@@ -26,12 +18,12 @@ export const ModalAboutMe = () => {
     const boxAboutMeThird = document.querySelector('.boxAboutMeThird');
     const boxAboutMeFour = document.querySelector('.boxAboutMeFour');
 
-    const closeBackdrop = () => {
-      if (
-        box.classList.contains('torightfour') ||
-        box.classList.contains('default') ||
-        box.classList.contains('toleftfour')
-      ) {
+    const currentSideModal = document.querySelector('.modalAboutMe');
+    currentSideModal.addEventListener('click', closeFrontSide);
+
+    function closeFrontSide(evt) {
+      if (evt.target === evt.currentTarget) {
+        backdrop.classList.add('ishiddenAboutMe');
         boxAboutMeFour.classList.remove('four');
         boxAboutMeThird.classList.remove('third');
         boxAboutMeSecond.classList.remove('second');
@@ -42,9 +34,8 @@ export const ModalAboutMe = () => {
         topSide.classList.remove('box__face--topOpen');
         bottomSide.classList.remove('box__face--bottomOpen');
         frontSide.classList.remove('frontSideOpen');
-        element.classList.add('ishiddenAboutMe');
       }
-    };
+    }
 
     const onKeyPress = evt => {
       switch (evt.keyCode) {
@@ -75,6 +66,7 @@ export const ModalAboutMe = () => {
             bottomSide.classList.add('box__face--bottomOpen');
             frontSide.classList.add('frontSideOpen');
             rightSide.classList.add('rightSideOpen');
+            rightSide.classList.remove('rightSideClosePortfolio');
             element.classList.remove('ishiddenAboutMe');
           }
           break;
