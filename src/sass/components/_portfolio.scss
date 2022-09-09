@@ -41,6 +41,23 @@
     transform: rotateY(180deg) translateZ(250px);
   }
 }
+// ==================
+.rightSideOpentest {
+  transform: rotateY(180deg) translateX(250px);
+  animation: rightSideOpentest 0.5s linear;
+}
+@keyframes rightSideOpentest {
+  0% {
+    transform: rotateY(90deg) translateZ(var(--cube-half));
+  }
+  // 50% {
+  //   transform: rotateY(180deg) translateZ(250px);
+  // }
+  100% {
+    transform: translateZ(-250px) translateX(500px);
+  }
+}
+// ==================rotate(0deg)
 .rightSideOpenPortfolio {
   transform: rotateY(90deg) translateZ(-249px);
   animation: rightSideOpenPortfolio 0.5s linear;

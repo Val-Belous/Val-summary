@@ -23,6 +23,7 @@ export const PortfolioModal = () => {
     const topSide = document.querySelector('.box__face--top');
     const bottomSide = document.querySelector('.box__face--bottom');
     const backSide = document.querySelector('.containerContactMe');
+    const portfolioListItem = document.querySelector('.modalPortfolio');
 
     const closeBackdrop = () => {
       if (
@@ -32,7 +33,6 @@ export const PortfolioModal = () => {
         topSide.classList.remove('box__face--topOpenPortfolio');
         backSide.classList.remove('contactMeOpen');
         rightSide.classList.remove('rightSideOpenPortfolio');
-
         bottomSide.classList.remove('box__face--bottomOpenPortfolio');
         rightSide.classList.remove('rightSideOpen');
         leftSide.classList.remove('experienceOpen');
@@ -42,7 +42,6 @@ export const PortfolioModal = () => {
         frontSide.classList.add('frontSideClosePortfolio');
         topSide.classList.add('box__face--topCLosePortfolio');
         backSide.classList.add('contactMeClose');
-
         bottomSide.classList.add('box__face--bottomClosePortfolio');
         element.classList.add('ishiddenPortfolio');
         rightSide.classList.add('rightSideClosePortfolio');
@@ -55,6 +54,7 @@ export const PortfolioModal = () => {
             box.classList.contains('torightone') ||
             box.classList.contains('toleftthree')
           ) {
+            portfolioListItem.classList.add('modalPortfolioAnimation');
             bottomSide.classList.remove('box__face--bottomCloseContact');
             topSide.classList.remove('box__face--topCloseContact');
             leftSide.classList.remove('leftSideCloseContact');
@@ -83,6 +83,7 @@ export const PortfolioModal = () => {
             box.classList.contains('torightone') ||
             box.classList.contains('toleftthree')
           ) {
+            portfolioListItem.classList.remove('modalPortfolioAnimation');
             topSide.classList.remove('box__face--topOpenPortfolio');
             backSide.classList.remove('contactMeOpen');
             rightSide.classList.remove('rightSideOpenPortfolio');
@@ -118,8 +119,8 @@ export const PortfolioModal = () => {
         <div className="modalPortfolio">
           <div>
             <div>
-              <ul className="list">
-                <li className="listItem">
+              <ul className="portfolioList">
+                <li className="portfolioListItem">
                   <a
                     rel="noopener noreferrer"
                     target="_blank"
@@ -136,7 +137,7 @@ export const PortfolioModal = () => {
                     </div>
                   </a>
                 </li>
-                <li className="listItem">
+                <li className="portfolioListItem">
                   <a
                     rel="noopener noreferrer"
                     target="_blank"
@@ -153,7 +154,7 @@ export const PortfolioModal = () => {
                     </div>
                   </a>
                 </li>
-                <li className="listItem">
+                <li className="portfolioListItem">
                   <a
                     rel="noopener noreferrer"
                     target="_blank"

@@ -1,4 +1,3 @@
-import photo from '../../images/myPhoto.JPG';
 import { useEffect } from 'react';
 
 export const FrontAboutMe = () => {
@@ -16,10 +15,9 @@ export const FrontAboutMe = () => {
 
   return (
     <div className="containerFront">
-      <h2 className="mainTitle">
-        Hello <br /> I'm Val
-      </h2>
-      <img className="image" src={photo} alt="" />
+      <h2 className="mainTitle">Hello!</h2>
+      <h3>My name is Val</h3>
+      <p>Press "Enter" to read information about me</p>
     </div>
   );
 };

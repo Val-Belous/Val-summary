@@ -1,9 +1,7 @@
 .backdropAboutMe {
-  backdrop-filter: blur(5px);
   position: fixed;
   top: 0;
-  left: 50%;
-  /* transform: translateX(-50%); */
+  left: 0;
   z-index: 1000;
 
   width: 100vw;
@@ -12,7 +10,6 @@
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
-  /* transition: opacity 500ms ease, visibility 500ms ease; */
 }
 
 .ishiddenAboutMe {
@@ -23,30 +20,184 @@
 
 .modalAboutMe {
   position: absolute;
-  bottom: 45%;
-  left: 15%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 5000ms ease-in-out 5000ms;
+  top: 0;
+  left: 0;
 
   color: black;
-  width: 100%;
-  max-width: 250px;
-  padding: 40px;
+  width: 100vw;
+  height: 100vh;
 
-  background-color: rgba(255, 255, 255, 0.09);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+  gap: 50px;
+
+  font-size: 20px;
+  color: #fff;
+
+  background-color: rgba(14, 13, 13, 0.09);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  /* animation: modal 8s linear; */
   opacity: 1;
 }
-@keyframes modal {
+
+.modalAboutMe > div {
+  width: 32%;
+}
+
+.boxAboutMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--backgroundCube);
+
+  border: var(--border);
+  padding: 15px;
+}
+
+.boxAboutMeFirst {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--backgroundCube);
+
+  border: var(--border);
+  padding: 15px;
+}
+
+.boxAboutMeSecond {
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--backgroundCube);
+
+  border: var(--border);
+  padding: 15px;
+}
+
+.boxAboutMeThird {
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--backgroundCube);
+
+  border: var(--border);
+  padding: 15px;
+}
+
+.boxAboutMeFour {
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--backgroundCube);
+
+  border: var(--border);
+  padding: 15px;
+}
+
+.first {
+  backdrop-filter: blur(5px);
+  animation: modalFirst 1s linear;
+}
+@keyframes modalFirst {
   0% {
-    transform: translate(0, 0) scale(0);
-    transition: transform 2500ms ease-in-out 2500ms;
+    transform: translate(30%, 30%) scale(0);
+  }
+  50% {
+    transform: translate(30%, 30%) scale(0);
   }
   100% {
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 2500ms ease-in-out 2500ms;
+    transform: translate(0%, 0%) scale(1);
   }
+}
+.firstClose {
+  animation: firstClose 1s linear;
+}
+@keyframes firstClose {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  100% {
+    transform: translate(30%, 30%) scale(0);
+  }
+}
+
+.second {
+  backdrop-filter: blur(5px);
+  animation: modalSecond 1s linear;
+}
+@keyframes modalSecond {
+  0% {
+    transform: translate(-30%, 30%) scale(0);
+  }
+  50% {
+    transform: translate(-30%, 30%) scale(0);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+.third {
+  backdrop-filter: blur(5px);
+  animation: modalthird 1s linear;
+}
+@keyframes modalthird {
+  0% {
+    transform: translate(30%, -30%) scale(0);
+  }
+  50% {
+    transform: translate(30%, -30%) scale(0);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+.four {
+  backdrop-filter: blur(5px);
+  animation: modalfour 1s linear;
+}
+@keyframes modalfour {
+  0% {
+    transform: translate(-30%, 30%) scale(0);
+  }
+  50% {
+    transform: translate(-30%, -30%) scale(0);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
+.text-box {
+  margin-left: 20px;
+}
+
+.titleAboutMe {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.textAboutMe {
+  margin-bottom: 10px;
+}
+
+.skills-text-box {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.work-list {
+  list-style: circle;
+  margin-bottom: 10px;
+  margin-left: 25px;
+}
+
+.work-text {
+  margin-bottom: 10px;
 }
