@@ -10,7 +10,7 @@ export const ModalAboutMe = () => {
 
     function onHandlerClick(evt) {
       if (evt.target === evt.currentTarget) {
-        closeBackdrop();
+        return closeBackdrop();
       }
     }
 
@@ -32,6 +32,10 @@ export const ModalAboutMe = () => {
         box.classList.contains('default') ||
         box.classList.contains('toleftfour')
       ) {
+        boxAboutMeFour.classList.remove('four');
+        boxAboutMeThird.classList.remove('third');
+        boxAboutMeSecond.classList.remove('second');
+        boxAboutMeFirst.classList.remove('first');
         rightSide.classList.remove('rightSideClosePortfolioContact');
         rightSide.classList.remove('rightSideOpen');
         leftSide.classList.remove('leftSideOpen');
@@ -66,12 +70,12 @@ export const ModalAboutMe = () => {
             topSide.classList.remove('box__face--topCLosePortfolio');
             frontSide.classList.remove('frontSideClosePortfolio');
             bottomSide.classList.remove('box__face--bottomClosePortfolio');
-            element.classList.remove('ishiddenAboutMe');
             leftSide.classList.add('leftSideOpen');
             topSide.classList.add('box__face--topOpen');
             bottomSide.classList.add('box__face--bottomOpen');
             frontSide.classList.add('frontSideOpen');
             rightSide.classList.add('rightSideOpen');
+            element.classList.remove('ishiddenAboutMe');
           }
           break;
         case 27:
