@@ -40,7 +40,7 @@ export const App = () => {
   return (
     <>
       <div className="container">
-        <p className="lol">beta v.1.0.1</p>
+        <p className="lol">beta v 1.0.1a</p>
         <div className="scene">
           <div className="box default" id="box" ref={ref}>
             <FrontAboutMe />
