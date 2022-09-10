@@ -49,7 +49,11 @@ export const FrontAboutMe = () => {
         Hello! <br />
         My name is Val
       </h2>
-      <p>"Click" or press "Enter" to read information about me</p>
+      <p className="About-text__desktop">
+        "Click" or press "Enter" to read information about me
+      </p>
+
+      <p className="About-text__mobile">"Tap" to read information about me</p>
     </div>
   );
 };

@@ -17,6 +17,9 @@
   border: var(--border);
   transform: rotateY(0deg) translateZ(var(--cube-half));
   animation: frontSideClose 0.5s linear;
+
+  @include mq(desktop) {
+  }
 }
 @keyframes frontSideClose {
   0% {
@@ -106,4 +109,20 @@
 .text {
   display: block;
   font-size: 25px;
+}
+
+.About-text__desktop {
+  text-align: center;
+  display: none;
+  @include mq(desktop) {
+    display: block;
+  }
+}
+
+.About-text__mobile {
+  text-align: center;
+  width: 200px;
+  @include mq(desktop) {
+    display: none;
+  }
 }
