@@ -51,18 +51,25 @@
 }
 
 .AboutMe__box {
-  width: 80%;
-  height: 80%;
+  width: 60%;
 
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  gap: 20px;
 
   background-color: var(--backgroundCube);
 
   border: var(--border);
   padding: 15px;
+}
+
+.AboutMe__box-first {
+  display: flex;
+  flex-direction: column;
+}
+
+.AboutMe__box-second {
+  display: flex;
+  flex-direction: column;
 }
 
 .boxAboutMeFirst {
@@ -80,7 +87,6 @@
 
 .boxAboutMeFour {
   display: flex;
-  justify-content: center;
   padding: 15px;
 }
 
@@ -99,23 +105,18 @@
   }
 }
 
-.text-box {
-  margin-left: 20px;
+.textAboutMe__descr {
+  margin-bottom: 15px;
 }
 
 .titleAboutMe {
   text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.textAboutMe {
   margin-bottom: 10px;
 }
 
 .skills-text-box {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -127,4 +128,10 @@
 
 .work-text {
   margin-bottom: 10px;
+}
+
+.image {
+  filter: saturate(0.3) contrast(1.2);
+  width: 300px;
+  height: 300px;
 }
