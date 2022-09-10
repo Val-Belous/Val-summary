@@ -51,8 +51,8 @@ export const App = () => {
             <div className="box__face box__face--bottom"></div>
           </div>
         </div>
+        <Arrows />
       </div>
-      <Arrows />
       <ModalAboutMe />
       <PortfolioModal />
       <ModalContactMe />

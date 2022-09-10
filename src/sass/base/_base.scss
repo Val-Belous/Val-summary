@@ -32,13 +32,6 @@ a {
   text-decoration: none;
 }
 
-:root {
-  --backgroundCube: rgba(255, 255, 255, 0.09);
-  --border: 1px solid rgba(209, 207, 207, 0.8);
-  --cube-size: 500px;
-  --cube-half: calc(var(--cube-size) / 2);
-}
-
 body {
   color: #fff;
   font-family: 'Roboto', sans-serif;

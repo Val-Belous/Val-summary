@@ -1,7 +1,4 @@
 .arrow-container {
-  position: absolute;
-  bottom: 5%;
-  left: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,14 +6,25 @@
   gap: 20px;
   opacity: 1;
   animation: arrows 8s linear;
-}
 
+  @include mq(desktop) {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+  }
+}
 @keyframes arrows {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+
+.arrow__title {
+  @include mq(mobile-only) {
+    display: none;
   }
 }
 
