@@ -97,8 +97,8 @@ export const ModalExperience = () => {
         <div className="modalExperience">
           <div className="boxAboutMeThird">
             <div className="work-box">
-              <h2 className="titleAboutMe">Work Experience</h2>
-              <h3 className="textAboutMe">Ekvator Holiday</h3>
+              <h2 className="workTitle">Work Experience</h2>
+              <h3 className="workText">Ekvator Holiday</h3>
               <ul className="work-text-box">
                 <li>
                   <p className="work-text">
@@ -120,6 +120,10 @@ export const ModalExperience = () => {
                     <li>Work with staff</li>
                     <li>Control of quality and service</li>
                   </ul>
+                  <p className="work-text">
+                    Achievements: for 2 seasons of work reached a managerial
+                    position.
+                  </p>
                 </li>
                 <li>
                   <h3 className="textAboutMe">Alex Group</h3>
