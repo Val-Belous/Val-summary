@@ -51,7 +51,10 @@
 }
 
 .AboutMe__box {
-  width: 60%;
+  // width: 60%;
+
+  margin-left: 200px;
+  margin-right: 200px;
 
   display: flex;
   gap: 20px;
@@ -63,11 +66,13 @@
 }
 
 .AboutMe__box-first {
+  max-width: 300px;
   display: flex;
   flex-direction: column;
 }
 
 .AboutMe__box-second {
+  max-width: 500px;
   display: flex;
   flex-direction: column;
 }
@@ -76,7 +81,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  margin-bottom: 15px;
 }
 
 .boxAboutMeSecond {
@@ -87,7 +92,6 @@
 
 .boxAboutMeFour {
   display: flex;
-  padding: 15px;
 }
 
 .third {

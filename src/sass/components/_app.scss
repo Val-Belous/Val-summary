@@ -18,6 +18,18 @@
   transform-style: preserve-3d;
   transform: translateX(0) translateY(0px) translateZ(-100px) rotateY(0deg)
     rotateX(0deg) scale(1);
+  animation: animateMainBox 15s linear;
+}
+@keyframes animateMainBox {
+  0% {
+    transform: translateZ(-100px) rotateY(0deg);
+  }
+  5% {
+    transform: translateZ(-100px) rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateY(-360deg);
+  }
 }
 
 .box__face {
@@ -28,26 +40,9 @@
   height: var(--cube-size);
 
   color: #fff;
-  font-size: calc(1vw + 1rem);
   text-align: center;
   line-height: var(--cube-size);
 }
-
-@keyframes shiningBox {
-  0% {
-    box-shadow: 10px 10px 120px rgba(0, 0, 0, 0.1);
-  }
-  50% {
-    box-shadow: 10px 10px 120px rgba(0, 0, 0, 0.6);
-  }
-  100% {
-    box-shadow: 10px 10px 120px rgba(9, 9, 9, 0.1);
-  }
-}
-
-/* .box__face--front {
-  transform: rotateY(0deg) translateZ(var(--cube-half));
-} */
 
 .box__face--top {
   box-shadow: var(--boxShadow);
