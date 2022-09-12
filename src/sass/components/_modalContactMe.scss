@@ -41,7 +41,6 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100%;
   font-size: 12px;
   display: flex;
   flex-wrap: wrap;
@@ -84,6 +83,7 @@
 }
 
 .modalContactMe__box {
+  height: 100%;
   width: 100%;
   max-width: 500px;
   position: relative;
