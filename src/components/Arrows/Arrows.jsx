@@ -9,7 +9,7 @@ export const Arrows = () => {
           <svg className="arrows" height="50" width="50">
             <use href={`${svg}#icon-arrow-left`}></use>
           </svg>
-          <svg className="arrows" height="50" width="50">
+          <svg className="arrows enter" height="50" width="50">
             <use href={`${svg}#icon-enter`}></use>
           </svg>
           <svg className="arrows" height="50" width="50">

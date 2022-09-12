@@ -62,7 +62,10 @@ export const Portfolio = () => {
             <img className="itemImagePortfolio" src={hellenImage} alt="" />
           </li>
         </ul>
-        <p>"Click" or press "Enter" for details</p>
+        <p className="About-text__desktop">
+          "Click" or press "Enter" for details
+        </p>
+        <p className="About-text__mobile">"Tap" for details</p>
       </div>
     </>
   );

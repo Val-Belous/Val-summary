@@ -35,8 +35,6 @@ export const ModalAboutMe = () => {
     const closeBtn = document.querySelector('.modal__close-btn');
     closeBtn.addEventListener('click', closeModal);
     function closeModal(evt) {
-      console.log(evt.target);
-      console.log(evt.currentTarget);
       if (evt.target !== evt.currentTarget) {
         AboutMe__box.classList.remove('third');
         rightSide.classList.remove('rightSideClosePortfolioContact');

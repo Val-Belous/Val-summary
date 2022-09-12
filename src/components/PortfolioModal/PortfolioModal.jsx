@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react';
 import kapustaImage from '../../images/kapusta-preview.PNG';
 import filmotekaImage from '../../images/filmoteka-preview.PNG';
 import hellenImage from '../../images/hellen-preview.PNG';
+import svg from '../../images/symbol-defs.svg';
 
 export const PortfolioModal = () => {
   const ref = useRef(null);
@@ -40,6 +41,29 @@ export const PortfolioModal = () => {
         topSide.classList.add('box__face--topCLosePortfolio');
         backSide.classList.add('contactMeClose');
         bottomSide.classList.add('box__face--bottomClosePortfolio');
+        rightSide.classList.add('rightSideClosePortfolio');
+      }
+    }
+
+    const closeBtn = document.querySelector('.modal__close-btnP');
+    closeBtn.addEventListener('click', closeModal);
+    function closeModal(evt) {
+      if (evt.target !== evt.currentTarget) {
+        portfolioList.classList.remove('modalPortfolioList');
+        topSide.classList.remove('box__face--topOpenPortfolio');
+        backSide.classList.remove('contactMeOpen');
+        rightSide.classList.remove('rightSideOpenPortfolio');
+        bottomSide.classList.remove('box__face--bottomOpenPortfolio');
+        rightSide.classList.remove('rightSideOpen');
+        leftSide.classList.remove('experienceOpen');
+        topSide.classList.remove('box__face--topOpen');
+        bottomSide.classList.remove('box__face--bottomOpen');
+        frontSide.classList.remove('frontSideOpenPortfolio');
+        frontSide.classList.add('frontSideClosePortfolio');
+        topSide.classList.add('box__face--topCLosePortfolio');
+        backSide.classList.add('contactMeClose');
+        bottomSide.classList.add('box__face--bottomClosePortfolio');
+        element.classList.add('ishiddenPortfolio');
         rightSide.classList.add('rightSideClosePortfolio');
       }
     }
@@ -115,6 +139,15 @@ export const PortfolioModal = () => {
       <div className="backdropPortfolio ishiddenPortfolio" ref={ref}>
         <div className="modalPortfolio">
           <div>
+            <button
+              className="modal__close-btnP"
+              type="button"
+              data-modal-close
+            >
+              <svg className="modal__close-icon" width="18" height="18">
+                <use href={`${svg}#icon-close`}></use>
+              </svg>
+            </button>
             <ul className="portfolioList">
               <li className="portfolioListItem">
                 <a

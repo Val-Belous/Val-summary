@@ -1,13 +1,14 @@
 .arrow-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
   opacity: 1;
   animation: arrows 8s linear;
 
   @include mq(desktop) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
     position: absolute;
     bottom: 5%;
     left: 5%;
@@ -23,7 +24,13 @@
 }
 
 .arrow__title {
-  @include mq(mobile-only) {
+  @include mq(notDesktop) {
+    display: none;
+  }
+}
+
+.enter {
+  @include mq(notDesktop) {
     display: none;
   }
 }
