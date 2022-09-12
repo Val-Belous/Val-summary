@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { FrontAboutMe } from './FrontAboutMe/FrontAboutMe';
 import { keysFunc } from 'helpers/keyPressFunc';
 import { Arrows } from './Arrows/Arrows';
@@ -11,9 +11,11 @@ import { ModalContactMe } from './ModalContactMe/ModalContactMe';
 import { ModalExperience } from './ModalExperience/ModalExperience';
 
 export const App = () => {
+  const [box, setBox] = useState(null);
   const ref = useRef(null);
   useEffect(() => {
     let element = ref.current;
+    setBox(ref.current);
     const onKeyPress = evt => {
       const aboutMeBackdrop = document.querySelector('#modalAboutMe');
       const portfolioBackdrop = document.querySelector('.backdropPortfolio');
@@ -35,11 +37,11 @@ export const App = () => {
     return () => {
       window.removeEventListener('keydown', onKeyPress);
     };
-  }, []);
+  }, [ref, setBox]);
 
   return (
     <>
-      <p className="lol">beta v 1.0.1a</p>
+      <p className="lol">beta v 1.5.0a</p>
       <div className="container">
         <div className="scene">
           <div className="box default" id="box" ref={ref}>
@@ -51,7 +53,7 @@ export const App = () => {
             <div className="box__face box__face--bottom"></div>
           </div>
         </div>
-        <Arrows />
+        {box && <Arrows el={box} />}
       </div>
       <ModalAboutMe />
       <PortfolioModal />
