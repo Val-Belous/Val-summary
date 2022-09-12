@@ -38,13 +38,15 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  // height: 100%;
   font-size: 12px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   @include mq(tablet) {
+    width: 100vw;
+    height: 100vh;
     font-size: 16px;
     color: #fff;
 
@@ -183,7 +185,7 @@
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 0;
+  top: 9px;
   right: 0;
   border: var(--border);
   border-radius: 0;
