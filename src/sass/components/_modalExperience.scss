@@ -73,5 +73,7 @@
 }
 
 .work-box {
-  width: 500px;
+  @include mq(desktop) {
+    width: 500px;
+  }
 }

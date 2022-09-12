@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import svg from '../../images/symbol-defs.svg';
 import photo from '../../images/myPhoto.JPG';
 
 export const ModalAboutMe = () => {
@@ -28,6 +29,23 @@ export const ModalAboutMe = () => {
         bottomSide.classList.remove('box__face--bottomOpen');
         frontSide.classList.remove('frontSideOpen');
         AboutMe__box.classList.remove('third');
+      }
+    }
+
+    const closeBtn = document.querySelector('.modal__close-btn');
+    closeBtn.addEventListener('click', closeModal);
+    function closeModal(evt) {
+      console.log(evt.target);
+      console.log(evt.currentTarget);
+      if (evt.target !== evt.currentTarget) {
+        AboutMe__box.classList.remove('third');
+        rightSide.classList.remove('rightSideClosePortfolioContact');
+        rightSide.classList.remove('rightSideOpen');
+        leftSide.classList.remove('leftSideOpen');
+        topSide.classList.remove('box__face--topOpen');
+        bottomSide.classList.remove('box__face--bottomOpen');
+        frontSide.classList.remove('frontSideOpen');
+        element.classList.add('ishiddenAboutMe');
       }
     }
 
@@ -98,31 +116,14 @@ export const ModalAboutMe = () => {
       >
         <div className="modalAboutMe">
           <div className="AboutMe__box">
-            <div className="AboutMe__box-first">
-              <img className="image" src={photo} alt="" />
-              <div className="boxAboutMeSecond">
-                <div className="skills-box">
-                  <h2 className="titleAboutMe">Skills</h2>
-                  <div className="skills-text-box">
-                    <h3 className="textAboutMe">Hard</h3>
-                    <p className="textAboutMe__descr">
-                      HTML5/CSS/SASS, Responsive/Adaptive design, GIT,
-                      JavaScript, React, Redux, Axios, Parcel, MaterialUI,
-                      Chart.js
-                    </p>
-                  </div>
-                  <div className="skills-text-box">
-                    <h3 className="textAboutMe">Soft</h3>
-                    <p>
-                      Teamwork, Good communication, Capable, Honest, Good sense
-                      of humour.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <button className="modal__close-btn" type="button" data-modal-close>
+              <svg className="modal__close-icon" width="18" height="18">
+                <use href={`${svg}#icon-close`}></use>
+              </svg>
+            </button>
             <div className="AboutMe__box-second">
               <div className="boxAboutMeFirst">
+                <img className="image" src={photo} alt="" />
                 <div className="text-box">
                   <h2 className="titleAboutMe">Valentyn Bilous</h2>
                   <p>
@@ -157,6 +158,28 @@ export const ModalAboutMe = () => {
                       </p>
                     </li>
                   </ul>
+                </div>
+              </div>
+            </div>
+            <div className="AboutMe__box-first">
+              <div className="boxAboutMeSecond">
+                <div className="skills-box">
+                  <h2 className="titleAboutMe">Skills</h2>
+                  <div className="skills-text-box">
+                    <h3 className="textAboutMe">Hard</h3>
+                    <p className="textAboutMe__descr">
+                      HTML5/CSS/SASS, Responsive/Adaptive design, GIT,
+                      JavaScript, React, Redux, Axios, Parcel, MaterialUI,
+                      Chart.js
+                    </p>
+                  </div>
+                  <div className="skills-text-box">
+                    <h3 className="textAboutMe">Soft</h3>
+                    <p>
+                      Teamwork, Good communication, Capable, Honest, Good sense
+                      of humour.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
