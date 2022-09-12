@@ -9,6 +9,9 @@
   height: 100%;
 
   overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   opacity: 1;
   visibility: visible;
@@ -19,12 +22,6 @@
     rgb(133, 133, 133) 2%,
     rgba(215, 217, 223, 0.213) 100%
   );
-
-  @include mq(tablet) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
   @include mq(desktop) {
     overflow-y: hidden;
@@ -38,20 +35,13 @@
 }
 
 .modalPortfolio {
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: 100%;
   width: 100vw;
   font-size: 12px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-
-  background-color: rgba(14, 13, 13, 0.09);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  opacity: 1;
 
   @include mq(tablet) {
     padding: 20px;
@@ -61,12 +51,12 @@
   }
 
   @include mq(desktop) {
-    height: 100%;
     font-size: 20px;
   }
 }
 
 .portfolioList {
+  height: 100%;
   max-width: 400px;
   position: relative;
   padding: 10px;
@@ -78,8 +68,6 @@
   @include mq(tablet) {
     max-width: 700px;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     padding: 15px;
   }
   @include mq(desktop) {
