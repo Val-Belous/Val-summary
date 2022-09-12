@@ -125,7 +125,7 @@ export const ModalContactMe = () => {
                 <use href={`${svg}#icon-close`}></use>
               </svg>
             </button>
-            <h3 className="titleAboutMe">Contact information</h3>
+            <h3 className="titleContactMe">Contact information</h3>
             <ul className="modalContactMe__list">
               <li className="modalContactMe__item">
                 <a className="modalContactMe__link" href="tel:+380953307070">
