@@ -36,8 +36,10 @@ export const ContactMe = () => {
   return (
     <div className="containerContactMe">
       <h2>Contact Me</h2>
-
-      <p>"Click" or press "Enter" for details</p>
+      <p className="About-text__desktop">
+        "Click" or press "Enter" for details
+      </p>
+      <p className="About-text__mobile">"Tap" for details</p>
     </div>
   );
 };

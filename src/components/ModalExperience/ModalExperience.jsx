@@ -1,4 +1,6 @@
 import { useRef, useEffect } from 'react';
+import svg from '../../images/symbol-defs.svg';
+
 export const ModalExperience = () => {
   const ref = useRef(null);
 
@@ -29,6 +31,25 @@ export const ModalExperience = () => {
         leftSide.classList.remove('leftSideOpenExp');
         backSide.classList.remove('contactMeOpenExp');
         backSide.classList.add('contactMeCloseExp');
+        leftSide.classList.add('leftSideCloseExp');
+      }
+    }
+
+    const closeBtn = document.querySelector('.modal__close-btnE');
+    closeBtn.addEventListener('click', closeModal);
+    function closeModal(evt) {
+      if (evt.target !== evt.currentTarget) {
+        boxAboutMeThird.classList.remove('third');
+        bottomSide.classList.add('box__face--bottomCloseExp');
+        bottomSide.classList.remove('box__face--bottomOpenExp');
+        topSide.classList.remove('box__face--topOpenExp');
+        topSide.classList.add('box__face--topCloseExp');
+        frontSide.classList.remove('frontSideOpenPortfolioExp');
+        frontSide.classList.add('frontSideClosePortfolioExp');
+        leftSide.classList.remove('leftSideOpenExp');
+        backSide.classList.remove('contactMeOpenExp');
+        backSide.classList.add('contactMeCloseExp');
+        element.classList.add('ishidden');
         leftSide.classList.add('leftSideCloseExp');
       }
     }
@@ -96,6 +117,15 @@ export const ModalExperience = () => {
       <div className="backdropExperience ishidden" ref={ref}>
         <div className="modalExperience">
           <div className="boxAboutMeThird">
+            <button
+              className="modal__close-btnE"
+              type="button"
+              data-modal-close
+            >
+              <svg className="modal__close-icon" width="18" height="18">
+                <use href={`${svg}#icon-close`}></use>
+              </svg>
+            </button>
             <div className="work-box">
               <h2 className="workTitle">Work Experience</h2>
               <h3 className="workText">Ekvator Holiday</h3>

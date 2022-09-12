@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import resume from '../../resume/cv-val-bilous.pdf';
+import svg from '../../images/symbol-defs.svg';
 
 export const ModalContactMe = () => {
   const ref = useRef(null);
@@ -35,6 +36,25 @@ export const ModalContactMe = () => {
         backSide.classList.remove('contactMeOpenContact');
         backSide.classList.add('contactMeCloseContact');
         ContactMe__box.classList.remove('third');
+      }
+    }
+
+    const closeBtn = document.querySelector('.modal__close-btnC');
+    closeBtn.addEventListener('click', closeModal);
+    function closeModal(evt) {
+      if (evt.target !== evt.currentTarget) {
+        ContactMe__box.classList.remove('third');
+        bottomSide.classList.add('box__face--bottomCloseContact');
+        bottomSide.classList.remove('box__face--bottomOpenContact');
+        topSide.classList.add('box__face--topCloseContact');
+        topSide.classList.remove('box__face--topOpenContact');
+        leftSide.classList.add('leftSideCloseContact');
+        leftSide.classList.remove('leftSideOpenContact');
+        rightSide.classList.remove('rightSideOpenPortfolioContact');
+        rightSide.classList.add('rightSideClosePortfolioContact');
+        backSide.classList.remove('contactMeOpenContact');
+        backSide.classList.add('contactMeCloseContact');
+        element.classList.add('ishiddenContactMe');
       }
     }
 
@@ -96,6 +116,15 @@ export const ModalContactMe = () => {
       <div className="backdropContactMe ishiddenContactMe" ref={ref}>
         <div className="modalContactMe">
           <div className="modalContactMe__box">
+            <button
+              className="modal__close-btnC"
+              type="button"
+              data-modal-close
+            >
+              <svg className="modal__close-icon" width="18" height="18">
+                <use href={`${svg}#icon-close`}></use>
+              </svg>
+            </button>
             <h3 className="titleAboutMe">Contact information</h3>
             <ul className="modalContactMe__list">
               <li className="modalContactMe__item">

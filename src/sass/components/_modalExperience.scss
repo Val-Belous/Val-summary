@@ -6,7 +6,9 @@
   z-index: 1000;
 
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+
+  overflow-y: scroll;
 
   opacity: 1;
   visibility: visible;
@@ -17,6 +19,15 @@
     rgb(133, 133, 133) 2%,
     rgba(215, 217, 223, 0.213) 100%
   );
+
+  @include mq(tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @include mq(desktop) {
+    overflow-y: hidden;
+  }
 }
 
 .ishidden {
@@ -29,38 +40,51 @@
   position: absolute;
   top: 0;
   left: 0;
-
-  color: black;
   width: 100vw;
-  height: 100vh;
-
+  height: 100%;
+  font-size: 12px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-
-  gap: 50px;
-
-  font-size: 20px;
-  color: #fff;
-
+  padding: 10px;
   background-color: rgba(14, 13, 13, 0.09);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   opacity: 1;
+  @include mq(tablet) {
+    padding: 20px;
+    width: 100vw;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  @include mq(desktop) {
+    font-size: 20px;
+  }
 }
 
 .boxAboutMeThird {
-  width: 80%;
-  // height: 80%;
+  max-width: 400px;
+  position: relative;
+  padding: 10px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-
   background-color: var(--backgroundCube);
-
   border: var(--border);
-  padding: 15px;
+
+  @include mq(tablet) {
+    max-width: 700px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+  }
+  @include mq(desktop) {
+    max-width: 1200px;
+    width: 1000px;
+  }
 }
 
 .workTitle {
@@ -75,5 +99,37 @@
 .work-box {
   @include mq(desktop) {
     width: 500px;
+  }
+}
+
+.modal__close-btnE {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: var(--border);
+  background-color: rgba(209, 207, 207, 0.8);
+
+  z-index: 1000;
+
+  @include mq(tablet) {
+    top: 0;
+    right: 0;
+    border: var(--border);
+    border-radius: 0;
+  }
+}
+
+.modal__close-icon {
+  fill: #fff;
+
+  .modal__close-btnE:hover &,
+  .modal__close-btnE:focus & {
+    fill: black;
   }
 }

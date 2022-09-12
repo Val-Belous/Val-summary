@@ -43,7 +43,12 @@ export const Experience = () => {
   return (
     <div className="containerLeft">
       <h2 className="mainTitleAbout">Experience</h2>
-      <p>"Click" or press "Enter" to read information about my experience</p>
+      <p className="About-text__desktop">
+        "Click" or press "Enter" to read information about my experience
+      </p>
+      <p className="About-text__mobile">
+        "Tap" to read information about my experience
+      </p>
     </div>
   );
 };
