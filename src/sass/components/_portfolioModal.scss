@@ -6,7 +6,7 @@
   z-index: 1000;
 
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 
   overflow-y: scroll;
 
@@ -27,7 +27,7 @@
   }
 
   @include mq(desktop) {
-    // overflow-y: hidden;
+    overflow-y: hidden;
   }
 }
 
@@ -42,6 +42,7 @@
   top: 0;
   left: 0;
   width: 100vw;
+  // height: 100%;
   font-size: 12px;
   display: flex;
   flex-wrap: wrap;
@@ -60,7 +61,6 @@
   }
 
   @include mq(desktop) {
-    height: 100vh;
     font-size: 20px;
   }
 }
@@ -68,6 +68,7 @@
 .portfolioList {
   max-width: 400px;
   position: relative;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,6 +79,7 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding: 15px;
   }
   @include mq(desktop) {
     flex-direction: row;
@@ -128,6 +130,7 @@
 
 .itemImage {
   width: 100%;
+  object-fit: cover;
 
   @include mq(tablet) {
     height: 285px;
@@ -164,8 +167,10 @@
   @include mq(tablet) {
     top: 0;
     right: 0;
-    border: var(--border);
-    border-radius: 0;
+  }
+  @include mq(desktop) {
+    top: 0;
+    right: 10px;
   }
 }
 

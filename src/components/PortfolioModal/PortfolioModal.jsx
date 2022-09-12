@@ -138,76 +138,70 @@ export const PortfolioModal = () => {
     <>
       <div className="backdropPortfolio ishiddenPortfolio" ref={ref}>
         <div className="modalPortfolio">
-          <div>
-            <button
-              className="modal__close-btnP"
-              type="button"
-              data-modal-close
-            >
-              <svg className="modal__close-icon" width="18" height="18">
-                <use href={`${svg}#icon-close`}></use>
-              </svg>
-            </button>
-            <ul className="portfolioList">
-              <li className="portfolioListItem">
-                <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://kapusta-project-app.netlify.app/"
-                >
-                  <img className="itemImage" src={kapustaImage} alt="" />
-                  <div className="listItemBox">
-                    <p className="listItemBox__text">
-                      [HTML, CSS, React, Redux, Formik, Chart.js]
-                    </p>
-                    <p className="listItemBox__text">
-                      A app with a responsive layout. For finance management.
-                      Worked with Chart.js logic and styles.
-                    </p>
-                    <p>Position: Developer</p>
-                  </div>
-                </a>
-              </li>
-              <li className="portfolioListItem">
-                <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://jasper935.github.io/filmoteka-project/"
-                >
-                  <img className="itemImage" src={filmotekaImage} alt="" />
-                  <div className="listItemBox">
-                    <p className="listItemBox__text">
-                      {' '}
-                      [HTML, SASS, JS, API,Parcel]
-                    </p>
-                    <p className="listItemBox__text">
-                      Application for choosing a movie. Role: developer. Worked
-                      on modal window and localstorage logic.
-                    </p>
-                    <p>Position: Developer</p>
-                  </div>
-                </a>
-              </li>
-              <li className="portfolioListItem">
-                <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://mr-nihility.github.io/pixel_hunters_project/"
-                >
-                  <img className="itemImage" src={hellenImage} alt="" />
-                  <div className="listItemBox">
-                    <p className="listItemBox__text">[HTML, SASS, Parcel]</p>
-                    <p className="listItemBox__text">
-                      A website with a responsive layout. For learning English.
-                      Role: developer. Worked on sections: "Our program" and
-                      "Teacher".
-                    </p>
-                    <p>Position: Developer</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <button className="modal__close-btnP" type="button" data-modal-close>
+            <svg className="modal__close-icon" width="18" height="18">
+              <use href={`${svg}#icon-close`}></use>
+            </svg>
+          </button>
+          <ul className="portfolioList">
+            <li className="portfolioListItem">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://kapusta-project-app.netlify.app/"
+              >
+                <img className="itemImage" src={kapustaImage} alt="" />
+                <div className="listItemBox">
+                  <p className="listItemBox__text">
+                    [HTML, CSS, React, Redux, Formik, Chart.js]
+                  </p>
+                  <p className="listItemBox__text">
+                    A app with a responsive layout. For finance management.
+                    Worked with Chart.js logic and styles.
+                  </p>
+                  <p>Position: Developer</p>
+                </div>
+              </a>
+            </li>
+            <li className="portfolioListItem">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://jasper935.github.io/filmoteka-project/"
+              >
+                <img className="itemImage" src={filmotekaImage} alt="" />
+                <div className="listItemBox">
+                  <p className="listItemBox__text">
+                    {' '}
+                    [HTML, SASS, JS, API,Parcel]
+                  </p>
+                  <p className="listItemBox__text">
+                    Application for choosing a movie. Role: developer. Worked on
+                    modal window and localstorage logic.
+                  </p>
+                  <p>Position: Developer</p>
+                </div>
+              </a>
+            </li>
+            <li className="portfolioListItem">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://mr-nihility.github.io/pixel_hunters_project/"
+              >
+                <img className="itemImage" src={hellenImage} alt="" />
+                <div className="listItemBox">
+                  <p className="listItemBox__text">[HTML, SASS, Parcel]</p>
+                  <p className="listItemBox__text">
+                    A website with a responsive layout. For learning English.
+                    Role: developer. Worked on sections: "Our program" and
+                    "Teacher".
+                  </p>
+                  <p>Position: Developer</p>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </>
