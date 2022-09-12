@@ -121,65 +121,55 @@ export const ModalAboutMe = () => {
                 <use href={`${svg}#icon-close`}></use>
               </svg>
             </button>
-            <div className="AboutMe__box-second">
-              <div className="boxAboutMeFirst">
-                <img className="image" src={photo} alt="" />
-                <div className="text-box">
-                  <h2 className="titleAboutMe">Valentyn Bilous</h2>
-                  <p>
-                    I am junior front-end developer looking for a full - time
-                    job. Seeking to use my good JavaScript and React.js skills.
-                    I want try to do my best on my future position in order to
-                    achieve the maximum good result in the shortest possible
-                    time.
-                  </p>
-                </div>
-              </div>
-              <div className="boxAboutMeFour">
-                <div className="work-box">
-                  <h2 className="titleAboutMe">Education</h2>
-                  <h3 className="textAboutMe">
-                    Chernivtsi Polytechnic College
-                  </h3>
-                  <ul className="work-text-box">
-                    <li>
-                      <p className="work-text">2009 - 2013</p>
-                      <p className="work-text">
-                        Construction and civil engineering
-                      </p>
-                    </li>
-                    <li>
-                      <h3 className="textAboutMe">
-                        Odessa Academy of Civil Engineering and Architecture
-                      </h3>
-                      <p className="work-text">2013 - 2017</p>
-                      <p className="work-text">
-                        Construction and civil engineering
-                      </p>
-                    </li>
-                  </ul>
-                </div>
+            <div className="boxAboutMeFirst">
+              <img className="image" src={photo} alt="" />
+              <div className="text-box">
+                <h2 className="titleAboutMe">Valentyn Bilous</h2>
+                <p>
+                  I am junior front-end developer looking for a full - time job.
+                  Seeking to use my good JavaScript and React.js skills. I want
+                  try to do my best on my future position in order to achieve
+                  the maximum good result in the shortest possible time.
+                </p>
               </div>
             </div>
-            <div className="AboutMe__box-first">
-              <div className="boxAboutMeSecond">
-                <div className="skills-box">
-                  <h2 className="titleAboutMe">Skills</h2>
-                  <div className="skills-text-box">
-                    <h3 className="textAboutMe">Hard</h3>
-                    <p className="textAboutMe__descr">
-                      HTML5/CSS/SASS, Responsive/Adaptive design, GIT,
-                      JavaScript, React, Redux, Axios, Parcel, MaterialUI,
-                      Chart.js
+            <div className="education-skills-box">
+              <div className="boxAboutMeFour">
+                <h2 className="titleAboutMe">Education</h2>
+                <h3 className="textAboutMe">Chernivtsi Polytechnic College</h3>
+                <ul className="work-text-box">
+                  <li>
+                    <p className="work-text">2009 - 2013</p>
+                    <p className="work-text">
+                      Construction and civil engineering
                     </p>
-                  </div>
-                  <div className="skills-text-box">
-                    <h3 className="textAboutMe">Soft</h3>
-                    <p>
-                      Teamwork, Good communication, Capable, Honest, Good sense
-                      of humour.
+                  </li>
+                  <li>
+                    <h3 className="textAboutMe">
+                      Odessa Academy of Civil Engineering and Architecture
+                    </h3>
+                    <p className="work-text">2013 - 2017</p>
+                    <p className="work-text">
+                      Construction and civil engineering
                     </p>
-                  </div>
+                  </li>
+                </ul>
+              </div>
+              <div className="AboutMe__box-first">
+                <h2 className="titleAboutMe">Skills</h2>
+                <div className="skills-text-box">
+                  <h3 className="textAboutMe">Hard</h3>
+                  <p className="textAboutMe__descr">
+                    HTML5/CSS/SASS, Responsive/Adaptive design, GIT, JavaScript,
+                    React, Redux, Axios, Parcel, MaterialUI, Chart.js
+                  </p>
+                </div>
+                <div className="skills-text-box">
+                  <h3 className="textAboutMe">Soft</h3>
+                  <p>
+                    Teamwork, Good communication, Capable, Honest, Good sense of
+                    humour.
+                  </p>
                 </div>
               </div>
             </div>
