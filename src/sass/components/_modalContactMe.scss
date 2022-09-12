@@ -8,10 +8,6 @@
   width: 100vw;
   height: 100%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   overflow-y: scroll;
 
   opacity: 1;
@@ -23,6 +19,12 @@
     rgb(133, 133, 133) 2%,
     rgba(215, 217, 223, 0.213) 100%
   );
+
+  @include mq(tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   @include mq(desktop) {
     overflow-y: hidden;
